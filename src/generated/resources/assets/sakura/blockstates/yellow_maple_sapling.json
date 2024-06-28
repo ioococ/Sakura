@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "stage=0": {
+      "model": "sakura:block/yellow_maple_sapling"
+    },
+    "stage=1": {
+      "model": "sakura:block/yellow_maple_sapling"
+    }
+  }
+}

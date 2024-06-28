@@ -1,10 +1,10 @@
 {
   "replace": false,
   "values": [
-    "sakura:sakuraleaves",
-    "sakura:mapleleaves_red",
-    "sakura:mapleleaves_green",
-    "sakura:mapleleaves_orange",
-    "sakura:mapleleaves_yellow"
+    "sakura:sakura_leaves",
+    "sakura:red_maple_leaves",
+    "sakura:green_maple_leaves",
+    "sakura:orange_maple_leaves",
+    "sakura:yellow_maple_leaves"
   ]
 }

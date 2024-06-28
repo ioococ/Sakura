@@ -1,7 +1,7 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "sakura:block/mapleleaves_red",
+		"0": "sakura:block/red_maple_leaves",
 		"particle": "#0"
 	},
 	"elements": [

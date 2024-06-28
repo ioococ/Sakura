@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "sakura:block/yellow_maple_sapling"
+  }
+}
