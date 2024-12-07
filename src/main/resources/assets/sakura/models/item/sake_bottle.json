@@ -1,13 +1,12 @@
 {
-	"credit": "Made with Blockbench",
-	"textures": {
-		"0": "sakura:models/sake_bottle",
-		"particle": "sakura:models/sake_bottle"
-	},
-	"elements": [
-		{
-			"from": [6, 1, 6],
-			"to": [10, 7, 10],
+  "textures": {
+    "0": "sakura:models/sake_bottle",
+    "particle": "sakura:models/sake_bottle"
+  },
+  "elements": [
+    {
+      "from": [6, 1, 6],
+  		"to": [10, 7, 10],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 1, 8]},
 			"faces": {
 				"north": {"uv": [9, 2, 16, 14], "texture": "#0"},

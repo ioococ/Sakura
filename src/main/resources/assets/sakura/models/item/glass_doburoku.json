@@ -1,7 +1,6 @@
 {
-	"credit": "Made with Blockbench",
-	"textures": {
-		"0": "block/glass",
+  "textures": {
+  	"0": "block/glass",
 		"1": "sakura:block/doburoku_flow",
 		"particle": "block/glass"
 	},

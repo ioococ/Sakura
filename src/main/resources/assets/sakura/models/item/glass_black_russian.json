@@ -1,9 +1,8 @@
 {
-	"credit": "Made with Blockbench",
-	"textures": {
-		"0": "block/glass",
-		"1": "sakura:models/black_russian",
-		"particle": "block/glass"
+  "textures": {
+    "0": "block/glass",
+    "1": "sakura:models/black_russian",
+  	"particle": "block/glass"
 	},
 	"elements": [
 		{

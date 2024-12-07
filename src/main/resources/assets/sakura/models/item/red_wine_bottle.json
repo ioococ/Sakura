@@ -1,18 +1,17 @@
 {
-	"credit": "Made with Blockbench",
-	"textures": {
-		"0": "sakura:models/red_wine_bottle",
-		"particle": "sakura:models/red_wine_bottle"
-	},
-	"elements": [
-		{
-			"from": [6, 1, 6],
-			"to": [10, 7, 10],
-			"rotation": {"angle": 0, "axis": "y", "origin": [8, 1, 8]},
-			"faces": {
-				"north": {"uv": [9, 2, 16, 14], "texture": "#0"},
-				"east": {"uv": [6, 2, 8.999, 13.999], "texture": "#0"},
-				"south": {"uv": [6, 2, 8.999, 13.999], "texture": "#0"},
+  "textures": {
+    "0": "sakura:models/red_wine_bottle",
+    "particle": "sakura:models/red_wine_bottle"
+  },
+  "elements": [
+    {
+      "from": [6, 1, 6],
+      "to": [10, 7, 10],
+      "rotation": {"angle": 0, "axis": "y", "origin": [8, 1, 8]},
+      "faces": {
+        "north": {"uv": [9, 2, 16, 14], "texture": "#0"},
+        "east": {"uv": [6, 2, 8.999, 13.999], "texture": "#0"},
+        "south": {"uv": [6, 2, 8.999, 13.999], "texture": "#0"},
 				"west": {"uv": [6, 2, 8.999, 13.999], "texture": "#0"},
 				"up": {"uv": [6, 0, 15.997, 1.998], "texture": "#0"},
 				"down": {"uv": [6, 0, 15.998, 1.999], "texture": "#0"}

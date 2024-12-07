@@ -1,11 +1,10 @@
 {
-	"credit": "Made with Blockbench",
-	"textures": {
-		"0": "block/glass",
-		"1": "sakura:models/godmother",
-		"particle": "block/glass"
-	},
-	"elements": [
+  "textures": {
+    "0": "block/glass",
+    "1": "sakura:models/godmother",
+    "particle": "block/glass"
+  },
+  "elements": [
 		{
 			"from": [2, 5, 4],
 			"to": [3, 11, 12],

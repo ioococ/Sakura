@@ -1,15 +1,14 @@
 {
-	"credit": "Made with Blockbench",
-	"textures": {
-		"0": "sakura:models/white_wine_bottle",
-		"particle": "sakura:models/white_wine_bottle"
-	},
-	"elements": [
-		{
-			"from": [6, 1, 6],
-			"to": [10, 7, 10],
-			"rotation": {"angle": 0, "axis": "y", "origin": [8, 1, 8]},
-			"faces": {
+  "textures": {
+    "0": "sakura:models/white_wine_bottle",
+    "particle": "sakura:models/white_wine_bottle"
+  },
+  "elements": [
+    {
+      "from": [6, 1, 6],
+      "to": [10, 7, 10],
+      "rotation": {"angle": 0, "axis": "y", "origin": [8, 1, 8]},
+  		"faces": {
 				"north": {"uv": [9, 2, 16, 14], "texture": "#0"},
 				"east": {"uv": [6, 2, 8.999, 13.999], "texture": "#0"},
 				"south": {"uv": [6, 2, 8.999, 13.999], "texture": "#0"},

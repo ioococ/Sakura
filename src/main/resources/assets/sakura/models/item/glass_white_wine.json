@@ -1,21 +1,20 @@
 {
-	"credit": "Made with Blockbench",
-	"textures": {
-		"0": "block/glass",
-		"1": "sakura:block/white_wine_flow",
-		"particle": "block/glass"
-	},
-	"elements": [
-		{
-			"from": [2, 5, 4],
-			"to": [3, 11, 12],
-			"rotation": {"angle": 0, "axis": "y", "origin": [8, 11, 8]},
-			"faces": {
-				"north": {"uv": [14, 0, 15.998, 16], "texture": "#0"},
-				"east": {"uv": [0, 0, 15.999, 16], "texture": "#0"},
-				"south": {"uv": [0, 0, 1.999, 16], "texture": "#0"},
-				"west": {"uv": [0, 0, 16, 16], "texture": "#0"},
-				"up": {"uv": [0, 0, 1.998, 16], "texture": "#0"},
+  "textures": {
+    "0": "block/glass",
+    "1": "sakura:block/white_wine_flow",
+    "particle": "block/glass"
+  },
+  "elements": [
+    {
+      "from": [2, 5, 4],
+      "to": [3, 11, 12],
+      "rotation": {"angle": 0, "axis": "y", "origin": [8, 11, 8]},
+      "faces": {
+        "north": {"uv": [14, 0, 15.998, 16], "texture": "#0"},
+        "east": {"uv": [0, 0, 15.999, 16], "texture": "#0"},
+        "south": {"uv": [0, 0, 1.999, 16], "texture": "#0"},
+        "west": {"uv": [0, 0, 16, 16], "texture": "#0"},
+    		"up": {"uv": [0, 0, 1.998, 16], "texture": "#0"},
 				"down": {"uv": [0, 0, 1.999, 16], "texture": "#0"}
 			}
 		},

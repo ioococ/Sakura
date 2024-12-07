@@ -1,13 +1,12 @@
 {
-	"credit": "Made with Blockbench",
-	"textures": {
-		"0": "block/glass",
-		"1": "sakura:models/godfather",
-		"particle": "block/glass"
-	},
-	"elements": [
-		{
-			"from": [2, 5, 4],
+  "textures": {
+    "0": "block/glass",
+    "1": "sakura:models/godfather",
+    "particle": "block/glass"
+  },
+  "elements": [
+    {
+    	"from": [2, 5, 4],
 			"to": [3, 11, 12],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 11, 8]},
 			"faces": {

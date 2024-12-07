@@ -1,8 +1,7 @@
 {
-	"credit": "Made with Blockbench",
-	"textures": {
-		"0": "sakura:models/beer_bottle",
-		"particle": "sakura:models/beer_bottle"
+  "textures": {
+    "0": "sakura:models/beer_bottle",
+    "particle": "sakura:models/beer_bottle"
 	},
 	"elements": [
 		{

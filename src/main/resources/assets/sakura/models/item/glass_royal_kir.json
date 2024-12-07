@@ -1,6 +1,5 @@
 {
-	"credit": "Made with Blockbench",
-	"textures": {
+  "textures": {
 		"0": "block/glass",
 		"1": "sakura:models/royal_kir",
 		"particle": "block/glass"
