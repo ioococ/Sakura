@@ -3,7 +3,7 @@ package cn.mcmod.sakura.item;
 import java.util.Map;
 import java.util.function.Supplier;
 
-import cn.mcmod.sakura.SakuraMod;
+import cn.mcmod.sakura.Sakura;
 import cn.mcmod.sakura.item.enums.SakuraCuisineSet;
 import cn.mcmod.sakura.item.enums.SakuraFoodSet;
 import cn.mcmod_mmf.mmlib.item.ItemFoodBase;
@@ -15,7 +15,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class FoodRegistry {
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, SakuraMod.MODID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Sakura.MOD_ID);
 
     public static final Map<SakuraFoodSet, RegistryObject<ItemFoodBase>> FOODSET = ItemRegistryUtil.mapOfKeys(
             SakuraFoodSet.class, info -> register(info.getFoodInfo().getName(), () -> normalFood(info.getFoodInfo())));
@@ -25,13 +25,13 @@ public class FoodRegistry {
             info -> register(info.getFoodInfo().getName(), () -> normalFood(info.getFoodInfo(), info.getContainer().get())));
 
     private static ItemFoodBase normalFood(FoodInfo info) {
-        return new ItemFoodBase(SakuraMod.defaultItemProperties(), info);
+        return new ItemFoodBase(Sakura.defaultItemProperties(), info);
     }
 
     private static ItemFoodBase normalFood(FoodInfo info, Item container) {
         if(container == null)
             return normalFood(info);
-        return new ItemFoodBase(SakuraMod.defaultItemProperties().craftRemainder(container), info);
+        return new ItemFoodBase(Sakura.defaultItemProperties().craftRemainder(container), info);
     }
 
     private static <V extends Item> RegistryObject<V> register(String name, Supplier<V> item) {

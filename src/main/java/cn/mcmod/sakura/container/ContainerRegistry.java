@@ -1,6 +1,6 @@
 package cn.mcmod.sakura.container;
 
-import cn.mcmod.sakura.SakuraMod;
+import cn.mcmod.sakura.Sakura;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraftforge.common.extensions.IForgeMenuType;
 import net.minecraftforge.registries.DeferredRegister;
@@ -9,7 +9,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ContainerRegistry {
     public static final DeferredRegister<MenuType<?>> CONTAINER_TYPES = DeferredRegister
-            .create(ForgeRegistries.CONTAINERS, SakuraMod.MODID);
+            .create(ForgeRegistries.CONTAINERS, Sakura.MOD_ID);
 
     public static final RegistryObject<MenuType<StoneMortarContainer>> STONE_MORTAR = CONTAINER_TYPES
             .register("stone_mortar", () -> IForgeMenuType.create(StoneMortarContainer::new));

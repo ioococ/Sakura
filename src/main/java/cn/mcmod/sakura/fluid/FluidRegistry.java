@@ -2,7 +2,7 @@ package cn.mcmod.sakura.fluid;
 
 import java.util.function.Supplier;
 
-import cn.mcmod.sakura.SakuraMod;
+import cn.mcmod.sakura.Sakura;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.Item;
@@ -16,7 +16,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class FluidRegistry {
-    public static final DeferredRegister<Fluid> FLUIDS = DeferredRegister.create(ForgeRegistries.FLUIDS, SakuraMod.MODID);
+
+    public static final DeferredRegister<Fluid> FLUIDS = DeferredRegister.create(ForgeRegistries.FLUIDS, Sakura.MOD_ID);
 
     public static final RegistryObject<FlowingFluid> FOOD_OIL = FLUIDS.register("food_oil", 
             () -> new ForgeFlowingFluid.Source(FluidRegistry.FOOD_OIL_PROP));

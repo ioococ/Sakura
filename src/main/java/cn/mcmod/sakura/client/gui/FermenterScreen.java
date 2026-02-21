@@ -1,7 +1,7 @@
 package cn.mcmod.sakura.client.gui;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import cn.mcmod.sakura.SakuraMod;
+import cn.mcmod.sakura.Sakura;
 import cn.mcmod.sakura.container.FermenterContainer;
 import cn.mcmod_mmf.mmlib.client.RenderUtils;
 import cn.mcmod_mmf.mmlib.utils.ClientUtil;
@@ -12,7 +12,7 @@ import net.minecraft.world.entity.player.Inventory;
 
 public class FermenterScreen extends AbstractContainerScreen<FermenterContainer> {
 
-    private static final ResourceLocation BACKGROUND_TEXTURE = new ResourceLocation(SakuraMod.MODID,
+    private static final ResourceLocation BACKGROUND_TEXTURE = new ResourceLocation(Sakura.MOD_ID,
             "textures/gui/barrel.png");
 
     public FermenterScreen(FermenterContainer screenContainer, Inventory inv, Component titleIn) {

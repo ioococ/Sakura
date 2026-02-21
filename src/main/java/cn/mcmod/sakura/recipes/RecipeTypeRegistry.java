@@ -1,6 +1,6 @@
 package cn.mcmod.sakura.recipes;
 
-import cn.mcmod.sakura.SakuraMod;
+import cn.mcmod.sakura.Sakura;
 import cn.mcmod_mmf.mmlib.recipe.AbstractRecipeSerializer;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
@@ -13,9 +13,9 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class RecipeTypeRegistry {
     public static final DeferredRegister<RecipeType<?>> RECIPE_TYPES = DeferredRegister
-            .create(Registry.RECIPE_TYPE_REGISTRY, SakuraMod.MODID);
+            .create(Registry.RECIPE_TYPE_REGISTRY, Sakura.MOD_ID);
     public static final DeferredRegister<RecipeSerializer<?>> RECIPE_SERIALIZERS = DeferredRegister
-            .create(ForgeRegistries.RECIPE_SERIALIZERS, SakuraMod.MODID);
+            .create(ForgeRegistries.RECIPE_SERIALIZERS, Sakura.MOD_ID);
 
     public static final RegistryObject<RecipeType<CookingPotRecipe>> COOKING_RECIPE_TYPE = RECIPE_TYPES
             .register("cooking", () -> recipeType("cooking"));
@@ -44,7 +44,7 @@ public class RecipeTypeRegistry {
     private static <T extends Recipe<?>> RecipeType<T> recipeType(String name) {
         return new RecipeType<T>() {
             public String toString() {
-                return new ResourceLocation(SakuraMod.MODID, name).toString();
+                return new ResourceLocation(Sakura.MOD_ID, name).toString();
             }
         };
     }

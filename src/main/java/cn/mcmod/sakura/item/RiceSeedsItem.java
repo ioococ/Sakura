@@ -1,6 +1,6 @@
 package cn.mcmod.sakura.item;
 
-import cn.mcmod.sakura.SakuraMod;
+import cn.mcmod.sakura.Sakura;
 import cn.mcmod.sakura.block.BlockRegistry;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.TranslatableComponent;
@@ -16,7 +16,7 @@ import net.minecraft.world.level.block.state.BlockState;
 public class RiceSeedsItem extends ItemNameBlockItem {
 
     public RiceSeedsItem() {
-        super(BlockRegistry.RICE_CROP_ROOT.get(), SakuraMod.defaultItemProperties());
+        super(BlockRegistry.RICE_CROP_ROOT.get(), Sakura.defaultItemProperties());
     }
 
     @Override
@@ -28,7 +28,7 @@ public class RiceSeedsItem extends ItemNameBlockItem {
             if (player != null && context.getClickedFace().equals(Direction.UP)
                     && (targetState.is(BlockTags.DIRT) || targetState.getBlock() instanceof FarmBlock)) {
                 player.displayClientMessage(
-                        new TranslatableComponent(SakuraMod.MODID + "." + "block.rice.invalid_placement"), true);
+                        new TranslatableComponent(Sakura.MOD_ID + "." + "block.rice.invalid_placement"), true);
             }
         }
         return !result.consumesAction() && this.isEdible()

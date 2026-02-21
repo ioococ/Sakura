@@ -2,7 +2,7 @@ package cn.mcmod.sakura.compat.jei.category;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 
-import cn.mcmod.sakura.SakuraMod;
+import cn.mcmod.sakura.Sakura;
 import cn.mcmod.sakura.block.BlockRegistry;
 import cn.mcmod.sakura.block.entity.FermenterBlockEntity;
 import cn.mcmod.sakura.compat.jei.JEIPlugin;
@@ -28,7 +28,7 @@ import net.minecraftforge.fluids.FluidStack;
 
 public class FermenterCategory implements IRecipeCategory<FermenterRecipe> {
 
-    public static final ResourceLocation UID = new ResourceLocation(SakuraMod.MODID, "fermenting");
+    public static final ResourceLocation UID = new ResourceLocation(Sakura.MOD_ID, "fermenting");
     protected final IDrawableAnimated arrow;
     protected final IDrawableAnimated bubbles;
     private final Component title;
@@ -37,7 +37,7 @@ public class FermenterCategory implements IRecipeCategory<FermenterRecipe> {
 
     public FermenterCategory(IGuiHelper helper) {
         title = new TranslatableComponent("sakura.jei.fermenting");
-        ResourceLocation backgroundImage = new ResourceLocation(SakuraMod.MODID, "textures/gui/barrel.png");
+        ResourceLocation backgroundImage = new ResourceLocation(Sakura.MOD_ID, "textures/gui/barrel.png");
         background = helper.createDrawable(backgroundImage, 32, 10, 110, 66);
         icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(BlockRegistry.FERMENTER.get()));
         arrow = helper.drawableBuilder(backgroundImage, 176, 0, 24, 17).buildAnimated(200, IDrawableAnimated.StartDirection.LEFT, false);

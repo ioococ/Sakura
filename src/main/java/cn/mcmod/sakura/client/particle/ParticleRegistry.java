@@ -1,6 +1,6 @@
 package cn.mcmod.sakura.client.particle;
 
-import cn.mcmod.sakura.SakuraMod;
+import cn.mcmod.sakura.Sakura;
 import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraftforge.registries.DeferredRegister;
@@ -9,7 +9,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ParticleRegistry {
     public static final DeferredRegister<ParticleType<?>> PARTICLE_TYPES = DeferredRegister
-            .create(ForgeRegistries.PARTICLE_TYPES, SakuraMod.MODID);
+            .create(ForgeRegistries.PARTICLE_TYPES, Sakura.MOD_ID);
     public static final RegistryObject<SimpleParticleType> SAKURA_LEAF = PARTICLE_TYPES.register("sakura",
             () -> new SimpleParticleType(false));
     public static final RegistryObject<SimpleParticleType> RED_MAPLE_LEAF = PARTICLE_TYPES.register("red_maple",

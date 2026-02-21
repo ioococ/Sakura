@@ -1,6 +1,6 @@
 package cn.mcmod.sakura.block;
 
-import cn.mcmod.sakura.SakuraMod;
+import cn.mcmod.sakura.Sakura;
 import cn.mcmod.sakura.block.crops.RiceCrop;
 import cn.mcmod.sakura.block.crops.RiceCropRoot;
 import cn.mcmod.sakura.block.foods.NabeBlock;
@@ -38,7 +38,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class BlockRegistry {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS,
-            SakuraMod.MODID);
+            Sakura.MOD_ID);
 
     public static final RegistryObject<Block> SAKURA_LEAVES = BLOCKS.register("sakuraleaves",
             () -> new SakuraLeavesBlock(Block.Properties.of(Material.LEAVES).strength(0.2F).randomTicks()

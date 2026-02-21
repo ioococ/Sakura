@@ -2,7 +2,7 @@ package cn.mcmod.sakura.compat.jei.category;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 
-import cn.mcmod.sakura.SakuraMod;
+import cn.mcmod.sakura.Sakura;
 import cn.mcmod.sakura.block.BlockRegistry;
 import cn.mcmod.sakura.block.entity.CookingPotBlockEntity;
 import cn.mcmod.sakura.compat.jei.JEIPlugin;
@@ -27,7 +27,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 
 public class CookingPotCategory implements IRecipeCategory<CookingPotRecipe> {
 
-    public static final ResourceLocation UID = new ResourceLocation(SakuraMod.MODID, "cooking");
+    public static final ResourceLocation UID = new ResourceLocation(Sakura.MOD_ID, "cooking");
     protected final IDrawable heatIndicator;
     protected final IDrawableAnimated arrow;
     private final Component title;
@@ -36,7 +36,7 @@ public class CookingPotCategory implements IRecipeCategory<CookingPotRecipe> {
 
     public CookingPotCategory(IGuiHelper helper) {
         title = new TranslatableComponent("sakura.jei.cooking");
-        ResourceLocation backgroundImage = new ResourceLocation(SakuraMod.MODID, "textures/gui/pot.png");
+        ResourceLocation backgroundImage = new ResourceLocation(Sakura.MOD_ID, "textures/gui/pot.png");
         background = helper.createDrawable(backgroundImage, 16, 16, 144, 54);
         icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(BlockRegistry.COOKING_POT.get()));
         heatIndicator = helper.createDrawable(backgroundImage, 176, 0, 18, 18);

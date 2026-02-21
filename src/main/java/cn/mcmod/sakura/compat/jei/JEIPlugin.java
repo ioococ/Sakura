@@ -1,7 +1,7 @@
 package cn.mcmod.sakura.compat.jei;
 
 import java.util.List;
-import cn.mcmod.sakura.SakuraMod;
+import cn.mcmod.sakura.Sakura;
 import cn.mcmod.sakura.block.BlockRegistry;
 import cn.mcmod.sakura.client.gui.CookingPotScreen;
 import cn.mcmod.sakura.client.gui.DistillerScreen;
@@ -38,7 +38,7 @@ import net.minecraft.world.item.crafting.RecipeType;
 
 @JeiPlugin
 public class JEIPlugin implements IModPlugin {
-    public static final ResourceLocation PLUGIN_ID = new ResourceLocation(SakuraMod.MODID, "jei_plugin");
+    public static final ResourceLocation PLUGIN_ID = new ResourceLocation(Sakura.MOD_ID, "jei_plugin");
 
     private static final Minecraft MC = Minecraft.getInstance();
 
@@ -47,19 +47,19 @@ public class JEIPlugin implements IModPlugin {
     }
     
     public static final mezz.jei.api.recipe.RecipeType<CookingPotRecipe> COOKING_POT_JEI_TYPE = 
-            mezz.jei.api.recipe.RecipeType.create(SakuraMod.MODID, "cooking", CookingPotRecipe.class);
+            mezz.jei.api.recipe.RecipeType.create(Sakura.MOD_ID, "cooking", CookingPotRecipe.class);
     
     public static final mezz.jei.api.recipe.RecipeType<StoneMortarRecipe> STONE_MORTAR_JEI_TYPE = 
-            mezz.jei.api.recipe.RecipeType.create(SakuraMod.MODID, "stone_mortar", StoneMortarRecipe.class);
+            mezz.jei.api.recipe.RecipeType.create(Sakura.MOD_ID, "stone_mortar", StoneMortarRecipe.class);
     
     public static final mezz.jei.api.recipe.RecipeType<FermenterRecipe> FERMENTER_JEI_TYPE = 
-            mezz.jei.api.recipe.RecipeType.create(SakuraMod.MODID, "fermenting", FermenterRecipe.class);
+            mezz.jei.api.recipe.RecipeType.create(Sakura.MOD_ID, "fermenting", FermenterRecipe.class);
     
     public static final mezz.jei.api.recipe.RecipeType<DistillerRecipe> DISTILLER_JEI_TYPE = 
-            mezz.jei.api.recipe.RecipeType.create(SakuraMod.MODID, "distillation", DistillerRecipe.class);
+            mezz.jei.api.recipe.RecipeType.create(Sakura.MOD_ID, "distillation", DistillerRecipe.class);
     
     public static final mezz.jei.api.recipe.RecipeType<ChoppingRecipe> CHOPPING_JEI_TYPE = 
-            mezz.jei.api.recipe.RecipeType.create(SakuraMod.MODID, "chopping", ChoppingRecipe.class);
+            mezz.jei.api.recipe.RecipeType.create(Sakura.MOD_ID, "chopping", ChoppingRecipe.class);
 
     @Override
     public void registerCategories(IRecipeCategoryRegistration registry) {

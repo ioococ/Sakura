@@ -1,6 +1,6 @@
 package cn.mcmod.sakura.client;
 
-import cn.mcmod.sakura.SakuraMod;
+import cn.mcmod.sakura.Sakura;
 import cn.mcmod.sakura.block.BlockRegistry;
 import cn.mcmod.sakura.block.entity.BlockEntityRegistry;
 import cn.mcmod.sakura.client.particle.FallenLeafParticle;
@@ -20,7 +20,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, modid = SakuraMod.MODID, value = Dist.CLIENT)
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, modid = Sakura.MOD_ID, value = Dist.CLIENT)
 public class ClientEvents {
 
     @SubscribeEvent
@@ -31,10 +31,10 @@ public class ClientEvents {
             ItemBlockRenderTypes.setRenderLayer(BlockRegistry.BAMBOO_PLANT.get(), RenderType.cutoutMipped());
             ItemBlockRenderTypes.setRenderLayer(BlockRegistry.BAMBOOSHOOT.get(), RenderType.cutoutMipped());
             ItemBlockRenderTypes.setRenderLayer(BlockRegistry.COOKING_POT.get(), RenderType.cutoutMipped());
-            
+
             ItemBlockRenderTypes.setRenderLayer(BlockRegistry.NABE_ODEN.get(), RenderType.cutoutMipped());
             ItemBlockRenderTypes.setRenderLayer(BlockRegistry.NABE_SUKIYAKI.get(), RenderType.cutoutMipped());
-            
+
             BlockRegistry.BLOCKS.getEntries().forEach(block -> {
                 if (block.get() instanceof BushBlock) {
                     ItemBlockRenderTypes.setRenderLayer(block.get(), RenderType.cutoutMipped());
@@ -43,7 +43,7 @@ public class ClientEvents {
             FluidRegistry.FLUIDS.getEntries().forEach(fluid -> {
                 ItemBlockRenderTypes.setRenderLayer(fluid.get(), RenderType.translucent());
             });
-            
+
             BlockEntityRenderers.register(BlockEntityRegistry.STONE_MORTAR.get(), StoneMortarRenderer::new);
             BlockEntityRenderers.register(BlockEntityRegistry.CHOPPING_BOARD.get(), ChoppingBoardRender::new);
             BlockEntityRenderers.register(BlockEntityRegistry.OBON.get(), ObonRender::new);

@@ -2,7 +2,7 @@ package cn.mcmod.sakura.client.gui;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 
-import cn.mcmod.sakura.SakuraMod;
+import cn.mcmod.sakura.Sakura;
 import cn.mcmod.sakura.container.StoneMortarContainer;
 import cn.mcmod_mmf.mmlib.client.RenderUtils;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
@@ -12,7 +12,7 @@ import net.minecraft.world.entity.player.Inventory;
 
 public class StoneMortarScreen extends AbstractContainerScreen<StoneMortarContainer> {
 
-    private static final ResourceLocation BACKGROUND_TEXTURE = new ResourceLocation(SakuraMod.MODID,
+    private static final ResourceLocation BACKGROUND_TEXTURE = new ResourceLocation(Sakura.MOD_ID,
             "textures/gui/stonemortar.png");
 
     public StoneMortarScreen(StoneMortarContainer screenContainer, Inventory inv, Component titleIn) {

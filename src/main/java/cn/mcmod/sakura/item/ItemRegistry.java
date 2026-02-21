@@ -3,7 +3,7 @@ package cn.mcmod.sakura.item;
 import java.util.Map;
 import java.util.function.Supplier;
 
-import cn.mcmod.sakura.SakuraMod;
+import cn.mcmod.sakura.Sakura;
 import cn.mcmod.sakura.block.BlockRegistry;
 import cn.mcmod.sakura.item.enums.SakuraNormalItemSet;
 import cn.mcmod_mmf.mmlib.item.ItemFoodSeeds;
@@ -18,7 +18,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ItemRegistry {
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, SakuraMod.MODID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Sakura.MOD_ID);
 
     public static final RegistryObject<Item> RICE_SEEDS = register("rice_seeds", RiceSeedsItem::new);
 
@@ -50,19 +50,19 @@ public class ItemRegistry {
     public static final Map<SakuraNormalItemSet, RegistryObject<Item>> MATERIALS = ItemRegistryUtil
             .mapOfKeys(SakuraNormalItemSet.class, material -> register(material.getName(), ItemRegistry::normalItem));
     
-    public static final RegistryObject<Item> IRON_FISH_KNIFE = register("knife_fish", ()->new KnifeItem(Tiers.IRON, 1F, -2.0F, SakuraMod.defaultItemProperties().stacksTo(1)));
-    public static final RegistryObject<Item> IRON_NOODLE_KNIFE = register("knife_noodle", ()->new KnifeItem(Tiers.IRON, 2F, -3.0F, SakuraMod.defaultItemProperties().stacksTo(1)));
-    
+    public static final RegistryObject<Item> IRON_FISH_KNIFE = register("knife_fish", () -> new KnifeItem(Tiers.IRON, 1F, -2.0F, Sakura.defaultItemProperties().stacksTo(1)));
+    public static final RegistryObject<Item> IRON_NOODLE_KNIFE = register("knife_noodle", () -> new KnifeItem(Tiers.IRON, 2F, -3.0F, Sakura.defaultItemProperties().stacksTo(1)));
+
     private static Item normalItem() {
-        return new Item(SakuraMod.defaultItemProperties());
+        return new Item(Sakura.defaultItemProperties());
     }
 
     private static ItemNameBlockItem seed(Block block) {
-        return new ItemNameBlockItem(block, SakuraMod.defaultItemProperties());
+        return new ItemNameBlockItem(block, Sakura.defaultItemProperties());
     }
 
     private static ItemFoodSeeds seed(Block block, FoodInfo info) {
-        return new ItemFoodSeeds(block, SakuraMod.defaultItemProperties(), info);
+        return new ItemFoodSeeds(block, Sakura.defaultItemProperties(), info);
     }
 
     private static <V extends Item> RegistryObject<V> register(String name, Supplier<V> item) {

@@ -2,7 +2,7 @@ package cn.mcmod.sakura.compat.jei.category;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 
-import cn.mcmod.sakura.SakuraMod;
+import cn.mcmod.sakura.Sakura;
 import cn.mcmod.sakura.block.BlockRegistry;
 import cn.mcmod.sakura.block.entity.DistillerBlockEntity;
 import cn.mcmod.sakura.compat.jei.JEIPlugin;
@@ -28,7 +28,7 @@ import net.minecraftforge.fluids.FluidStack;
 
 public class DistillerCategory implements IRecipeCategory<DistillerRecipe> {
 
-    public static final ResourceLocation UID = new ResourceLocation(SakuraMod.MODID, "distillation");
+    public static final ResourceLocation UID = new ResourceLocation(Sakura.MOD_ID, "distillation");
     protected final IDrawable heatIndicator;
     protected final IDrawableAnimated arrow;
     protected final IDrawableAnimated bubbles;
@@ -38,7 +38,7 @@ public class DistillerCategory implements IRecipeCategory<DistillerRecipe> {
 
     public DistillerCategory(IGuiHelper helper) {
         title = new TranslatableComponent("sakura.jei.distillation");
-        ResourceLocation backgroundImage = new ResourceLocation(SakuraMod.MODID, "textures/gui/distiller.png");
+        ResourceLocation backgroundImage = new ResourceLocation(Sakura.MOD_ID, "textures/gui/distiller.png");
         background = helper.createDrawable(backgroundImage, 32, 10, 110, 66);
         icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(BlockRegistry.DISTILLER.get()));
         heatIndicator = helper.createDrawable(backgroundImage, 176, 17, 18, 18);

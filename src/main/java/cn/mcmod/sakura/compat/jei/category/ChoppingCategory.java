@@ -3,7 +3,7 @@ package cn.mcmod.sakura.compat.jei.category;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 
-import cn.mcmod.sakura.SakuraMod;
+import cn.mcmod.sakura.Sakura;
 import cn.mcmod.sakura.block.BlockRegistry;
 import cn.mcmod.sakura.compat.jei.JEIPlugin;
 import cn.mcmod.sakura.recipes.ChoppingRecipe;
@@ -29,7 +29,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 
 public class ChoppingCategory implements IRecipeCategory<ChoppingRecipe> {
 
-    public static final ResourceLocation UID = new ResourceLocation(SakuraMod.MODID, "chopping");
+    public static final ResourceLocation UID = new ResourceLocation(Sakura.MOD_ID, "chopping");
     private final Component title;
     private final IDrawable background;
     private final IDrawable icon;
@@ -37,7 +37,7 @@ public class ChoppingCategory implements IRecipeCategory<ChoppingRecipe> {
     private final IDrawable chancedSlot;
     public ChoppingCategory(IGuiHelper helper) {
         title = new TranslatableComponent("sakura.jei.chopping");
-        ResourceLocation backgroundImage = new ResourceLocation(SakuraMod.MODID, "textures/gui/jei_chopping.png");
+        ResourceLocation backgroundImage = new ResourceLocation(Sakura.MOD_ID, "textures/gui/jei_chopping.png");
         background = helper.createDrawable(backgroundImage, 4, 4, 92, 74);
         chancedSlot = helper.createDrawable(backgroundImage, 100, 0, 18, 18);
         icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK,

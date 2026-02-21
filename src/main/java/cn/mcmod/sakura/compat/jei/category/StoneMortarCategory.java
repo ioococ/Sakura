@@ -2,7 +2,7 @@ package cn.mcmod.sakura.compat.jei.category;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 
-import cn.mcmod.sakura.SakuraMod;
+import cn.mcmod.sakura.Sakura;
 import cn.mcmod.sakura.block.BlockRegistry;
 import cn.mcmod.sakura.compat.jei.JEIPlugin;
 import cn.mcmod.sakura.recipes.StoneMortarRecipe;
@@ -23,7 +23,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 
 public class StoneMortarCategory implements IRecipeCategory<StoneMortarRecipe> {
 
-    public static final ResourceLocation UID = new ResourceLocation(SakuraMod.MODID, "stone_mortar");
+    public static final ResourceLocation UID = new ResourceLocation(Sakura.MOD_ID, "stone_mortar");
     private final Component title;
     private final IDrawable background;
     private final IDrawable icon;
@@ -32,7 +32,7 @@ public class StoneMortarCategory implements IRecipeCategory<StoneMortarRecipe> {
 
     public StoneMortarCategory(IGuiHelper helper) {
         title = new TranslatableComponent("sakura.jei.stone_mortar");
-        ResourceLocation backgroundImage = new ResourceLocation(SakuraMod.MODID, "textures/gui/stonemortar.png");
+        ResourceLocation backgroundImage = new ResourceLocation(Sakura.MOD_ID, "textures/gui/stonemortar.png");
         background = helper.createDrawable(backgroundImage, 39, 13, 87, 62);
         icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(BlockRegistry.STONE_MORTAR.get()));
         mortar = helper.createDrawable(backgroundImage, 176, 0, 14, 16);

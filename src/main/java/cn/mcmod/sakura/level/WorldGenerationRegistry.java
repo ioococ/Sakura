@@ -5,7 +5,7 @@ import java.util.function.Supplier;
 import com.google.common.collect.Lists;
 
 import cn.mcmod.sakura.SakuraConfig;
-import cn.mcmod.sakura.SakuraMod;
+import cn.mcmod.sakura.Sakura;
 import cn.mcmod.sakura.block.BlockRegistry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.data.BuiltinRegistries;
@@ -29,9 +29,9 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class WorldGenerationRegistry {
     public static final DeferredRegister<ConfiguredFeature<?, ?>> FEATURES = DeferredRegister
-            .create(BuiltinRegistries.CONFIGURED_FEATURE.key(), SakuraMod.MODID);
+            .create(BuiltinRegistries.CONFIGURED_FEATURE.key(), Sakura.MOD_ID);
     public static final DeferredRegister<PlacedFeature> PATCHES = DeferredRegister
-            .create(BuiltinRegistries.PLACED_FEATURE.key(), SakuraMod.MODID);
+            .create(BuiltinRegistries.PLACED_FEATURE.key(), Sakura.MOD_ID);
     
     public static final RegistryObject<ConfiguredFeature<?, ?>> FEATURE_PATCH_BAMBOOSHOOT = FEATURES.register("patch_bambooshoot", 
             ()->wildPlantFeature(BlockRegistry.BAMBOOSHOOT, BlockTags.DIRT));

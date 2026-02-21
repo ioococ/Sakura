@@ -1,6 +1,6 @@
 package cn.mcmod.sakura.data;
 
-import cn.mcmod.sakura.SakuraMod;
+import cn.mcmod.sakura.Sakura;
 import cn.mcmod.sakura.data.client.SakuraBlockStateProvider;
 import cn.mcmod.sakura.data.client.SakuraItemModelProvider;
 import net.minecraft.data.DataGenerator;
@@ -15,12 +15,12 @@ public class DataGen {
     public static void dataGen(GatherDataEvent event) {
         DataGenerator dataGenerator = event.getGenerator();
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
-        dataGenerator.addProvider(new SakuraBlockStateProvider(dataGenerator, SakuraMod.MODID, existingFileHelper));
-        dataGenerator.addProvider(new SakuraItemModelProvider(dataGenerator, SakuraMod.MODID, existingFileHelper));
-        SakuraBlockTagsProvider block_tag = new SakuraBlockTagsProvider(dataGenerator, SakuraMod.MODID, existingFileHelper);
+        dataGenerator.addProvider(new SakuraBlockStateProvider(dataGenerator, Sakura.MOD_ID, existingFileHelper));
+        dataGenerator.addProvider(new SakuraItemModelProvider(dataGenerator, Sakura.MOD_ID, existingFileHelper));
+        SakuraBlockTagsProvider block_tag = new SakuraBlockTagsProvider(dataGenerator, Sakura.MOD_ID, existingFileHelper);
         dataGenerator.addProvider(block_tag);
-        dataGenerator.addProvider(new SakuraItemTagsProvider(dataGenerator, block_tag, SakuraMod.MODID, existingFileHelper));
-        dataGenerator.addProvider(new SakuraFluidTagsProvider(dataGenerator, SakuraMod.MODID, existingFileHelper));
+        dataGenerator.addProvider(new SakuraItemTagsProvider(dataGenerator, block_tag, Sakura.MOD_ID, existingFileHelper));
+        dataGenerator.addProvider(new SakuraFluidTagsProvider(dataGenerator, Sakura.MOD_ID, existingFileHelper));
         dataGenerator.addProvider(new SakuraRecipeProvider(dataGenerator));
         dataGenerator.addProvider(new SakuraLootTableProvider(dataGenerator));
     }

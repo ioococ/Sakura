@@ -6,7 +6,7 @@ import javax.annotation.Nonnull;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 
-import cn.mcmod.sakura.SakuraMod;
+import cn.mcmod.sakura.Sakura;
 import cn.mcmod.sakura.block.BlockRegistry;
 import cn.mcmod.sakura.block.entity.BlockEntityRegistry;
 import cn.mcmod.sakura.block.entity.StoneMortarBlockEntity;
@@ -22,7 +22,7 @@ import net.minecraftforge.client.IItemRenderProperties;
 public class StoneMortarItem extends BlockItem {
 
     public StoneMortarItem() {
-        super(BlockRegistry.STONE_MORTAR.get(), SakuraMod.defaultItemProperties());
+        super(BlockRegistry.STONE_MORTAR.get(), Sakura.defaultItemProperties());
     }
 
     @Override

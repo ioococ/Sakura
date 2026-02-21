@@ -1,14 +1,14 @@
 package cn.mcmod.sakura.tags;
 
-import cn.mcmod.sakura.SakuraMod;
+import cn.mcmod.sakura.Sakura;
 import cn.mcmod_mmf.mmlib.utils.TagUtils;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.common.Tags;
 
 public class SakuraItemTags {
-    public static final TagKey<Item> OFFHAND_EQUIPMENT = TagUtils.modItemTag(SakuraMod.MODID,"offhand_equipment");
-    public static final TagKey<Item> SOUPS = TagUtils.modItemTag(SakuraMod.MODID,"soups");
+    public static final TagKey<Item> OFFHAND_EQUIPMENT = TagUtils.modItemTag(Sakura.MOD_ID,"offhand_equipment");
+    public static final TagKey<Item> SOUPS = TagUtils.modItemTag(Sakura.MOD_ID,"soups");
     
     public static final TagKey<Item> SALT = TagUtils.forgeItemTag("salt");
     public static final TagKey<Item> DUST_SALT = TagUtils.forgeItemTag("dust/salt");
@@ -100,9 +100,9 @@ public class SakuraItemTags {
     public static final TagKey<Item> GRAIN_BUCKWHEAT = TagUtils.forgeItemTag("grain/buckwheat");
     public static final TagKey<Item> GRAIN_RICE = TagUtils.forgeItemTag("grain/rice");
 
-    public static final TagKey<Item> RICE = TagUtils.modItemTag(SakuraMod.MODID, "rice");
-    public static final TagKey<Item> RICE_BROWN = TagUtils.modItemTag(SakuraMod.MODID, "rice/brown");
-    public static final TagKey<Item> RICE_RICE = TagUtils.modItemTag(SakuraMod.MODID, "rice/rice");
+    public static final TagKey<Item> RICE = TagUtils.modItemTag(Sakura.MOD_ID, "rice");
+    public static final TagKey<Item> RICE_BROWN = TagUtils.modItemTag(Sakura.MOD_ID, "rice/brown");
+    public static final TagKey<Item> RICE_RICE = TagUtils.modItemTag(Sakura.MOD_ID, "rice/rice");
 
     public static final TagKey<Item> MILK = TagUtils.forgeItemTag("milk");
     public static final TagKey<Item> MILK_BUCKET = TagUtils.forgeItemTag("milk/milk");
@@ -133,7 +133,7 @@ public class SakuraItemTags {
     public static final TagKey<Item> SALAD_INGREDIENTS_TOMATO = TagUtils
             .forgeItemTag("salad_ingredients/tomato");
 
-    public static final TagKey<Item> FISHCAKE = TagUtils.modItemTag(SakuraMod.MODID, "fishcake");
+    public static final TagKey<Item> FISHCAKE = TagUtils.modItemTag(Sakura.MOD_ID, "fishcake");
     
     public static final TagKey<Item> SEEDS = TagUtils.forgeItemTag("seeds");
     public static final TagKey<Item> SEEDS_CABBAGE = TagUtils.forgeItemTag("seeds/cabbage");
@@ -180,8 +180,8 @@ public class SakuraItemTags {
     public static final TagKey<Item> TOOLS_AXES = TagUtils.forgeItemTag("tools/axes");
     public static final TagKey<Item> TOOLS_HOES = TagUtils.forgeItemTag("tools/hoes");
     public static final TagKey<Item> TOOLS_KNIVES = TagUtils.forgeItemTag("tools/knives");
-    public static final TagKey<Item> TOOLS_KNIVES_FISH = TagUtils.modItemTag(SakuraMod.MODID,"tools/knives/fish");
-    public static final TagKey<Item> TOOLS_KNIVES_NOODLE = TagUtils.modItemTag(SakuraMod.MODID,"tools/knives/noodle");
+    public static final TagKey<Item> TOOLS_KNIVES_FISH = TagUtils.modItemTag(Sakura.MOD_ID,"tools/knives/fish");
+    public static final TagKey<Item> TOOLS_KNIVES_NOODLE = TagUtils.modItemTag(Sakura.MOD_ID,"tools/knives/noodle");
     public static final TagKey<Item> TOOLS_PICKAXES = TagUtils.forgeItemTag("tools/pickaxes");
     public static final TagKey<Item> TOOLS_SHOVELS = TagUtils.forgeItemTag("tools/shovels");
 }

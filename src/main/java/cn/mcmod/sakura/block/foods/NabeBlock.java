@@ -2,7 +2,7 @@ package cn.mcmod.sakura.block.foods;
 
 import java.util.Random;
 
-import cn.mcmod.sakura.SakuraMod;
+import cn.mcmod.sakura.Sakura;
 import cn.mcmod.sakura.block.BlockRegistry;
 import cn.mcmod_mmf.mmlib.block.entity.HeatableBlockEntity;
 import cn.mcmod_mmf.mmlib.item.info.FoodInfo;
@@ -106,7 +106,7 @@ public class NabeBlock extends Block implements HeatableBlockEntity{
 
     protected InteractionResult eat(LevelAccessor level, BlockPos pos, BlockState state, Player player) {
         if (!state.getValue(IS_COOKED)) {
-            player.displayClientMessage(new TranslatableComponent(SakuraMod.MODID + ".block.nabe.not_cooked"), true);
+            player.displayClientMessage(new TranslatableComponent(Sakura.MOD_ID + ".block.nabe.not_cooked"), true);
             return InteractionResult.FAIL;
         }else if (!player.canEat(false)) {
             return InteractionResult.PASS;

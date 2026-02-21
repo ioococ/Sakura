@@ -1,6 +1,6 @@
 package cn.mcmod.sakura.client.layers;
 
-import cn.mcmod.sakura.SakuraMod;
+import cn.mcmod.sakura.Sakura;
 import cn.mcmod.sakura.client.render.StoneMortarRenderer;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.resources.ResourceLocation;
@@ -9,7 +9,7 @@ import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, modid = SakuraMod.MODID, value = Dist.CLIENT)
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, modid = Sakura.MOD_ID, value = Dist.CLIENT)
 public class LayerRegistry {
     public static final ModelLayerLocation STONE_MORTAR = register("stone_mortar");
 
@@ -23,6 +23,6 @@ public class LayerRegistry {
     }
 
     private static ModelLayerLocation register(String path, String part) {
-        return new ModelLayerLocation(new ResourceLocation(SakuraMod.MODID, path), part);
+        return new ModelLayerLocation(new ResourceLocation(Sakura.MOD_ID, path), part);
     }
 }
