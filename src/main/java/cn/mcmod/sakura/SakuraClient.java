@@ -1,6 +1,5 @@
-package cn.mcmod.sakura.client;
+package cn.mcmod.sakura;
 
-import cn.mcmod.sakura.Sakura;
 import cn.mcmod.sakura.block.BlockRegistry;
 import cn.mcmod.sakura.block.entity.BlockEntityRegistry;
 import cn.mcmod.sakura.client.particle.FallenLeafParticle;
@@ -21,7 +20,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, modid = Sakura.MOD_ID, value = Dist.CLIENT)
-public class ClientEvents {
+public class SakuraClient {
 
     @SubscribeEvent
     public static void clientStuff(final FMLClientSetupEvent event) {
