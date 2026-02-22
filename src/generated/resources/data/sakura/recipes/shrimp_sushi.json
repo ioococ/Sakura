@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "sakura:cooked_rice"
+    },
+    {
+      "tag": "forge:shrimp"
+    }
+  ],
+  "result": {
+    "item": "sakura:shrimp_sushi",
+    "count": 2
+  }
+}

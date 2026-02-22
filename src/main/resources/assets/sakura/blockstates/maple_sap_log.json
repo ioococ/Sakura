@@ -1,7 +1,7 @@
 {
   "variants": {
     "axis=x,exhaustion=false": {
-      "model": "sakura:block/maple_sap_log_horizontal",
+      "model": "sakura:block/horizontal_maple_sap_log",
       "x": 90,
       "y": 90
     },
@@ -9,11 +9,11 @@
       "model": "sakura:block/maple_sap_log"
     },
     "axis=z,exhaustion=false": {
-      "model": "sakura:block/maple_sap_log_horizontal",
+      "model": "sakura:block/horizontal_maple_sap_log",
       "x": 90
     },
     "axis=x,exhaustion=true": {
-      "model": "sakura:block/maple_nosap_log_horizontal",
+      "model": "sakura:block/horizontal_maple_nosap_log",
       "x": 90,
       "y": 90
     },
@@ -21,7 +21,7 @@
       "model": "sakura:block/maple_nosap_log"
     },
     "axis=z,exhaustion=true": {
-      "model": "sakura:block/maple_nosap_log_horizontal",
+      "model": "sakura:block/horizontal_maple_nosap_log",
       "x": 90
     }
   }

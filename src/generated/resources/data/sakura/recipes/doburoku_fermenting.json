@@ -2,7 +2,7 @@
   "type": "sakura:fermenting",
   "ingredients": [
     {
-      "item": "sakura:rice_cooked"
+      "item": "sakura:cooked_rice"
     },
     {
       "tag": "forge:kouji"

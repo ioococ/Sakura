@@ -8,15 +8,15 @@ import cn.mcmod_mmf.mmlib.item.info.FoodInfo;
 
 public final class ItemList {
     public static List<String> MATERIAL_SET = Lists.newArrayList("silk", "hop", "straw", "brown_rice", "rice", "salt",
-            "curry_powder", "alkaline", "yeast", "flour", "flour_rice", "flour_buckwheat", "dough", "dough_rice",
-            "dough_buckwheat", "ramen_raw", "udon_raw", "soba_raw", "pasta_raw", "maple_syrup", "noodle_soup",
+            "curry_powder", "alkaline", "yeast", "flour", "rice_flour", "buckwheat_flour", "dough", "rice_dough",
+            "buckwheat_dough", "raw_ramen", "raw_udon", "raw_soba", "raw_pasta", "maple_syrup", "noodle_soup",
             "soysause", "seaweed", "worcester_sauce", "mayo", "vinegar", "curry_sauce", "tomato_sauce", "white_sauce",
-            "tempura_batter", "chestnut_burrs", "chestnut", "peppercorn_green", "peppercorn_red", "black_pepper",
-            "white_pepper", "grape_seeds", "vanilla_seeds", "vanilla", "vanilla_roast", "lumber_bamboo",
-            "lumber_sakura", "lumber_maple", "miso", "miso_ball", "breadcrumbs", "green_tea_leaves", "black_tea_leaves",
+            "tempura_batter", "chestnut_burr", "chestnut", "green_peppercorn", "red_peppercorn", "black_pepper",
+            "white_pepper", "grape_seeds", "vanilla_seeds", "vanilla", "vanilla_roast", "bamboo_lumber",
+            "sakura_lumber", "maple_lumber", "miso", "miso_ball", "breadcrumbs", "green_tea_leaves", "black_tea_leaves",
             "earl_grey_leaves", "fruit_tea_leaves", "mocha", "rice_tea_leaves", "mint", "mint_tea_leaves", "coin",
             "zuku", "zuku_ingot", "sagegane", "tamahagane", "steel_ingot", "imogara", "dried_imogara",
-            "imogaranawa_piece", "empty_bottle", "bento_box", "bamboo_sunburnt", "bamboo_charcoal");
+            "imogaranawa_piece", "empty_bottle", "bento_box", "sunburnt_bamboo", "charcoal_bamboo");
 
     public static List<FoodInfo> FOODSET = Lists.newArrayList(
             FoodInfo.builder().name("rice_bread").amountAndCalories(5, 0.6F).water(0F).nutrients(2F, 0F, 0F, 0F, 0F)
@@ -71,15 +71,15 @@ public final class ItemList {
                     .decayModifier(3F).heatCapacity(1F).cookingTemp(480F).build(),
             FoodInfo.builder().name("dried_bonito").amountAndCalories(3, 0.3F).water(0F).nutrients(0F, 0F, 0F, 2F, 2F)
                     .decayModifier(0F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("bonito_shaving").amountAndCalories(1, 0.1F).water(0F).nutrients(0F, 0F, 0F, 2F, 2F)
+            FoodInfo.builder().name("shaved_bonito").amountAndCalories(1, 0.1F).water(0F).nutrients(0F, 0F, 0F, 2F, 2F)
                     .decayModifier(0F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("chestnut_toasted").amountAndCalories(4, 0.4F).water(0.5F)
+            FoodInfo.builder().name("toasted_chestnut").amountAndCalories(4, 0.4F).water(0.5F)
                     .nutrients(2F, 0F, 2F, 0F, 0F).decayModifier(2.5F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("taro_baked").amountAndCalories(5, 0.6F).water(0F).nutrients(2F, 2F, 0F, 0F, 0F)
+            FoodInfo.builder().name("baked_taro").amountAndCalories(5, 0.6F).water(0F).nutrients(2F, 2F, 0F, 0F, 0F)
                     .decayModifier(2F).heatCapacity(1F).cookingTemp(480F).build(),
             FoodInfo.builder().name("roast_matsutake").amountAndCalories(5, 0.6F).water(0F)
                     .nutrients(0F, 0F, 3F, 0F, 0F).decayModifier(1F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("eggplant_baked").amountAndCalories(4, 0.5F).water(1F).nutrients(0F, 0F, 3F, 0F, 0F)
+            FoodInfo.builder().name("baked_eggplant").amountAndCalories(4, 0.5F).water(1F).nutrients(0F, 0F, 3F, 0F, 0F)
                     .decayModifier(3F).heatCapacity(1F).cookingTemp(480F).build(),
             FoodInfo.builder().name("tamagoyaki").amountAndCalories(6, 0.6F).water(0.5F).nutrients(2F, 0F, 0F, 0F, 3F)
                     .decayModifier(3F).heatCapacity(1F).cookingTemp(480F).build(),
@@ -87,7 +87,7 @@ public final class ItemList {
                     .decayModifier(1.5F).heatCapacity(1F).cookingTemp(480F).build(),
             FoodInfo.builder().name("tofu").amountAndCalories(2, 0.4F).water(0.5F).nutrients(0F, 0F, 2F, 0F, 0.5F)
                     .decayModifier(3F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("tofu_fried").amountAndCalories(4, 0.5F).water(0.5F)
+            FoodInfo.builder().name("fried_tofu").amountAndCalories(4, 0.5F).water(0.5F)
                     .nutrients(0.5F, 0F, 3F, 0F, 0.5F).decayModifier(2F).heatCapacity(1F).cookingTemp(480F).build(),
             FoodInfo.builder().name("natto").amountAndCalories(2, 0.5F).water(0.5F).nutrients(1F, 0F, 2F, 0F, 0F)
                     .decayModifier(2F).heatCapacity(1F).cookingTemp(480F).build(),
@@ -103,7 +103,7 @@ public final class ItemList {
                     .decayModifier(1.25F).heatCapacity(0F).cookingTemp(-1F).build(),
             FoodInfo.builder().name("tempura").amountAndCalories(5, 0.6F).water(0F).nutrients(1F, 0F, 0F, 2F, 0F)
                     .decayModifier(1.5F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("burger_raw").amountAndCalories(2, 0.2F).water(1F).nutrients(0.5F, 0F, 0F, 3F, 0F)
+            FoodInfo.builder().name("raw_burger").amountAndCalories(2, 0.2F).water(1F).nutrients(0.5F, 0F, 0F, 3F, 0F)
                     .decayModifier(2F).heatCapacity(1F).cookingTemp(200F).build(),
             FoodInfo.builder().name("burger").amountAndCalories(6, 0.6F).water(2F).nutrients(0.5F, 0F, 0F, 4F, 0F)
                     .decayModifier(2F).heatCapacity(1F).cookingTemp(200F).build(),
@@ -113,9 +113,9 @@ public final class ItemList {
                     .nutrients(0.5F, 0F, 2F, 5F, 1F).decayModifier(3F).heatCapacity(1F).cookingTemp(480F).build(),
             FoodInfo.builder().name("croquette_dish").amountAndCalories(8, 0.6F).water(0.5F)
                     .nutrients(0.5F, 0F, 2F, 5F, 1F).decayModifier(3F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("egg_soft").amountAndCalories(2, 0.6F).water(1F).nutrients(0F, 0F, 0F, 0.0F, 3.0F)
+            FoodInfo.builder().name("soft_egg").amountAndCalories(2, 0.6F).water(1F).nutrients(0F, 0F, 0F, 0.0F, 3.0F)
                     .decayModifier(2F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("egg_soysauce").amountAndCalories(4, 0.6F).water(1F)
+            FoodInfo.builder().name("soysauce_egg").amountAndCalories(4, 0.6F).water(1F)
                     .nutrients(0F, 0F, 0F, 0.0F, 3.5F).decayModifier(1.0F).heatCapacity(1F).cookingTemp(480F).build(),
             FoodInfo.builder().name("lemon_juice").amountAndCalories(1, 0.1F).water(40F).nutrients(0F, 2F, 0F, 0F, 0F)
                     .decayModifier(5F).heatCapacity(0F).cookingTemp(0F).build(),
@@ -125,11 +125,11 @@ public final class ItemList {
                     .nutrients(0F, 2F, 0F, 0F, 0F).decayModifier(5F).heatCapacity(0F).cookingTemp(0F).build(),
             FoodInfo.builder().name("orange_juice").amountAndCalories(1, 0.1F).water(40F).nutrients(0F, 2F, 0F, 0F, 0F)
                     .decayModifier(5F).heatCapacity(0F).cookingTemp(0F).build(),
-            FoodInfo.builder().name("brown_rice_cooked").amountAndCalories(4, 0.5F).water(0.5F)
+            FoodInfo.builder().name("cooked_brown_rice").amountAndCalories(4, 0.5F).water(0.5F)
                     .nutrients(1.5F, 0F, 0F, 0F, 0F).decayModifier(2F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("rice_cooked").amountAndCalories(4, 0.5F).water(0.5F)
+            FoodInfo.builder().name("cooked_rice").amountAndCalories(4, 0.5F).water(0.5F)
                     .nutrients(1.5F, 0F, 0F, 0F, 0F).decayModifier(2F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("rice_redbean").amountAndCalories(6, 0.6F).water(0.5F).nutrients(4F, 0F, 2F, 0F, 0F)
+            FoodInfo.builder().name("red_bean_rice").amountAndCalories(6, 0.6F).water(0.5F).nutrients(4F, 0F, 2F, 0F, 0F)
                     .decayModifier(3F).heatCapacity(1F).cookingTemp(480F).build(),
             FoodInfo.builder().name("fried_brown_rice").amountAndCalories(4, 0.5F).water(0F)
                     .nutrients(1.5F, 0F, 0F, 0F, 0F).decayModifier(0F).heatCapacity(1F).cookingTemp(480F).build(),
@@ -137,151 +137,151 @@ public final class ItemList {
                     .nutrients(1.5F, 0F, 0F, 0F, 0F).decayModifier(0F).heatCapacity(1F).cookingTemp(480F).build(),
             FoodInfo.builder().name("dried_rice").amountAndCalories(4, 0.5F).water(0F).nutrients(1.5F, 0F, 0F, 0F, 0F)
                     .decayModifier(0F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("rice_natto").amountAndCalories(5, 0.6F).water(0.5F).nutrients(2.5F, 0F, 2F, 0F, 0F)
+            FoodInfo.builder().name("natto_rice").amountAndCalories(5, 0.6F).water(0.5F).nutrients(2.5F, 0F, 2F, 0F, 0F)
                     .decayModifier(2.25F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("rice_bamboo").amountAndCalories(5, 0.6F).water(0.5F)
+            FoodInfo.builder().name("bamboo_rice").amountAndCalories(5, 0.6F).water(0.5F)
                     .nutrients(1.5F, 1F, 0F, 0F, 0F).decayModifier(2.25F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("rice_fish").amountAndCalories(7, 0.7F).water(0.5F).nutrients(1.5F, 0F, 0F, 2F, 0F)
+            FoodInfo.builder().name("fish_rice").amountAndCalories(7, 0.7F).water(0.5F).nutrients(1.5F, 0F, 0F, 2F, 0F)
                     .decayModifier(2.25F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("rice_beef").amountAndCalories(9, 0.8F).water(0.5F).nutrients(1.5F, 0F, 0F, 3F, 0F)
+            FoodInfo.builder().name("beef_rice").amountAndCalories(9, 0.8F).water(0.5F).nutrients(1.5F, 0F, 0F, 3F, 0F)
                     .decayModifier(2.25F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("rice_pork").amountAndCalories(7, 0.7F).water(0.5F).nutrients(1.5F, 0F, 0F, 3F, 0F)
+            FoodInfo.builder().name("pork_rice").amountAndCalories(7, 0.7F).water(0.5F).nutrients(1.5F, 0F, 0F, 3F, 0F)
                     .decayModifier(2.25F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("rice_mushroom").amountAndCalories(6, 0.6F).water(0.5F)
+            FoodInfo.builder().name("mushroom_rice").amountAndCalories(6, 0.6F).water(0.5F)
                     .nutrients(1.5F, 0F, 2F, 0F, 0F).decayModifier(2F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("rice_matsutake").amountAndCalories(8, 0.6F).water(0.5F)
+            FoodInfo.builder().name("matsutake_rice").amountAndCalories(8, 0.6F).water(0.5F)
                     .nutrients(2F, 0F, 3F, 0F, 1F).decayModifier(2F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("rice_egg").amountAndCalories(5, 0.6F).water(0.5F).nutrients(1.5F, 0F, 0F, 0F, 2F)
+            FoodInfo.builder().name("egg_rice").amountAndCalories(5, 0.6F).water(0.5F).nutrients(1.5F, 0F, 0F, 0F, 2F)
                     .decayModifier(2.25F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("rice_beef_egg").amountAndCalories(10, 1F).water(0.5F)
+            FoodInfo.builder().name("beef_egg_rice").amountAndCalories(10, 1F).water(0.5F)
                     .nutrients(1.5F, 0F, 0F, 3.5F, 2F).decayModifier(2.25F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("rice_natto_egg").amountAndCalories(6, 0.6F).water(0.5F)
+            FoodInfo.builder().name("natto_egg_rice").amountAndCalories(6, 0.6F).water(0.5F)
                     .nutrients(2.5F, 0F, 3F, 0F, 3F).decayModifier(2.25F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("rice_pork_egg").amountAndCalories(9, 0.8F).water(0.5F)
+            FoodInfo.builder().name("pork_egg_rice").amountAndCalories(9, 0.8F).water(0.5F)
                     .nutrients(1.5F, 0F, 0F, 3.5F, 2F).decayModifier(2.25F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("rice_pork_fried").amountAndCalories(10, 1F).water(0.5F)
+            FoodInfo.builder().name("fried_pork_rice").amountAndCalories(10, 1F).water(0.5F)
                     .nutrients(2F, 0F, 0F, 4F, 4F).decayModifier(2.25F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("rice_oyako").amountAndCalories(9, 0.8F).water(0.5F)
+            FoodInfo.builder().name("oyako_rice").amountAndCalories(9, 0.8F).water(0.5F)
                     .nutrients(1.5F, 0F, 0F, 3.5F, 2F).decayModifier(2.25F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("rice_oyako_fish").amountAndCalories(9, 0.8F).water(0.5F)
+            FoodInfo.builder().name("fish_oyako_rice").amountAndCalories(9, 0.8F).water(0.5F)
                     .nutrients(1.5F, 0F, 0F, 3.5F, 2F).decayModifier(2.25F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("rice_curry").amountAndCalories(6, 0.6F).water(0.5F).nutrients(2.5F, 0F, 1F, 1F, 1F)
+            FoodInfo.builder().name("curry_rice").amountAndCalories(6, 0.6F).water(0.5F).nutrients(2.5F, 0F, 1F, 1F, 1F)
                     .decayModifier(2.25F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("rice_curry_katsu").amountAndCalories(10, 0.8F).water(0.5F)
+            FoodInfo.builder().name("katsu_curry_rice").amountAndCalories(10, 0.8F).water(0.5F)
                     .nutrients(3F, 0F, 1F, 4F, 1F).decayModifier(2.25F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("rice_curry_burger").amountAndCalories(10, 0.8F).water(0.5F)
+            FoodInfo.builder().name("burger_curry_rice").amountAndCalories(10, 0.8F).water(0.5F)
                     .nutrients(3F, 0F, 1F, 4F, 1F).decayModifier(2.25F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("rice_curry_cheese").amountAndCalories(8, 0.8F).water(0.5F)
+            FoodInfo.builder().name("cheese_curry_rice").amountAndCalories(8, 0.8F).water(0.5F)
                     .nutrients(2.5F, 0F, 1F, 1F, 4F).decayModifier(2.25F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("rice_curry_cheese_katsu").amountAndCalories(12, 0.8F).water(0.5F)
+            FoodInfo.builder().name("cheese_katsu_curry_rice").amountAndCalories(12, 0.8F).water(0.5F)
                     .nutrients(3F, 0F, 1F, 4F, 3F).decayModifier(2.25F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("rice_curry_cheese_burger").amountAndCalories(12, 0.8F).water(0.5F)
+            FoodInfo.builder().name("cheese_burger_curry_rice").amountAndCalories(12, 0.8F).water(0.5F)
                     .nutrients(3F, 0F, 1F, 4F, 3F).decayModifier(2.25F).heatCapacity(1F).cookingTemp(480F).build(),
             FoodInfo.builder().name("omurice").amountAndCalories(8, 0.6F).water(0.5F).nutrients(2F, 0F, 3F, 3F, 2F)
                     .decayModifier(2.5F).heatCapacity(1F).cookingTemp(480F).build(),
             FoodInfo.builder().name("curry_omurice").amountAndCalories(8, 0.6F).water(0.5F)
                     .nutrients(3F, 0F, 1F, 4F, 3F).decayModifier(2.25F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("rice_fried").amountAndCalories(8, 0.6F).water(0.5F).nutrients(1.5F, 0F, 2F, 2F, 0F)
+            FoodInfo.builder().name("fried_rice").amountAndCalories(8, 0.6F).water(0.5F).nutrients(1.5F, 0F, 2F, 2F, 0F)
                     .decayModifier(2.5F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("zosui_zuiki").amountAndCalories(6, 1F).water(5F).nutrients(2F, 0F, 2F, 0F, 0F)
+            FoodInfo.builder().name("zuiki_zosui").amountAndCalories(6, 1F).water(5F).nutrients(2F, 0F, 2F, 0F, 0F)
                     .decayModifier(5F).heatCapacity(1F).cookingTemp(480F).build(),
             FoodInfo.builder().name("zosui").amountAndCalories(8, 1F).water(5F).nutrients(0F, 0F, 0F, 3F, 3F)
                     .decayModifier(5F).heatCapacity(1F).cookingTemp(480F).build(),
             FoodInfo.builder().name("onigiri").amountAndCalories(6, 0.6F).water(0.5F).nutrients(2F, 0F, 1F, 0F, 0F)
                     .decayModifier(2F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("onigiri_bamboo").amountAndCalories(7, 0.7F).water(0.5F)
+            FoodInfo.builder().name("bamboo_onigiri").amountAndCalories(7, 0.7F).water(0.5F)
                     .nutrients(2F, 0F, 2F, 0F, 0F).decayModifier(2.25F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("onigiri_fish").amountAndCalories(8, 0.7F).water(0.5F).nutrients(2F, 0F, 1F, 2F, 0F)
+            FoodInfo.builder().name("fish_onigiri").amountAndCalories(8, 0.7F).water(0.5F).nutrients(2F, 0F, 1F, 2F, 0F)
                     .decayModifier(2.25F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("onigiri_mushroom").amountAndCalories(7, 0.7F).water(0.5F)
+            FoodInfo.builder().name("mushroom_onigiri").amountAndCalories(7, 0.7F).water(0.5F)
                     .nutrients(2F, 0F, 2F, 0F, 0.5F).decayModifier(2F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("onigiri_seaweed").amountAndCalories(7, 0.7F).water(0.5F)
+            FoodInfo.builder().name("seaweed_onigiri").amountAndCalories(7, 0.7F).water(0.5F)
                     .nutrients(2F, 0F, 2F, 0F, 0.5F).decayModifier(2.25F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("onigiri_tempura").amountAndCalories(10, 0.8F).water(0.5F)
+            FoodInfo.builder().name("tempura_onigiri").amountAndCalories(10, 0.8F).water(0.5F)
                     .nutrients(2F, 0F, 2F, 4F, 1F).decayModifier(2.25F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("onigiri_matsutake").amountAndCalories(9, 0.7F).water(0.5F)
+            FoodInfo.builder().name("matsutake_onigiri").amountAndCalories(9, 0.7F).water(0.5F)
                     .nutrients(2F, 0F, 4F, 0F, 1F).decayModifier(2F).heatCapacity(1F).cookingTemp(480F).build(),
             FoodInfo.builder().name("sushi").amountAndCalories(5, 0.6F).water(1F).nutrients(2F, 0F, 0F, 2F, 0F)
                     .decayModifier(4F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("sushi_shrimp").amountAndCalories(5, 0.6F).water(1F).nutrients(2F, 0F, 0F, 2F, 0F)
+            FoodInfo.builder().name("shrimp_sushi").amountAndCalories(5, 0.6F).water(1F).nutrients(2F, 0F, 0F, 2F, 0F)
                     .decayModifier(4F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("sushi_tamago").amountAndCalories(4, 0.6F).water(1F).nutrients(2F, 0F, 0F, 0F, 2F)
+            FoodInfo.builder().name("tamago_sushi").amountAndCalories(4, 0.6F).water(1F).nutrients(2F, 0F, 0F, 0F, 2F)
                     .decayModifier(4F).heatCapacity(1F).cookingTemp(480F).build(),
             FoodInfo.builder().name("ehoumaki").amountAndCalories(8, 0.6F).water(1F).nutrients(2F, 0F, 3F, 3F, 2F)
                     .decayModifier(4F).heatCapacity(1F).cookingTemp(480F).build(),
             FoodInfo.builder().name("mochi").amountAndCalories(2, 0.5F).water(0.5F).nutrients(2F, 0F, 0F, 0F, 0F)
                     .decayModifier(2F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("mochi_toasted").amountAndCalories(4, 0.6F).water(0.5F)
+            FoodInfo.builder().name("toasted_mochi").amountAndCalories(4, 0.6F).water(0.5F)
                     .nutrients(3F, 0F, 0F, 0F, 0F).decayModifier(1.5F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("mochi_sakura").amountAndCalories(4, 0.6F).water(0.5F)
+            FoodInfo.builder().name("sakura_mochi").amountAndCalories(4, 0.6F).water(0.5F)
                     .nutrients(3F, 0F, 1F, 0F, 0.5F).decayModifier(2F).heatCapacity(1F).cookingTemp(480F).build(),
             FoodInfo.builder().name("ohagi").amountAndCalories(6, 0.6F).water(0.5F).nutrients(3F, 0F, 0.5F, 0F, 0.5F)
                     .decayModifier(2.25F).heatCapacity(1F).cookingTemp(480F).build(),
             FoodInfo.builder().name("ramen").amountAndCalories(4, 0.5F).water(35F).nutrients(1.5F, 0F, 0F, 0F, 0F)
                     .decayModifier(0F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("ramen_beef").amountAndCalories(9, 0.8F).water(35F).nutrients(1.5F, 0F, 0F, 3F, 0F)
+            FoodInfo.builder().name("beef_ramen").amountAndCalories(9, 0.8F).water(35F).nutrients(1.5F, 0F, 0F, 3F, 0F)
                     .decayModifier(5F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("ramen_egg").amountAndCalories(5, 0.6F).water(35F).nutrients(1.5F, 0F, 0F, 0F, 2F)
+            FoodInfo.builder().name("egg_ramen").amountAndCalories(5, 0.6F).water(35F).nutrients(1.5F, 0F, 0F, 0F, 2F)
                     .decayModifier(5F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("ramen_tempura").amountAndCalories(9, 0.8F).water(35F).nutrients(2F, 0F, 0F, 3F, 0F)
+            FoodInfo.builder().name("tempura_ramen").amountAndCalories(9, 0.8F).water(35F).nutrients(2F, 0F, 0F, 3F, 0F)
                     .decayModifier(5F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("ramen_friedtofu").amountAndCalories(9, 0.7F).water(35F)
+            FoodInfo.builder().name("friedtofu_ramen").amountAndCalories(9, 0.7F).water(35F)
                     .nutrients(2F, 0F, 2F, 0F, 0F).decayModifier(5F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("ramen_katsu").amountAndCalories(10, 0.8F).water(35F).nutrients(2F, 0F, 0F, 4F, 0F)
+            FoodInfo.builder().name("katsu_ramen").amountAndCalories(10, 0.8F).water(35F).nutrients(2F, 0F, 0F, 4F, 0F)
                     .decayModifier(5F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("ramen_chicken").amountAndCalories(9, 0.8F).water(35F).nutrients(2F, 0F, 0F, 4F, 0F)
+            FoodInfo.builder().name("chicken_ramen").amountAndCalories(9, 0.8F).water(35F).nutrients(2F, 0F, 0F, 4F, 0F)
                     .decayModifier(5F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("ramen_croquette").amountAndCalories(9, 0.8F).water(35F)
+            FoodInfo.builder().name("croquette_ramen").amountAndCalories(9, 0.8F).water(35F)
                     .nutrients(2F, 0F, 0F, 4F, 0F).decayModifier(5F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("ramen_large").amountAndCalories(12, 1F).water(35F).nutrients(2F, 0F, 5F, 5F, 2F)
+            FoodInfo.builder().name("large_ramen").amountAndCalories(12, 1F).water(35F).nutrients(2F, 0F, 5F, 5F, 2F)
                     .decayModifier(5F).heatCapacity(1F).cookingTemp(480F).build(),
             FoodInfo.builder().name("udon").amountAndCalories(4, 0.5F).water(35F).nutrients(1.5F, 0F, 0F, 0F, 0F)
                     .decayModifier(4F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("udon_beef").amountAndCalories(9, 0.8F).water(35F).nutrients(1.5F, 0F, 0F, 3F, 0F)
+            FoodInfo.builder().name("beef_udon").amountAndCalories(9, 0.8F).water(35F).nutrients(1.5F, 0F, 0F, 3F, 0F)
                     .decayModifier(5F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("udon_egg").amountAndCalories(5, 0.6F).water(35F).nutrients(1.5F, 0F, 0F, 0F, 2F)
+            FoodInfo.builder().name("egg_udon").amountAndCalories(5, 0.6F).water(35F).nutrients(1.5F, 0F, 0F, 0F, 2F)
                     .decayModifier(5F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("udon_tempura").amountAndCalories(9, 0.8F).water(35F).nutrients(2F, 0F, 0F, 3F, 0F)
+            FoodInfo.builder().name("tempura_udon").amountAndCalories(9, 0.8F).water(35F).nutrients(2F, 0F, 0F, 3F, 0F)
                     .decayModifier(5F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("udon_friedtofu").amountAndCalories(9, 0.7F).water(35F)
+            FoodInfo.builder().name("friedtofu_udon").amountAndCalories(9, 0.7F).water(35F)
                     .nutrients(2F, 0F, 2F, 0F, 0F).decayModifier(5F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("udon_katsu").amountAndCalories(10, 0.8F).water(35F).nutrients(2F, 0F, 0F, 4F, 0F)
+            FoodInfo.builder().name("katsu_udon").amountAndCalories(10, 0.8F).water(35F).nutrients(2F, 0F, 0F, 4F, 0F)
                     .decayModifier(5F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("udon_croquette").amountAndCalories(9, 0.8F).water(35F)
+            FoodInfo.builder().name("croquette_udon").amountAndCalories(9, 0.8F).water(35F)
                     .nutrients(2F, 0F, 0F, 4F, 0F).decayModifier(5F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("udon_chicken").amountAndCalories(9, 0.8F).water(35F).nutrients(2F, 0F, 0F, 4F, 0F)
+            FoodInfo.builder().name("chicken_udon").amountAndCalories(9, 0.8F).water(35F).nutrients(2F, 0F, 0F, 4F, 0F)
                     .decayModifier(5F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("udon_large").amountAndCalories(12, 1F).water(35F).nutrients(2F, 0F, 5F, 5F, 2F)
+            FoodInfo.builder().name("large_udon").amountAndCalories(12, 1F).water(35F).nutrients(2F, 0F, 5F, 5F, 2F)
                     .decayModifier(5F).heatCapacity(1F).cookingTemp(480F).build(),
             FoodInfo.builder().name("yaki_udon").amountAndCalories(9, 0.7F).water(2.5F).nutrients(1.5F, 0F, 4F, 2F, 2F)
                     .decayModifier(3.5F).heatCapacity(1F).cookingTemp(480F).build(),
             FoodInfo.builder().name("soba").amountAndCalories(4, 0.5F).water(35F).nutrients(1.5F, 0F, 0F, 0F, 0F)
                     .decayModifier(4F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("soba_beef").amountAndCalories(9, 0.8F).water(35F).nutrients(1.5F, 0F, 0F, 3F, 0F)
+            FoodInfo.builder().name("beef_soba").amountAndCalories(9, 0.8F).water(35F).nutrients(1.5F, 0F, 0F, 3F, 0F)
                     .decayModifier(5F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("soba_egg").amountAndCalories(5, 0.6F).water(35F).nutrients(1.5F, 0F, 0F, 0F, 2F)
+            FoodInfo.builder().name("egg_soba").amountAndCalories(5, 0.6F).water(35F).nutrients(1.5F, 0F, 0F, 0F, 2F)
                     .decayModifier(5F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("soba_tempura").amountAndCalories(9, 0.8F).water(35F).nutrients(2F, 0F, 0F, 3F, 0F)
+            FoodInfo.builder().name("tempura_soba").amountAndCalories(9, 0.8F).water(35F).nutrients(2F, 0F, 0F, 3F, 0F)
                     .decayModifier(5F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("soba_friedtofu").amountAndCalories(9, 0.7F).water(35F)
+            FoodInfo.builder().name("friedtofu_soba").amountAndCalories(9, 0.7F).water(35F)
                     .nutrients(2F, 0F, 2F, 0F, 0F).decayModifier(5F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("soba_katsu").amountAndCalories(10, 0.8F).water(35F).nutrients(2F, 0F, 0F, 4F, 0F)
+            FoodInfo.builder().name("katsu_soba").amountAndCalories(10, 0.8F).water(35F).nutrients(2F, 0F, 0F, 4F, 0F)
                     .decayModifier(5F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("soba_croquette").amountAndCalories(9, 0.8F).water(35F)
+            FoodInfo.builder().name("croquette_soba").amountAndCalories(9, 0.8F).water(35F)
                     .nutrients(2F, 0F, 0F, 4F, 0F).decayModifier(5F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("soba_chicken").amountAndCalories(9, 0.8F).water(35F).nutrients(2F, 0F, 0F, 4F, 0F)
+            FoodInfo.builder().name("chicken_soba").amountAndCalories(9, 0.8F).water(35F).nutrients(2F, 0F, 0F, 4F, 0F)
                     .decayModifier(5F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("soba_large").amountAndCalories(12, 1F).water(35F).nutrients(2F, 0F, 5F, 5F, 2F)
+            FoodInfo.builder().name("large_soba").amountAndCalories(12, 1F).water(35F).nutrients(2F, 0F, 5F, 5F, 2F)
                     .decayModifier(5F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("soba_zaru").amountAndCalories(6, 0.7F).water(5F).nutrients(2F, 0F, 0.5F, 0F, 0F)
+            FoodInfo.builder().name("zaru_soba").amountAndCalories(6, 0.7F).water(5F).nutrients(2F, 0F, 0.5F, 0F, 0F)
                     .decayModifier(3.5F).heatCapacity(1F).cookingTemp(480F).build(),
             FoodInfo.builder().name("yaki_soba").amountAndCalories(9, 0.7F).water(2.5F).nutrients(1.5F, 0F, 4F, 2F, 2F)
                     .decayModifier(3.5F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("pasta_tomato").amountAndCalories(9, 0.8F).water(1.5F).nutrients(2F, 0F, 4F, 4F, 2F)
+            FoodInfo.builder().name("tomato_pasta").amountAndCalories(9, 0.8F).water(1.5F).nutrients(2F, 0F, 4F, 4F, 2F)
                     .decayModifier(5F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("pasta_mushroom").amountAndCalories(9, 0.8F).water(1.5F)
+            FoodInfo.builder().name("mushroom_pasta").amountAndCalories(9, 0.8F).water(1.5F)
                     .nutrients(2F, 0F, 4F, 4F, 2F).decayModifier(5F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("pasta_whitesauce").amountAndCalories(9, 0.8F).water(1.5F)
+            FoodInfo.builder().name("whitesauce_pasta").amountAndCalories(9, 0.8F).water(1.5F)
                     .nutrients(2F, 0F, 4F, 4F, 2F).decayModifier(5F).heatCapacity(1F).cookingTemp(480F).build(),
             FoodInfo.builder().name("yaki_pasta").amountAndCalories(9, 0.7F).water(2.5F).nutrients(1.5F, 0F, 4F, 2F, 2F)
                     .decayModifier(3.5F).heatCapacity(1F).cookingTemp(480F).build(),
@@ -299,9 +299,9 @@ public final class ItemList {
                     .decayModifier(1.5F).heatCapacity(1F).cookingTemp(480F).build(),
             FoodInfo.builder().name("pork_stick").amountAndCalories(6, 0.6F).water(2F).nutrients(0F, 0F, 0F, 4F, 0F)
                     .decayModifier(1.5F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("soup_red_bean").amountAndCalories(6, 0.6F).water(5F).nutrients(2F, 0F, 2F, 0F, 2F)
+            FoodInfo.builder().name("red_bean_soup").amountAndCalories(6, 0.6F).water(5F).nutrients(2F, 0F, 2F, 0F, 2F)
                     .decayModifier(5F).heatCapacity(0F).cookingTemp(0F).build(),
-            FoodInfo.builder().name("soup_miso").amountAndCalories(5, 0.5F).water(50F).nutrients(0F, 0F, 0F, 0F, 0F)
+            FoodInfo.builder().name("miso_soup").amountAndCalories(5, 0.5F).water(50F).nutrients(0F, 0F, 0F, 0F, 0F)
                     .decayModifier(5F).heatCapacity(1F).cookingTemp(480F).build(),
             FoodInfo.builder().name("chawanmushi").amountAndCalories(6, 0.5F).water(5F).nutrients(0F, 0F, 3F, 3F, 3F)
                     .decayModifier(5F).heatCapacity(2F).cookingTemp(480F).build(),
@@ -315,7 +315,7 @@ public final class ItemList {
                     .nutrients(2F, 0F, 0F, 0F, 0.2F).decayModifier(0.8F).heatCapacity(1F).cookingTemp(480F).build(),
             FoodInfo.builder().name("pudding").amountAndCalories(4, 0.4F).water(2F).nutrients(2F, 0F, 0F, 0F, 2F)
                     .decayModifier(2.5F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("pudding_maple").amountAndCalories(6, 0.6F).water(2F).nutrients(3F, 0F, 0F, 0F, 2F)
+            FoodInfo.builder().name("maple_pudding").amountAndCalories(6, 0.6F).water(2F).nutrients(3F, 0F, 0F, 0F, 2F)
                     .decayModifier(2.5F).heatCapacity(1F).cookingTemp(480F).build(),
             FoodInfo.builder().name("pound_cake").amountAndCalories(5, 0.6F).water(0.5F).nutrients(4F, 2F, 0F, 0F, 4F)
                     .decayModifier(3F).heatCapacity(1F).cookingTemp(480F).build(),
@@ -329,15 +329,15 @@ public final class ItemList {
                     .nutrients(4F, 0F, 0F, 0F, 4F).decayModifier(1F).heatCapacity(1F).cookingTemp(480F).build(),
             FoodInfo.builder().name("mocha_cookie").amountAndCalories(5, 0.25F).water(0.75F)
                     .nutrients(2F, 0F, 0F, 0F, 0.2F).decayModifier(0.8F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("pudding_mocha").amountAndCalories(6, 0.6F).water(2F).nutrients(3F, 0F, 0F, 0F, 2F)
+            FoodInfo.builder().name("mocha_pudding").amountAndCalories(6, 0.6F).water(2F).nutrients(3F, 0F, 0F, 0F, 2F)
                     .decayModifier(2.5F).heatCapacity(1F).cookingTemp(480F).build(),
             FoodInfo.builder().name("pound_cake_mocha").amountAndCalories(7, 0.6F).water(0.5F)
                     .nutrients(4F, 2F, 0F, 0F, 4F).decayModifier(3F).heatCapacity(1F).cookingTemp(480F).build(),
             FoodInfo.builder().name("sashimi").amountAndCalories(6, 0.6F).water(1F).nutrients(0F, 0F, 1F, 3F, 0F)
                     .decayModifier(4F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("fish_bake").amountAndCalories(8, 0.8F).water(0.5F).nutrients(0F, 0F, 0F, 4F, 0F)
+            FoodInfo.builder().name("baked_fish").amountAndCalories(8, 0.8F).water(0.5F).nutrients(0F, 0F, 0F, 4F, 0F)
                     .decayModifier(3F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("fish_bake_salt").amountAndCalories(8, 0.8F).water(0.5F)
+            FoodInfo.builder().name("salt_baked_fish").amountAndCalories(8, 0.8F).water(0.5F)
                     .nutrients(0F, 0F, 0F, 4F, 0F).decayModifier(3F).heatCapacity(1F).cookingTemp(480F).build(),
             FoodInfo.builder().name("mabodofu").amountAndCalories(8, 0.6F).water(1F).nutrients(1F, 0F, 3F, 1F, 0F)
                     .decayModifier(4F).heatCapacity(1F).cookingTemp(480F).build(),
@@ -355,7 +355,7 @@ public final class ItemList {
                     .decayModifier(3F).heatCapacity(1F).cookingTemp(480F).build(),
             FoodInfo.builder().name("cheese_burger").amountAndCalories(10, 0.8F).water(0.5F)
                     .nutrients(2F, 0F, 2F, 4F, 3F).decayModifier(3F).heatCapacity(1F).cookingTemp(480F).build(),
-            FoodInfo.builder().name("dough_okinoyaki").amountAndCalories(2, 0.2F).water(0F)
+            FoodInfo.builder().name("okinoyaki_dough").amountAndCalories(2, 0.2F).water(0F)
                     .nutrients(2F, 0F, 2F, 2F, 2F).decayModifier(0F).heatCapacity(1F).cookingTemp(480F).build(),
             FoodInfo.builder().name("okinoyaki").amountAndCalories(8, 0.8F).water(0.5F).nutrients(2F, 0F, 3F, 3F, 3F)
                     .decayModifier(1F).heatCapacity(1F).cookingTemp(480F).build(),

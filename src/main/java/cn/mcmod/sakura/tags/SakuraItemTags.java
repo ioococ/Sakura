@@ -9,7 +9,7 @@ import net.minecraftforge.common.Tags;
 public class SakuraItemTags {
     public static final TagKey<Item> OFFHAND_EQUIPMENT = TagUtils.modItemTag(Sakura.MOD_ID,"offhand_equipment");
     public static final TagKey<Item> SOUPS = TagUtils.modItemTag(Sakura.MOD_ID,"soups");
-    
+
     public static final TagKey<Item> SALT = TagUtils.forgeItemTag("salt");
     public static final TagKey<Item> DUST_SALT = TagUtils.forgeItemTag("dust/salt");
     public static final TagKey<Item> SALT_SALT = TagUtils.forgeItemTag("salt/salt");
@@ -19,11 +19,11 @@ public class SakuraItemTags {
 
     public static final TagKey<Item> WATER = TagUtils.forgeItemTag("water");
     public static final TagKey<Item> WATER_WATER = TagUtils.forgeItemTag("water/water");
-    
+
     public static final TagKey<Item> KOUJI = TagUtils.forgeItemTag("kouji");
     public static final TagKey<Item> NATTO = TagUtils.forgeItemTag("natto");
     public static final TagKey<Item> YEAST = TagUtils.forgeItemTag("yeast");
-    
+
     public static final TagKey<Item> TOFU = TagUtils.forgeItemTag("tofu");
     public static final TagKey<Item> TOFU_FRIED = TagUtils.forgeItemTag("tofu/fried");
 
@@ -33,11 +33,11 @@ public class SakuraItemTags {
     public static final TagKey<Item> CHEESE_CHEESE = TagUtils.forgeItemTag("cheese/cheese");
     public static final TagKey<Item> COOKIES = TagUtils.forgeItemTag("cookies");
 //    public static final TagKey<Item> COOKIE_MATCHA = TagUtils.forgeItemTag("cookies/matcha");
-    
+
     public static final TagKey<Item> TOMATOSAUCE = TagUtils.forgeItemTag("tomatosauce");
-    
+
     public static final TagKey<Item> MISO = TagUtils.forgeItemTag("miso");
-    
+
     public static final TagKey<Item> SOYSAUCE = TagUtils.forgeItemTag("soysauce");
     public static final TagKey<Item> SOYSAUCE_SOYSAUCE = TagUtils.forgeItemTag("soysauce/soysauce");
 
@@ -45,7 +45,7 @@ public class SakuraItemTags {
     public static final TagKey<Item> PROTEIN_RICE = TagUtils.forgeItemTag("protein/rice");
 
     public static final TagKey<Item> STRAW = TagUtils.forgeItemTag("straw");
-    
+
     public static final TagKey<Item> SHRIMP = TagUtils.forgeItemTag("shrimp");
 
     public static final TagKey<Item> BREAD = TagUtils.forgeItemTag("bread");
@@ -59,7 +59,7 @@ public class SakuraItemTags {
     public static final TagKey<Item> FLOUR_RICE = TagUtils.forgeItemTag("flour/rice");
 
     public static final TagKey<Item> DUST_CHARCOAL = TagUtils.forgeItemTag("dust/charcoal");
-    
+
     public static final TagKey<Item> DOUGH = TagUtils.forgeItemTag("dough");
     public static final TagKey<Item> DOUGH_WHEAT = TagUtils.forgeItemTag("dough/wheat");
     public static final TagKey<Item> DOUGH_BUCKWHEAT = TagUtils.forgeItemTag("dough/buckwheat");
@@ -85,7 +85,7 @@ public class SakuraItemTags {
     public static final TagKey<Item> CROPS_EGGPLANT = TagUtils.forgeItemTag("crops/eggplant");
     public static final TagKey<Item> CROPS_RADISH = TagUtils.forgeItemTag("crops/radish");
     public static final TagKey<Item> CROPS_TARO = TagUtils.forgeItemTag("crops/taro");
-    public static final TagKey<Item> CROPS_REDBEAN = TagUtils.forgeItemTag("crops/redbean");
+    public static final TagKey<Item> CROPS_RED_BEAN = TagUtils.forgeItemTag("crops/red_bean");
     public static final TagKey<Item> CROPS_SOYBEAN = TagUtils.forgeItemTag("crops/soybean");
 
     public static final TagKey<Item> EGGS = TagUtils.forgeItemTag("eggs");
@@ -120,7 +120,7 @@ public class SakuraItemTags {
     public static final TagKey<Item> RAW_FISHES_COD = TagUtils.forgeItemTag("raw_fishes/cod");
     public static final TagKey<Item> RAW_FISHES_SALMON = TagUtils.forgeItemTag("raw_fishes/salmon");
     public static final TagKey<Item> RAW_FISHES_TROPICAL = TagUtils.forgeItemTag("raw_fishes/tropical_fish");
-    
+
     public static final TagKey<Item> SLICES = TagUtils.forgeItemTag("slices");
     public static final TagKey<Item> SLICES_CABBAGE = TagUtils.forgeItemTag("slices/cabbage");
     public static final TagKey<Item> SLICES_RAW_FISHES = TagUtils.forgeItemTag("slices/raw_fishes");
@@ -134,7 +134,7 @@ public class SakuraItemTags {
             .forgeItemTag("salad_ingredients/tomato");
 
     public static final TagKey<Item> FISHCAKE = TagUtils.modItemTag(Sakura.MOD_ID, "fishcake");
-    
+
     public static final TagKey<Item> SEEDS = TagUtils.forgeItemTag("seeds");
     public static final TagKey<Item> SEEDS_CABBAGE = TagUtils.forgeItemTag("seeds/cabbage");
     public static final TagKey<Item> SEEDS_ONION = TagUtils.forgeItemTag("seeds/onion");
@@ -143,8 +143,8 @@ public class SakuraItemTags {
     public static final TagKey<Item> SEEDS_RICE = TagUtils.forgeItemTag("seeds/rice");
     public static final TagKey<Item> SEEDS_BUCKWHEAT = TagUtils.forgeItemTag("seeds/buckwheat");
     public static final TagKey<Item> SEEDS_TOMATO = TagUtils.forgeItemTag("seeds/tomato");
-    public static final TagKey<Item> SEEDS_RAPESEED = TagUtils.forgeItemTag("seeds/rapeseed");
-    public static final TagKey<Item> SEEDS_REDBEAN = TagUtils.forgeItemTag("seeds/redbean");
+    public static final TagKey<Item> SEEDS_RAPE_SEEDS = TagUtils.forgeItemTag("seeds/rape_seeds");
+    public static final TagKey<Item> SEEDS_RED_BEAN = TagUtils.forgeItemTag("seeds/red_bean");
     public static final TagKey<Item> SEEDS_SOYBEAN = TagUtils.forgeItemTag("seeds/soybean");
 
     public static final TagKey<Item> VEGETABLES = TagUtils.forgeItemTag("vegetables");

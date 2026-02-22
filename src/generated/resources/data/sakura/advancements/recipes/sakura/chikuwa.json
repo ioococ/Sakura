@@ -6,13 +6,13 @@
     ]
   },
   "criteria": {
-    "has_sakura:chikuwa_raw": {
+    "has_sakura:raw_chikuwa": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "sakura:chikuwa_raw"
+              "sakura:raw_chikuwa"
             ]
           }
         ]
@@ -27,7 +27,7 @@
   },
   "requirements": [
     [
-      "has_sakura:chikuwa_raw",
+      "has_sakura:raw_chikuwa",
       "has_the_recipe"
     ]
   ]

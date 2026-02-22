@@ -18,7 +18,7 @@ public class TatamiBlock extends BaseHorizonBlock {
     public void randomTick(BlockState state, ServerLevel worldIn, BlockPos pos, Random rand) {
         super.randomTick(state, worldIn, pos, rand);
         if (worldIn.isDay() && worldIn.canSeeSky(pos)) {
-            worldIn.setBlockAndUpdate(pos, BlockRegistry.TATAMI_SUNBURNT.get().withPropertiesOf(state));
+            worldIn.setBlockAndUpdate(pos, BlockRegistry.SUNBURNT_TATAMI.get().withPropertiesOf(state));
         }
     }
 

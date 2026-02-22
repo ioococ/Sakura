@@ -1,0 +1,26 @@
+{
+  "type": "sakura:cooking",
+  "ingredients": [
+    {
+      "tag": "sakura:rice/rice"
+    },
+    {
+      "tag": "forge:raw_chicken"
+    },
+    {
+      "tag": "forge:eggs"
+    },
+    {
+      "tag": "forge:soysauce"
+    }
+  ],
+  "fluid": {
+    "fluidTag": "forge:water/water",
+    "amount": 125
+  },
+  "result": {
+    "item": "sakura:oyako_rice"
+  },
+  "experience": 0.0,
+  "recipeTime": 200
+}

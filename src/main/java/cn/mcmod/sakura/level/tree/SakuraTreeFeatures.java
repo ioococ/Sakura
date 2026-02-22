@@ -25,29 +25,29 @@ public class SakuraTreeFeatures {
     public static final RegistryObject<ConfiguredFeature<?, ?>> FANCY_SAKURA = WorldGenerationRegistry.FEATURES.register("fancy_sakura",
             ()->registryTree(createFancyTree(BlockRegistry.SAKURA_LOG.get(), BlockRegistry.SAKURA_LEAVES.get())));
 
-    public static final RegistryObject<ConfiguredFeature<?, ?>> MAPLE_RED = WorldGenerationRegistry.FEATURES.register("maple_red",
-            ()->registryTree(createStraightBlobTree(BlockRegistry.MAPLE_LOG.get(),BlockRegistry.MAPLE_LEAVES_RED.get(), 5, 2, 0, 2).ignoreVines()));
+    public static final RegistryObject<ConfiguredFeature<?, ?>> GREEN_MAPLE = WorldGenerationRegistry.FEATURES.register("green_maple",
+            ()->registryTree(createStraightBlobTree(BlockRegistry.MAPLE_LOG.get(),BlockRegistry.GREEN_MAPLE_LEAVES.get(), 5, 2, 0, 2).ignoreVines()));
 
-    public static final RegistryObject<ConfiguredFeature<?, ?>> FANCY_MAPLE_RED = WorldGenerationRegistry.FEATURES.register("fancy_maple_red",
-            ()->registryTree(createFancyTree(BlockRegistry.MAPLE_LOG.get(), BlockRegistry.MAPLE_LEAVES_RED.get())));
+    public static final RegistryObject<ConfiguredFeature<?, ?>> FANCY_GREEN_MAPLE = WorldGenerationRegistry.FEATURES.register("fancy_green_maple",
+            ()->registryTree(createFancyTree(BlockRegistry.MAPLE_LOG.get(), BlockRegistry.GREEN_MAPLE_LEAVES.get())));
 
-    public static final RegistryObject<ConfiguredFeature<?, ?>> MAPLE_YELLOW = WorldGenerationRegistry.FEATURES.register("maple_yellow",
-            ()->registryTree(createStraightBlobTree(BlockRegistry.MAPLE_LOG.get(),BlockRegistry.MAPLE_LEAVES_YELLOW.get(), 5, 2, 0, 2).ignoreVines()));
+    public static final RegistryObject<ConfiguredFeature<?, ?>> YELLOW_MAPLE = WorldGenerationRegistry.FEATURES.register("yellow_maple",
+            ()->registryTree(createStraightBlobTree(BlockRegistry.MAPLE_LOG.get(),BlockRegistry.YELLOW_MAPLE_LEAVES.get(), 5, 2, 0, 2).ignoreVines()));
 
-    public static final RegistryObject<ConfiguredFeature<?, ?>> FANCY_MAPLE_YELLOW = WorldGenerationRegistry.FEATURES.register("fancy_maple_yellow",
-            ()->registryTree(createFancyTree(BlockRegistry.MAPLE_LOG.get(), BlockRegistry.MAPLE_LEAVES_YELLOW.get())));
+    public static final RegistryObject<ConfiguredFeature<?, ?>> FANCY_YELLOW_MAPLE = WorldGenerationRegistry.FEATURES.register("fancy_maple_yellow",
+            ()->registryTree(createFancyTree(BlockRegistry.MAPLE_LOG.get(), BlockRegistry.YELLOW_MAPLE_LEAVES.get())));
 
-    public static final RegistryObject<ConfiguredFeature<?, ?>> MAPLE_ORANGE = WorldGenerationRegistry.FEATURES.register("maple_orange",
-            ()->registryTree(createStraightBlobTree(BlockRegistry.MAPLE_LOG.get(),BlockRegistry.MAPLE_LEAVES_ORANGE.get(), 5, 2, 0, 2).ignoreVines()));
+    public static final RegistryObject<ConfiguredFeature<?, ?>> ORANGE_MAPLE = WorldGenerationRegistry.FEATURES.register("orange_maple",
+            ()->registryTree(createStraightBlobTree(BlockRegistry.MAPLE_LOG.get(),BlockRegistry.ORANGE_MAPLE_LEAVES.get(), 5, 2, 0, 2).ignoreVines()));
 
-    public static final RegistryObject<ConfiguredFeature<?, ?>> FANCY_MAPLE_ORANGE = WorldGenerationRegistry.FEATURES.register("fancy_maple_orange", 
-            ()->registryTree(createFancyTree(BlockRegistry.MAPLE_LOG.get(), BlockRegistry.MAPLE_LEAVES_ORANGE.get())));
+    public static final RegistryObject<ConfiguredFeature<?, ?>> FANCY_ORANGE_MAPLE = WorldGenerationRegistry.FEATURES.register("fancy_orange_maple",
+            ()->registryTree(createFancyTree(BlockRegistry.MAPLE_LOG.get(), BlockRegistry.ORANGE_MAPLE_SAPLING.get())));
 
-    public static final RegistryObject<ConfiguredFeature<?, ?>> MAPLE_GREEN = WorldGenerationRegistry.FEATURES.register("maple_green",
-            ()->registryTree(createStraightBlobTree(BlockRegistry.MAPLE_LOG.get(),BlockRegistry.MAPLE_LEAVES_GREEN.get(), 5, 2, 0, 2).ignoreVines()));
+    public static final RegistryObject<ConfiguredFeature<?, ?>> RED_MAPLE = WorldGenerationRegistry.FEATURES.register("red_maple",
+            ()->registryTree(createStraightBlobTree(BlockRegistry.MAPLE_LOG.get(),BlockRegistry.RED_MAPLE_LEAVES.get(), 5, 2, 0, 2).ignoreVines()));
 
-    public static final RegistryObject<ConfiguredFeature<?, ?>> FANCY_MAPLE_GREEN = WorldGenerationRegistry.FEATURES.register("fancy_maple_green", 
-            ()->registryTree(createFancyTree(BlockRegistry.MAPLE_LOG.get(), BlockRegistry.MAPLE_LEAVES_GREEN.get())));
+    public static final RegistryObject<ConfiguredFeature<?, ?>> FANCY_RED_MAPLE = WorldGenerationRegistry.FEATURES.register("fancy_maple_red",
+            ()->registryTree(createFancyTree(BlockRegistry.MAPLE_LOG.get(), BlockRegistry.RED_MAPLE_SAPLING.get())));
 
     private static ConfiguredFeature<?, ?> registryTree(TreeConfiguration.TreeConfigurationBuilder tree){
         return new ConfiguredFeature<>(Feature.TREE, tree.build());

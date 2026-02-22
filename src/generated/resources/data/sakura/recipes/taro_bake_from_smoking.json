@@ -3,7 +3,7 @@
   "ingredient": {
     "item": "sakura:taro"
   },
-  "result": "sakura:taro_baked",
+  "result": "sakura:baked_taro",
   "experience": 0.5,
   "cookingtime": 100
 }

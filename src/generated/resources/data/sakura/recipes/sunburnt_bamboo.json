@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "sakura:sunburnt_bamboo_block"
+    }
+  ],
+  "result": {
+    "item": "sakura:sunburnt_bamboo",
+    "count": 9
+  }
+}

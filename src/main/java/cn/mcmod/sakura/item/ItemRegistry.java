@@ -28,10 +28,10 @@ public class ItemRegistry {
             () -> seed(BlockRegistry.RADISH_CROP.get()));
     public static final RegistryObject<Item> CABBAGE_SEEDS = register("cabbage_seeds",
             () -> seed(BlockRegistry.CABBAGE_CROP.get()));
-    public static final RegistryObject<Item> RAPESEEDS = register("rapeseeds",
-            () -> seed(BlockRegistry.RAPESEED_CROP.get()));
+    public static final RegistryObject<Item> RAPE_SEEDS = register("rape_seeds",
+            () -> seed(BlockRegistry.RAPE_SEEDS_CROP.get()));
     public static final RegistryObject<Item> RED_BEAN = register("red_bean",
-            () -> seed(BlockRegistry.REDBEAN_CROP.get()));
+            () -> seed(BlockRegistry.RED_BEAN_CROP.get()));
     public static final RegistryObject<Item> SOYBEAN = register("soybean",
             () -> seed(BlockRegistry.SOYBEAN_CROP.get()));
     public static final RegistryObject<Item> BUCKWHEAT = register("buckwheat",
@@ -50,8 +50,8 @@ public class ItemRegistry {
     public static final Map<SakuraNormalItemSet, RegistryObject<Item>> MATERIALS = ItemRegistryUtil
             .mapOfKeys(SakuraNormalItemSet.class, material -> register(material.getName(), ItemRegistry::normalItem));
     
-    public static final RegistryObject<Item> IRON_FISH_KNIFE = register("knife_fish", () -> new KnifeItem(Tiers.IRON, 1F, -2.0F, Sakura.defaultItemProperties().stacksTo(1)));
-    public static final RegistryObject<Item> IRON_NOODLE_KNIFE = register("knife_noodle", () -> new KnifeItem(Tiers.IRON, 2F, -3.0F, Sakura.defaultItemProperties().stacksTo(1)));
+    public static final RegistryObject<Item> IRON_FISH_KNIFE = register("fish_knife", () -> new KnifeItem(Tiers.IRON, 1F, -2.0F, Sakura.defaultItemProperties().stacksTo(1)));
+    public static final RegistryObject<Item> IRON_NOODLE_KNIFE = register("noodle_knife", () -> new KnifeItem(Tiers.IRON, 2F, -3.0F, Sakura.defaultItemProperties().stacksTo(1)));
 
     private static Item normalItem() {
         return new Item(Sakura.defaultItemProperties());

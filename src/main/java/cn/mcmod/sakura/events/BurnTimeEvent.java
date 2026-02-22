@@ -17,10 +17,10 @@ public class BurnTimeEvent {
     public static void registerBurnTime(FurnaceFuelBurnTimeEvent event) {
         register(event, ItemRegistry.MATERIALS.get(SakuraNormalItemSet.BAMBOO), 400);
         register(event, BlockItemRegistry.BAMBOO_BLOCK, 4000);
-        register(event, ItemRegistry.MATERIALS.get(SakuraNormalItemSet.BAMBOO_SUNBURNT), 400);
-        register(event, BlockItemRegistry.BAMBOO_BLOCK_SUNBURNT, 4000);
-        register(event, ItemRegistry.MATERIALS.get(SakuraNormalItemSet.BAMBOO_CHARCOAL), 1600);
-        register(event, BlockItemRegistry.BAMBOO_CHARCOAL_BLOCK, 16000);
+        register(event, ItemRegistry.MATERIALS.get(SakuraNormalItemSet.SUNBURNT_BAMBOO), 400);
+        register(event, BlockItemRegistry.SUNBURNT_BAMBOO_BLOCK, 4000);
+        register(event, ItemRegistry.MATERIALS.get(SakuraNormalItemSet.CHARCOAL_BAMBOO), 1600);
+        register(event, BlockItemRegistry.CHARCOAL_BAMBOO_BLOCK, 16000);
     }
 
     private static void register(FurnaceFuelBurnTimeEvent event, Supplier<? extends Item> item, int burnTime) {

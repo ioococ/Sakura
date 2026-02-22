@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "sakura:sakura_log"
+    }
+  ],
+  "result": {
+    "item": "sakura:sakura_lumber",
+    "count": 8
+  }
+}

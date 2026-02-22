@@ -33,11 +33,11 @@ public class WorldGenerationRegistry {
     public static final DeferredRegister<PlacedFeature> PATCHES = DeferredRegister
             .create(BuiltinRegistries.PLACED_FEATURE.key(), Sakura.MOD_ID);
     
-    public static final RegistryObject<ConfiguredFeature<?, ?>> FEATURE_PATCH_BAMBOOSHOOT = FEATURES.register("patch_bambooshoot", 
-            ()->wildPlantFeature(BlockRegistry.BAMBOOSHOOT, BlockTags.DIRT));
+    public static final RegistryObject<ConfiguredFeature<?, ?>> FEATURE_PATCH_BAMBOO_SHOOT = FEATURES.register("patch_bamboo_shoot",
+            ()->wildPlantFeature(BlockRegistry.BAMBOO_SHOOT, BlockTags.DIRT));
 
-    public static final RegistryObject<PlacedFeature> PATCH_BAMBOOSHOOT = PATCHES.register("patch_bambooshoot", 
-            ()->wildPlantPatch(FEATURE_PATCH_BAMBOOSHOOT, RarityFilter.onAverageOnceEvery(SakuraConfig.CHANCE_BAMBOOSHOOT.get()),
+    public static final RegistryObject<PlacedFeature> PATCH_BAMBOO_SHOOT = PATCHES.register("patch_bamboo_shoot",
+            ()->wildPlantPatch(FEATURE_PATCH_BAMBOO_SHOOT, RarityFilter.onAverageOnceEvery(SakuraConfig.CHANCE_BAMBOOSHOOT.get()),
                     InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
 
     public static final BlockPos BLOCK_BELOW = new BlockPos(0, -1, 0);

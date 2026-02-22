@@ -22,49 +22,49 @@ public class SakuraBlockStateProvider extends AbstractBlockStateProvider {
         
         simpleBlock(BlockRegistry.STRAW_BLOCK.get());
 
-        simpleBlock(BlockRegistry.MAPLE_LEAVES_RED.get());
-        simpleBlock(BlockRegistry.MAPLE_LEAVES_YELLOW.get());
-        simpleBlock(BlockRegistry.MAPLE_LEAVES_GREEN.get());
-        simpleBlock(BlockRegistry.MAPLE_LEAVES_ORANGE.get());
+        simpleBlock(BlockRegistry.GREEN_MAPLE_LEAVES.get());
+        simpleBlock(BlockRegistry.YELLOW_MAPLE_LEAVES.get());
+        simpleBlock(BlockRegistry.ORANGE_MAPLE_LEAVES.get());
+        simpleBlock(BlockRegistry.RED_MAPLE_LEAVES.get());
 
         log(BlockRegistry.SAKURA_LOG);
         log(BlockRegistry.STRIPPED_SAKURA_LOG);
         log(BlockRegistry.MAPLE_LOG);
         log(BlockRegistry.STRIPPED_MAPLE_LOG);
         log(BlockRegistry.BAMBOO_BLOCK);
-        log(BlockRegistry.BAMBOO_BLOCK_SUNBURNT);
-        log(BlockRegistry.BAMBOO_CHARCOAL_BLOCK);
+        log(BlockRegistry.SUNBURNT_BAMBOO_BLOCK);
+        log(BlockRegistry.CHARCOAL_BAMBOO_BLOCK);
 
         horizontalBlock(BlockRegistry.FERMENTER.get(), models().getExistingFile(new ResourceLocation("sakura:block/fermenter")));
         crossBlock(BlockRegistry.SAKURA_SAPLING);
-        crossBlock(BlockRegistry.MAPLE_SAPLING_RED);
-        crossBlock(BlockRegistry.MAPLE_SAPLING_YELLOW);
-        crossBlock(BlockRegistry.MAPLE_SAPLING_GREEN);
-        crossBlock(BlockRegistry.MAPLE_SAPLING_ORANGE);
+        crossBlock(BlockRegistry.RED_MAPLE_SAPLING);
+        crossBlock(BlockRegistry.YELLOW_MAPLE_SAPLING);
+        crossBlock(BlockRegistry.GREEN_MAPLE_SAPLING);
+        crossBlock(BlockRegistry.ORANGE_MAPLE_SAPLING);
 
         stageBlock(BlockRegistry.BUCKWHEAT_CROP, BlockStateProperties.AGE_7);
-        stageBlock(BlockRegistry.RAPESEED_CROP, BlockStateProperties.AGE_7);
-        stageBlock(BlockRegistry.REDBEAN_CROP, BlockStateProperties.AGE_3);
+        stageBlock(BlockRegistry.RAPE_SEEDS_CROP, BlockStateProperties.AGE_7);
+        stageBlock(BlockRegistry.RED_BEAN_CROP, BlockStateProperties.AGE_3);
         stageBlock(BlockRegistry.TARO_CROP, BlockStateProperties.AGE_3);
         
         horizontalBlock(BlockRegistry.TATAMI.get(), 
                 texture("tatami"), 
                 texture("tatami"), 
                 texture("tatami"));
-        horizontalBlock(BlockRegistry.TATAMI_SUNBURNT.get(), 
-                texture("tatami_tan"), 
-                texture("tatami_tan"), 
-                texture("tatami_tan"));
+        horizontalBlock(BlockRegistry.SUNBURNT_TATAMI.get(),
+                texture("tan_tatami"), 
+                texture("tan_tatami"), 
+                texture("tan_tatami"));
         
         facingSlabBlock(BlockRegistry.TATAMI_SLAB, 
                 texture("tatami"), 
                 texture("tatami"), 
                 texture("tatami")
         );
-        facingSlabBlock(BlockRegistry.TATAMI_SLAB_SUNBURNT, 
-                texture("tatami_tan"), 
-                texture("tatami_tan"), 
-                texture("tatami_tan")
+        facingSlabBlock(BlockRegistry.SUNBURNT_TATAMI_SLAB,
+                texture("tan_tatami"), 
+                texture("tan_tatami"), 
+                texture("tan_tatami")
         );
     }
 

@@ -186,9 +186,9 @@ public class BambooPlant extends Block implements BonemealableBlock {
     public void growBambooShoot(ServerLevel levelIn, BlockPos pos, Random random) {
         BlockPos blockpos1 = pos.offset(random.nextInt(3) - 1, random.nextInt(2) - random.nextInt(2),
                 random.nextInt(3) - 1);
-        if (BlockRegistry.BAMBOOSHOOT.get().defaultBlockState().canSurvive(levelIn, blockpos1)
+        if (BlockRegistry.BAMBOO_SHOOT.get().defaultBlockState().canSurvive(levelIn, blockpos1)
                 && levelIn.isEmptyBlock(blockpos1.above()) && levelIn.isEmptyBlock(blockpos1)) {
-            levelIn.setBlockAndUpdate(blockpos1, BlockRegistry.BAMBOOSHOOT.get().defaultBlockState());
+            levelIn.setBlockAndUpdate(blockpos1, BlockRegistry.BAMBOO_SHOOT.get().defaultBlockState());
         }
     }
 

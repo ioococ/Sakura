@@ -2,28 +2,28 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "tag": "forge:seeds/rapeseed"
+      "tag": "forge:seeds/rape_seeds"
     },
     {
-      "tag": "forge:seeds/rapeseed"
+      "tag": "forge:seeds/rape_seeds"
     },
     {
-      "tag": "forge:seeds/rapeseed"
+      "tag": "forge:seeds/rape_seeds"
     },
     {
-      "tag": "forge:seeds/rapeseed"
+      "tag": "forge:seeds/rape_seeds"
     },
     {
-      "tag": "forge:seeds/rapeseed"
+      "tag": "forge:seeds/rape_seeds"
     },
     {
-      "tag": "forge:seeds/rapeseed"
+      "tag": "forge:seeds/rape_seeds"
     },
     {
-      "tag": "forge:seeds/rapeseed"
+      "tag": "forge:seeds/rape_seeds"
     },
     {
-      "tag": "forge:seeds/rapeseed"
+      "tag": "forge:seeds/rape_seeds"
     },
     {
       "item": "minecraft:bucket"

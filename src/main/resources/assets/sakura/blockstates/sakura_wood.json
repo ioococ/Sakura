@@ -1,7 +1,7 @@
 {
   "variants": {
     "axis=x": {
-      "model": "sakura:block/sakura_wood_horizontal",
+      "model": "sakura:block/horizontal_sakura_wood",
       "x": 90,
       "y": 90
     },
@@ -9,7 +9,7 @@
       "model": "sakura:block/sakura_wood"
     },
     "axis=z": {
-      "model": "sakura:block/sakura_wood_horizontal",
+      "model": "sakura:block/horizontal_sakura_wood",
       "x": 90
     }
   }

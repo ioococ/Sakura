@@ -6,13 +6,13 @@
     ]
   },
   "criteria": {
-    "has_sakura:dough_rice": {
+    "has_sakura:rice_dough": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "sakura:dough_rice"
+              "sakura:rice_dough"
             ]
           }
         ]
@@ -27,7 +27,7 @@
   },
   "requirements": [
     [
-      "has_sakura:dough_rice",
+      "has_sakura:rice_dough",
       "has_the_recipe"
     ]
   ]

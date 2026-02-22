@@ -6,13 +6,13 @@
     ]
   },
   "criteria": {
-    "has_sakura:burger_raw": {
+    "has_sakura:raw_burger": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "sakura:burger_raw"
+              "sakura:raw_burger"
             ]
           }
         ]
@@ -27,7 +27,7 @@
   },
   "requirements": [
     [
-      "has_sakura:burger_raw",
+      "has_sakura:raw_burger",
       "has_the_recipe"
     ]
   ]

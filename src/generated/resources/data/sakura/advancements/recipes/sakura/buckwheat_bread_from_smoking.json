@@ -6,13 +6,13 @@
     ]
   },
   "criteria": {
-    "has_sakura:dough_buckwheat": {
+    "has_sakura:buckwheat_dough": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "sakura:dough_buckwheat"
+              "sakura:buckwheat_dough"
             ]
           }
         ]
@@ -27,7 +27,7 @@
   },
   "requirements": [
     [
-      "has_sakura:dough_buckwheat",
+      "has_sakura:buckwheat_dough",
       "has_the_recipe"
     ]
   ]

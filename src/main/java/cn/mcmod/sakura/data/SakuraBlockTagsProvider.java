@@ -26,17 +26,17 @@ public class SakuraBlockTagsProvider extends BlockTagsProvider {
         
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.STONE_MORTAR.get());
 
-        this.tag(BlockTags.LEAVES).add(BlockRegistry.SAKURA_LEAVES.get(), BlockRegistry.MAPLE_LEAVES_RED.get(),
-                BlockRegistry.MAPLE_LEAVES_GREEN.get(), BlockRegistry.MAPLE_LEAVES_ORANGE.get(),
-                BlockRegistry.MAPLE_LEAVES_YELLOW.get());
+        this.tag(BlockTags.LEAVES).add(BlockRegistry.SAKURA_LEAVES.get(), BlockRegistry.GREEN_MAPLE_LEAVES.get(),
+                BlockRegistry.YELLOW_MAPLE_LEAVES.get(), BlockRegistry.ORANGE_MAPLE_LEAVES.get(),
+                BlockRegistry.RED_MAPLE_LEAVES.get());
 
-        this.tag(BlockTags.SAPLINGS).add(BlockRegistry.SAKURA_SAPLING.get(), BlockRegistry.MAPLE_SAPLING_RED.get(),
-                BlockRegistry.MAPLE_SAPLING_GREEN.get(), BlockRegistry.MAPLE_SAPLING_ORANGE.get(),
-                BlockRegistry.MAPLE_SAPLING_YELLOW.get());
+        this.tag(BlockTags.SAPLINGS).add(BlockRegistry.SAKURA_SAPLING.get(), BlockRegistry.RED_MAPLE_SAPLING.get(),
+                BlockRegistry.GREEN_MAPLE_SAPLING.get(), BlockRegistry.ORANGE_MAPLE_SAPLING.get(),
+                BlockRegistry.YELLOW_MAPLE_SAPLING.get());
 
         this.tag(BlockTags.CROPS).add(BlockRegistry.RICE_CROP.get(), BlockRegistry.BUCKWHEAT_CROP.get(),
                 BlockRegistry.CABBAGE_CROP.get(), BlockRegistry.EGGPLANT_CROP.get(), BlockRegistry.ONION_CROP.get(),
-                BlockRegistry.RADISH_CROP.get(), BlockRegistry.RAPESEED_CROP.get(), BlockRegistry.REDBEAN_CROP.get(),
+                BlockRegistry.RADISH_CROP.get(), BlockRegistry.RAPE_SEEDS_CROP.get(), BlockRegistry.RED_BEAN_CROP.get(),
                 BlockRegistry.RICE_CROP_ROOT.get(), BlockRegistry.TARO_CROP.get(), BlockRegistry.TOMATO_CROP.get());
 
         this.tag(BlockTags.PLANKS).add(BlockRegistry.SAKURA_PLANK.get(), BlockRegistry.BAMBOO_PLANK.get(),

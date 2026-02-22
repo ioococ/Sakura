@@ -8,7 +8,7 @@
     "#forge:seeds/rice",
     "#forge:seeds/tomato",
     "#forge:seeds/buckwheat",
-    "#forge:seeds/rapeseed",
-    "#forge:seeds/redbean"
+    "#forge:seeds/rape_seeds",
+    "#forge:seeds/red_bean"
   ]
 }

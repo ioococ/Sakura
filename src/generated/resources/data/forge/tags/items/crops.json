@@ -9,8 +9,8 @@
     "#forge:crops/rice",
     "#forge:crops/tomato",
     "#forge:crops/taro",
-    "#forge:seeds/rapeseed",
-    "#forge:crops/redbean",
+    "#forge:seeds/rape_seeds",
+    "#forge:crops/red_bean",
     "#forge:crops/pumpkin"
   ]
 }

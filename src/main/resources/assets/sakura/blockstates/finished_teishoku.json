@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north":  { "model": "sakura:block/finished_teishoku" },
+    "facing=south":  { "model": "sakura:block/finished_teishoku", "y": 180 },
+    "facing=west":  { "model": "sakura:block/finished_teishoku", "y": 270 },
+    "facing=east":  { "model": "sakura:block/finished_teishoku", "y": 90 }
+  }
+}

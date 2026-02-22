@@ -1,7 +1,7 @@
 {
   "variants": {
     "leaves=none":  { "model": "sakura:block/bamboo" },
-    "leaves=small":  { "model": "sakura:block/bamboo_leaves_small" },
-    "leaves=large":  { "model": "sakura:block/bamboo_leaves_large" }
+    "leaves=small":  { "model": "sakura:block/small_bamboo_leaves" },
+    "leaves=large":  { "model": "sakura:block/large_bamboo_leaves" }
   }
 }

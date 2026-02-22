@@ -6,7 +6,7 @@
         "item": "minecraft:charcoal"
       },
       {
-        "item": "sakura:bamboo_charcoal"
+        "item": "sakura:charcoal_bamboo"
       }
     ],
     [
@@ -14,7 +14,7 @@
         "item": "minecraft:charcoal"
       },
       {
-        "item": "sakura:bamboo_charcoal"
+        "item": "sakura:charcoal_bamboo"
       }
     ]
   ],

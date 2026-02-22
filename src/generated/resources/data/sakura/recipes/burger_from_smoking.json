@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smoking",
   "ingredient": {
-    "item": "sakura:burger_raw"
+    "item": "sakura:raw_burger"
   },
   "result": "sakura:burger",
   "experience": 0.5,

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "sakura:block/sunburnt_tatami"
+    },
+    "facing=south": {
+      "model": "sakura:block/sunburnt_tatami",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "sakura:block/sunburnt_tatami",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "sakura:block/sunburnt_tatami",
+      "y": 90
+    }
+  }
+}

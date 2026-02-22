@@ -16,7 +16,7 @@ public class BiomeEvent {
 
     @SubscribeEvent
     public static void onBiomeLoad(BiomeLoadingEvent event) {
-        setVegetalFeature(event, WorldGenerationRegistry.PATCH_BAMBOOSHOOT, SakuraConfig.GENERATE_BAMBOOSHOOT.get(),
+        setVegetalFeature(event, WorldGenerationRegistry.PATCH_BAMBOO_SHOOT, SakuraConfig.GENERATE_BAMBOOSHOOT.get(),
                 0.4F, 1.0F);
     }
 

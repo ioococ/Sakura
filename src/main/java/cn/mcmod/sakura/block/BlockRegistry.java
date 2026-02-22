@@ -40,22 +40,22 @@ public class BlockRegistry {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS,
             Sakura.MOD_ID);
 
-    public static final RegistryObject<Block> SAKURA_LEAVES = BLOCKS.register("sakuraleaves",
+    public static final RegistryObject<Block> SAKURA_LEAVES = BLOCKS.register("sakura_leaves",
             () -> new SakuraLeavesBlock(Block.Properties.of(Material.LEAVES).strength(0.2F).randomTicks()
                     .sound(SoundType.GRASS).noOcclusion(), ParticleRegistry.SAKURA_LEAF));
 
-    public static final RegistryObject<Block> MAPLE_LEAVES_RED = BLOCKS.register("mapleleaves_red",
+    public static final RegistryObject<Block> GREEN_MAPLE_LEAVES = BLOCKS.register("green_maple_leaves",
             () -> new SakuraLeavesBlock(Block.Properties.of(Material.LEAVES).strength(0.2F).randomTicks()
                     .sound(SoundType.GRASS).noOcclusion(), ParticleRegistry.RED_MAPLE_LEAF));
-    public static final RegistryObject<Block> MAPLE_LEAVES_GREEN = BLOCKS.register("mapleleaves_green",
-            () -> new SakuraLeavesBlock(Block.Properties.of(Material.LEAVES).strength(0.2F).randomTicks()
-                    .sound(SoundType.GRASS).noOcclusion(), ParticleRegistry.GREEN_MAPLE_LEAF));
-    public static final RegistryObject<Block> MAPLE_LEAVES_YELLOW = BLOCKS.register("mapleleaves_yellow",
+    public static final RegistryObject<Block> YELLOW_MAPLE_LEAVES = BLOCKS.register("yellow_maple_leaves",
             () -> new SakuraLeavesBlock(Block.Properties.of(Material.LEAVES).strength(0.2F).randomTicks()
                     .sound(SoundType.GRASS).noOcclusion(), ParticleRegistry.YELLOW_MAPLE_LEAF));
-    public static final RegistryObject<Block> MAPLE_LEAVES_ORANGE = BLOCKS.register("mapleleaves_orange",
+    public static final RegistryObject<Block> ORANGE_MAPLE_LEAVES = BLOCKS.register("orange_maple_leaves",
             () -> new SakuraLeavesBlock(Block.Properties.of(Material.LEAVES).strength(0.2F).randomTicks()
                     .sound(SoundType.GRASS).noOcclusion(), ParticleRegistry.ORANGE_MAPLE_LEAF));
+    public static final RegistryObject<Block> RED_MAPLE_LEAVES = BLOCKS.register("red_maple_leaves",
+            () -> new SakuraLeavesBlock(Block.Properties.of(Material.LEAVES).strength(0.2F).randomTicks()
+                    .sound(SoundType.GRASS).noOcclusion(), ParticleRegistry.GREEN_MAPLE_LEAF));
 
     public static final RegistryObject<RotatedPillarBlock> SAKURA_LOG = BLOCKS.register("sakura_log",
             () -> log(MaterialColor.WOOD, MaterialColor.PODZOL));
@@ -66,8 +66,8 @@ public class BlockRegistry {
     public static final RegistryObject<RotatedPillarBlock> SAKURA_WOOD = BLOCKS.register("sakura_wood",
             () -> log(MaterialColor.PODZOL, MaterialColor.PODZOL));
 
-    public static final RegistryObject<RotatedPillarBlock> STRIPPED_SAKURA_WOOD = BLOCKS
-            .register("stripped_sakura_wood", () -> log(MaterialColor.WOOD, MaterialColor.WOOD));
+    public static final RegistryObject<RotatedPillarBlock> STRIPPED_SAKURA_WOOD = BLOCKS.register("stripped_sakura_wood",
+            () -> log(MaterialColor.WOOD, MaterialColor.WOOD));
 
     public static final RegistryObject<SaplingBlock> SAKURA_SAPLING = BLOCKS.register("sakura_sapling",
             () -> sapling(new SakuraTreeGrower()));
@@ -87,42 +87,38 @@ public class BlockRegistry {
     public static final RegistryObject<RotatedPillarBlock> STRIPPED_MAPLE_WOOD = BLOCKS.register("stripped_maple_wood",
             () -> log(MaterialColor.WOOD, MaterialColor.WOOD));
 
-    public static final RegistryObject<RotatedPillarBlock> BAMBOO_BLOCK = BLOCKS.register("bamboo_block",
-            BambooBlock::new);
-    public static final RegistryObject<RotatedPillarBlock> BAMBOO_BLOCK_SUNBURNT = BLOCKS
-            .register("bamboo_block_sunburnt", () -> simplebambooBlock(MaterialColor.SAND, MaterialColor.WOOD));
-    public static final RegistryObject<RotatedPillarBlock> BAMBOO_CHARCOAL_BLOCK = BLOCKS.register(
-            "bamboo_charcoal_block", () -> simplebambooBlock(MaterialColor.COLOR_GRAY, MaterialColor.COLOR_BLACK));
+    public static final RegistryObject<RotatedPillarBlock> BAMBOO_BLOCK = BLOCKS.register("bamboo_block", BambooBlock::new);
+    public static final RegistryObject<RotatedPillarBlock> SUNBURNT_BAMBOO_BLOCK = BLOCKS
+            .register("sunburnt_bamboo_block", () -> simplebambooBlock(MaterialColor.SAND, MaterialColor.WOOD));
+    public static final RegistryObject<RotatedPillarBlock> CHARCOAL_BAMBOO_BLOCK = BLOCKS.register(
+            "charcoal_bamboo_block", () -> simplebambooBlock(MaterialColor.COLOR_GRAY, MaterialColor.COLOR_BLACK));
 
-    public static final RegistryObject<Block> MAPLE_SAPLING_RED = BLOCKS.register("maple_sapling_red",
-            () -> sapling(new MapleTreeGrower(SakuraTreeFeatures.MAPLE_RED, SakuraTreeFeatures.FANCY_MAPLE_RED)));
-    public static final RegistryObject<Block> MAPLE_SAPLING_GREEN = BLOCKS.register("maple_sapling_green",
-            () -> sapling(new MapleTreeGrower(SakuraTreeFeatures.MAPLE_GREEN, SakuraTreeFeatures.FANCY_MAPLE_GREEN)));
-    public static final RegistryObject<Block> MAPLE_SAPLING_YELLOW = BLOCKS.register("maple_sapling_yellow",
-            () -> sapling(new MapleTreeGrower(SakuraTreeFeatures.MAPLE_YELLOW, SakuraTreeFeatures.FANCY_MAPLE_YELLOW)));
-    public static final RegistryObject<Block> MAPLE_SAPLING_ORANGE = BLOCKS.register("maple_sapling_orange",
-            () -> sapling(new MapleTreeGrower(SakuraTreeFeatures.MAPLE_ORANGE, SakuraTreeFeatures.FANCY_MAPLE_ORANGE)));
+    public static final RegistryObject<Block> GREEN_MAPLE_SAPLING = BLOCKS.register("green_maple_sapling",
+            () -> sapling(new MapleTreeGrower(SakuraTreeFeatures.GREEN_MAPLE, SakuraTreeFeatures.FANCY_GREEN_MAPLE)));
+    public static final RegistryObject<Block> YELLOW_MAPLE_SAPLING = BLOCKS.register("yellow_maple_sapling",
+            () -> sapling(new MapleTreeGrower(SakuraTreeFeatures.YELLOW_MAPLE, SakuraTreeFeatures.FANCY_YELLOW_MAPLE)));
+    public static final RegistryObject<Block> ORANGE_MAPLE_SAPLING = BLOCKS.register("orange_maple_sapling",
+            () -> sapling(new MapleTreeGrower(SakuraTreeFeatures.ORANGE_MAPLE, SakuraTreeFeatures.FANCY_ORANGE_MAPLE)));
+    public static final RegistryObject<Block> RED_MAPLE_SAPLING = BLOCKS.register("red_maple_sapling",
+            () -> sapling(new MapleTreeGrower(SakuraTreeFeatures.RED_MAPLE, SakuraTreeFeatures.FANCY_RED_MAPLE)));
 
     public static final RegistryObject<Block> BAMBOO_PLANT = BLOCKS.register("bamboo_plant", BambooPlant::new);
-    public static final RegistryObject<Block> BAMBOOSHOOT = BLOCKS.register("bamboo_shoot", BambooShoot::new);
+    public static final RegistryObject<Block> BAMBOO_SHOOT = BLOCKS.register("bamboo_shoot", BambooShoot::new);
 
-    public static final RegistryObject<Block> SAKURA_PLANK = BLOCKS.register("plank_sakura",
-            () -> plank(MaterialColor.WOOD));
-    public static final RegistryObject<Block> MAPLE_PLANK = BLOCKS.register("plank_maple",
-            () -> plank(MaterialColor.SAND));
-    public static final RegistryObject<Block> BAMBOO_PLANK = BLOCKS.register("plank_bamboo",
-            () -> plank(MaterialColor.SAND));
+    public static final RegistryObject<Block> SAKURA_PLANK = BLOCKS.register("sakura_plank", () -> plank(MaterialColor.WOOD));
+    public static final RegistryObject<Block> MAPLE_PLANK = BLOCKS.register("maple_plank", () -> plank(MaterialColor.SAND));
+    public static final RegistryObject<Block> BAMBOO_PLANK = BLOCKS.register("bamboo_plank", () -> plank(MaterialColor.SAND));
     
     public static final RegistryObject<Block> STRAW_BLOCK = BLOCKS.register("straw_block",
             () -> new Block(Block.Properties.copy(Blocks.HAY_BLOCK)));
 
     public static final RegistryObject<Block> TATAMI = BLOCKS.register("tatami",
             () -> new TatamiBlock(Block.Properties.copy(Blocks.HAY_BLOCK)));
-    public static final RegistryObject<Block> TATAMI_SUNBURNT = BLOCKS.register("tatami_sunburnt",
-            () -> new BaseHorizonBlock(Block.Properties.copy(Blocks.HAY_BLOCK)));
     public static final RegistryObject<FacingSlab> TATAMI_SLAB = BLOCKS.register("tatami_slab",
             () -> new TatamiSlabBlock(Block.Properties.copy(Blocks.HAY_BLOCK)));
-    public static final RegistryObject<FacingSlab> TATAMI_SLAB_SUNBURNT = BLOCKS.register("tatami_slab_sunburnt",
+    public static final RegistryObject<Block> SUNBURNT_TATAMI = BLOCKS.register("sunburnt_tatami",
+            () -> new BaseHorizonBlock(Block.Properties.copy(Blocks.HAY_BLOCK)));
+    public static final RegistryObject<FacingSlab> SUNBURNT_TATAMI_SLAB = BLOCKS.register("sunburnt_tatami_slab",
             () -> new FacingSlab(Block.Properties.copy(Blocks.HAY_BLOCK)));
 
     public static final RegistryObject<Block> RICE_CROP_ROOT = BLOCKS.register("rice_crop_root",
@@ -139,14 +135,14 @@ public class BlockRegistry {
     public static final RegistryObject<Block> ONION_CROP = BLOCKS.register("onion_crop",
             () -> new Age3CropBlock(Block.Properties.copy(Blocks.CARROTS).strength(0.2F), ItemRegistry.ONION_SEEDS));
 
-    public static final RegistryObject<Block> REDBEAN_CROP = BLOCKS.register("redbean_crop",
+    public static final RegistryObject<Block> RED_BEAN_CROP = BLOCKS.register("red_bean_crop",
             () -> new Age3CropBlock(Block.Properties.copy(Blocks.WHEAT).strength(0.2F), ItemRegistry.RED_BEAN));
-    
+
     public static final RegistryObject<Block> SOYBEAN_CROP = BLOCKS.register("soybean_crop",
             () -> new Age3CropBlock(Block.Properties.copy(Blocks.WHEAT).strength(0.2F), ItemRegistry.SOYBEAN));
 
-    public static final RegistryObject<Block> RAPESEED_CROP = BLOCKS.register("rapeseed_crop",
-            () -> new BaseCropBlock(Block.Properties.copy(Blocks.WHEAT).strength(0.2F), ItemRegistry.RAPESEEDS));
+    public static final RegistryObject<Block> RAPE_SEEDS_CROP = BLOCKS.register("rape_seeds_crop",
+            () -> new BaseCropBlock(Block.Properties.copy(Blocks.WHEAT).strength(0.2F), ItemRegistry.RAPE_SEEDS));
 
     public static final RegistryObject<Block> BUCKWHEAT_CROP = BLOCKS.register("buckwheat_crop",
             () -> new BaseCropBlock(Block.Properties.copy(Blocks.WHEAT).strength(0.2F), ItemRegistry.BUCKWHEAT));
@@ -166,21 +162,21 @@ public class BlockRegistry {
     public static final RegistryObject<Block> DISTILLER = BLOCKS.register("distiller", DistillerBlock::new);
     public static final RegistryObject<Block> OBON = BLOCKS.register("obon", ObonBlock::new);
     public static final RegistryObject<Block> CHOPPING_BOARD = BLOCKS.register("chopping_board", ChoppingBoardBlock::new);
-    public static final RegistryObject<Block> TEISHOUKU_FINISHED = BLOCKS.register("teishoku_finished", TeishokuFinishedBlock::new);
-    public static final RegistryObject<Block> TEISHOUKU_FISH_SALT = BLOCKS.register("teishoku_fish_salt", 
+    public static final RegistryObject<Block> FINISHED_TEISHOKU = BLOCKS.register("finished_teishoku", TeishokuFinishedBlock::new);
+    public static final RegistryObject<Block> SHIOYAKI_TEISHOKU = BLOCKS.register("sashimi_teishoku",
             ()->new TeishokuBlock(FoodInfo.builder().amountAndCalories(8, 0.8f).build()));
-    public static final RegistryObject<Block> TEISHOUKU_FISH_COOKED = BLOCKS.register("teishoku_fish_cooked", 
+    public static final RegistryObject<Block> YAKIZANA_TEISHOKU = BLOCKS.register("yakizana_teishoku",
             ()->new TeishokuBlock(FoodInfo.builder().amountAndCalories(8, 0.8f).build()));
-    public static final RegistryObject<Block> TEISHOUKU_FISH_RAW = BLOCKS.register("teishoku_fish_raw", 
+    public static final RegistryObject<Block> SASHIMI_TEISHOKU = BLOCKS.register("shioyaki_teishoku",
             ()->new TeishokuBlock(FoodInfo.builder().amountAndCalories(6, 0.8f).build()));
-    public static final RegistryObject<Block> TEISHOKO_TAMAGOYAKI = BLOCKS.register("teishoku_tamagoyaki", 
+    public static final RegistryObject<Block> TAMAGOYAKI_TEISHOKU = BLOCKS.register("tamagoyaki_teishoku",
             ()->new TeishokuBlock(FoodInfo.builder().amountAndCalories(6, 0.8f).build()));
-    public static final RegistryObject<Block> TEISHOKO_YAKINIKU = BLOCKS.register("teishoku_yakiniku", 
+    public static final RegistryObject<Block> YAKINIKU_TEISHOKU = BLOCKS.register("yakiniku_teishoku",
             ()->new TeishokuBlock(FoodInfo.builder().amountAndCalories(10, 0.8f).build()));
-    
-    public static final RegistryObject<Block> NABE_SUKIYAKI = BLOCKS.register("nabe_sukiyaki", 
+
+    public static final RegistryObject<Block> SUKIYAKI_NABE = BLOCKS.register("sukiyaki_nabe",
             ()->new NabeBlock(FoodInfo.builder().amountAndCalories(12, 1f).build()));
-    public static final RegistryObject<Block> NABE_ODEN = BLOCKS.register("nabe_oden", 
+    public static final RegistryObject<Block> ODEN_NABE = BLOCKS.register("oden_nabe",
             ()->new NabeBlock(FoodInfo.builder().amountAndCalories(12, 1f).build()));
     
     private static RotatedPillarBlock log(MaterialColor top, MaterialColor bark) {

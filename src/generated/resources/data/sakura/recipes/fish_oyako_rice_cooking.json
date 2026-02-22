@@ -1,0 +1,23 @@
+{
+  "type": "sakura:cooking",
+  "ingredients": [
+    {
+      "tag": "sakura:rice/rice"
+    },
+    {
+      "tag": "forge:raw_fishes"
+    },
+    {
+      "tag": "forge:eggs"
+    }
+  ],
+  "fluid": {
+    "fluidTag": "forge:water/water",
+    "amount": 125
+  },
+  "result": {
+    "item": "sakura:fish_oyako_rice"
+  },
+  "experience": 0.0,
+  "recipeTime": 200
+}

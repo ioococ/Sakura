@@ -43,21 +43,21 @@ public class SakuraBlockLoot extends AbstartctBlockLoot {
             else
                 dropSelf(block.get());
         });
-        this.add(BlockRegistry.MAPLE_LEAVES_RED.get(), createLeavesDrops(BlockRegistry.MAPLE_LEAVES_RED.get(),
-                BlockRegistry.MAPLE_SAPLING_RED.get(), NORMAL_LEAVES_SAPLING_CHANCES));
-        this.add(BlockRegistry.MAPLE_LEAVES_ORANGE.get(), createLeavesDrops(BlockRegistry.MAPLE_LEAVES_ORANGE.get(),
-                BlockRegistry.MAPLE_SAPLING_ORANGE.get(), NORMAL_LEAVES_SAPLING_CHANCES));
-        this.add(BlockRegistry.MAPLE_LEAVES_YELLOW.get(), createLeavesDrops(BlockRegistry.MAPLE_LEAVES_YELLOW.get(),
-                BlockRegistry.MAPLE_SAPLING_YELLOW.get(), NORMAL_LEAVES_SAPLING_CHANCES));
-        this.add(BlockRegistry.MAPLE_LEAVES_GREEN.get(), createLeavesDrops(BlockRegistry.MAPLE_LEAVES_GREEN.get(),
-                BlockRegistry.MAPLE_SAPLING_GREEN.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.add(BlockRegistry.GREEN_MAPLE_LEAVES.get(), createLeavesDrops(BlockRegistry.GREEN_MAPLE_LEAVES.get(),
+                BlockRegistry.GREEN_MAPLE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.add(BlockRegistry.YELLOW_MAPLE_LEAVES.get(), createLeavesDrops(BlockRegistry.YELLOW_MAPLE_LEAVES.get(),
+                BlockRegistry.YELLOW_MAPLE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.add(BlockRegistry.ORANGE_MAPLE_LEAVES.get(), createLeavesDrops(BlockRegistry.ORANGE_MAPLE_LEAVES.get(),
+                BlockRegistry.ORANGE_MAPLE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.add(BlockRegistry.RED_MAPLE_LEAVES.get(), createLeavesDrops(BlockRegistry.RED_MAPLE_LEAVES.get(),
+                BlockRegistry.RED_MAPLE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
         this.add(BlockRegistry.SAKURA_LEAVES.get(), createLeavesDrops(BlockRegistry.SAKURA_LEAVES.get(),
                 BlockRegistry.SAKURA_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
-        this.createTeishoku(BlockRegistry.TEISHOUKU_FISH_COOKED.get());
-        this.createTeishoku(BlockRegistry.TEISHOUKU_FISH_RAW.get());
-        this.createTeishoku(BlockRegistry.TEISHOUKU_FISH_SALT.get());
-        this.createTeishoku(BlockRegistry.TEISHOKO_TAMAGOYAKI.get());
+        this.createTeishoku(BlockRegistry.YAKIZANA_TEISHOKU.get());
+        this.createTeishoku(BlockRegistry.SASHIMI_TEISHOKU.get());
+        this.createTeishoku(BlockRegistry.SHIOYAKI_TEISHOKU.get());
+        this.createTeishoku(BlockRegistry.TAMAGOYAKI_TEISHOKU.get());
         
         createCrop(BlockRegistry.CABBAGE_CROP.get(), FoodRegistry.FOODSET.get(SakuraFoodSet.CABBAGE).get(),
                 ItemRegistry.CABBAGE_SEEDS.get(), 7);
@@ -68,7 +68,7 @@ public class SakuraBlockLoot extends AbstartctBlockLoot {
         createCrop(BlockRegistry.ONION_CROP.get(), FoodRegistry.FOODSET.get(SakuraFoodSet.ONION).get(),
                 ItemRegistry.ONION_SEEDS.get(), 3);
 
-        createCrop(BlockRegistry.REDBEAN_CROP.get(), ItemRegistry.RED_BEAN.get(), ItemRegistry.RED_BEAN.get(), 3);
+        createCrop(BlockRegistry.RED_BEAN_CROP.get(), ItemRegistry.RED_BEAN.get(), ItemRegistry.RED_BEAN.get(), 3);
         createCrop(BlockRegistry.SOYBEAN_CROP.get(), ItemRegistry.SOYBEAN.get(), ItemRegistry.SOYBEAN.get(), 3);
 
         createCrop(BlockRegistry.EGGPLANT_CROP.get(), FoodRegistry.FOODSET.get(SakuraFoodSet.EGGPLANT).get(),
@@ -83,7 +83,7 @@ public class SakuraBlockLoot extends AbstartctBlockLoot {
         createCrop(BlockRegistry.RICE_CROP_ROOT.get(), ItemRegistry.MATERIALS.get(SakuraNormalItemSet.STRAW).get(),
                 ItemRegistry.RICE_SEEDS.get(), 7);
 
-        createCrop(BlockRegistry.RAPESEED_CROP.get(), ItemRegistry.RAPESEEDS.get(), ItemRegistry.RAPESEEDS.get(), 7);
+        createCrop(BlockRegistry.RAPE_SEEDS_CROP.get(), ItemRegistry.RAPE_SEEDS.get(), ItemRegistry.RAPE_SEEDS.get(), 7);
 
         createCrop(BlockRegistry.TARO_CROP.get(), ItemRegistry.MATERIALS.get(SakuraNormalItemSet.IMOGARA).get(),
                 ItemRegistry.TARO.get(), 3);

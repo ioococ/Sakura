@@ -9,9 +9,6 @@
     },
     {
       "tag": "forge:eggs"
-    },
-    {
-      "tag": "forge:soysauce"
     }
   ],
   "fluid": {
@@ -19,7 +16,7 @@
     "amount": 125
   },
   "result": {
-    "item": "sakura:rice_pork_fried"
+    "item": "sakura:fried_pork_rice"
   },
   "experience": 0.0,
   "recipeTime": 200

@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "sakura:rice_cooked"
+      "item": "sakura:cooked_rice"
     },
     {
-      "item": "sakura:rice_cooked"
+      "item": "sakura:cooked_rice"
     },
     {
-      "item": "sakura:rice_cooked"
+      "item": "sakura:cooked_rice"
     },
     {
-      "item": "sakura:rice_cooked"
+      "item": "sakura:cooked_rice"
     }
   ],
   "result": {

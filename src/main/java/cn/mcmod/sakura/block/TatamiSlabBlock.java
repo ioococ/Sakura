@@ -18,7 +18,7 @@ public class TatamiSlabBlock extends FacingSlab {
     public void randomTick(BlockState state, ServerLevel worldIn, BlockPos pos, Random rand) {
         super.randomTick(state, worldIn, pos, rand);
         if (worldIn.isDay() && worldIn.canSeeSky(pos)) {
-            worldIn.setBlockAndUpdate(pos, BlockRegistry.TATAMI_SLAB_SUNBURNT.get().withPropertiesOf(state));
+            worldIn.setBlockAndUpdate(pos, BlockRegistry.SUNBURNT_TATAMI_SLAB.get().withPropertiesOf(state));
         }
     }
 

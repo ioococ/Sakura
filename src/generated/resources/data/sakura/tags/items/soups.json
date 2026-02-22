@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "sakura:soup_miso",
-    "sakura:soup_red_bean",
+    "sakura:miso_soup",
+    "sakura:red_bean_soup",
     "sakura:osuimono"
   ]
 }

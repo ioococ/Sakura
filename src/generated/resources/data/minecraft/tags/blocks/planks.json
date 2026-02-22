@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "sakura:plank_sakura",
-    "sakura:plank_bamboo",
-    "sakura:plank_maple"
+    "sakura:sakura_plank",
+    "sakura:bamboo_plank",
+    "sakura:maple_plank"
   ]
 }

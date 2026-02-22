@@ -12,6 +12,7 @@ import cn.mcmod.sakura.item.ComposterRegistry;
 import cn.mcmod.sakura.item.FoodRegistry;
 import cn.mcmod.sakura.item.ItemRegistry;
 import cn.mcmod.sakura.item.enums.SakuraFoodSet;
+import cn.mcmod.sakura.level.WorldGenerationRegistry;
 import cn.mcmod.sakura.loot_modifier.LootModifiterRegistry;
 import cn.mcmod.sakura.recipes.RecipeTypeRegistry;
 import com.mojang.logging.LogUtils;
@@ -64,6 +65,9 @@ public class Sakura {
         LootModifiterRegistry.GLM.register(eventBus);
         RecipeTypeRegistry.RECIPE_TYPES.register(eventBus);
         RecipeTypeRegistry.RECIPE_SERIALIZERS.register(eventBus);
+
+        WorldGenerationRegistry.FEATURES.register(eventBus);
+        WorldGenerationRegistry.PATCHES.register(eventBus);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
