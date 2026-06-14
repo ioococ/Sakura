@@ -21,6 +21,7 @@ public class DataGen {
         dataGenerator.addProvider(block_tag);
         dataGenerator.addProvider(new SakuraItemTagsProvider(dataGenerator, block_tag, Sakura.MOD_ID, existingFileHelper));
         dataGenerator.addProvider(new SakuraFluidTagsProvider(dataGenerator, Sakura.MOD_ID, existingFileHelper));
+        dataGenerator.addProvider(new SakuraAnimationMetadataProvider(dataGenerator, Sakura.MOD_ID));
         dataGenerator.addProvider(new SakuraRecipeProvider(dataGenerator));
         dataGenerator.addProvider(new SakuraLootTableProvider(dataGenerator));
     }

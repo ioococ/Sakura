@@ -1,11 +1,16 @@
 package cn.mcmod.sakura.data.client;
 
 import cn.mcmod.sakura.block.BlockRegistry;
+import cn.mcmod.sakura.fluid.FluidBlockRegistry;
 import cn.mcmod_mmf.mmlib.data.AbstractBlockStateProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraftforge.client.model.generators.ConfiguredModel;
+import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.RegistryObject;
 
 public class SakuraBlockStateProvider extends AbstractBlockStateProvider {
 
@@ -66,6 +71,34 @@ public class SakuraBlockStateProvider extends AbstractBlockStateProvider {
                 texture("tan_tatami"), 
                 texture("tan_tatami")
         );
+
+        fluidBlock(FluidBlockRegistry.BEER_BLOCK);
+        fluidBlock(FluidBlockRegistry.BRANDY_BLOCK);
+        fluidBlock(FluidBlockRegistry.CHAMPAGNE_BLOCK);
+        fluidBlock(FluidBlockRegistry.COCOA_LIQUEUR_BLOCK);
+        fluidBlock(FluidBlockRegistry.DOBUROKU_BLOCK);
+        fluidBlock(FluidBlockRegistry.FOOD_OIL_BLOCK);
+        fluidBlock(FluidBlockRegistry.GIN_BLOCK);
+        fluidBlock(FluidBlockRegistry.GREEN_GRAPE_JUICE_BLOCK);
+        fluidBlock(FluidBlockRegistry.HOT_SPRING_BLOCK);
+        fluidBlock(FluidBlockRegistry.LIQUEUR_BLOCK);
+        fluidBlock(FluidBlockRegistry.MAPLE_SAP_BLOCK);
+        fluidBlock(FluidBlockRegistry.MAPLE_SYRUP_BLOCK);
+        fluidBlock(FluidBlockRegistry.PURPLE_GRAPE_JUICE_BLOCK);
+        fluidBlock(FluidBlockRegistry.RED_WINE_BLOCK);
+        fluidBlock(FluidBlockRegistry.RUM_BLOCK);
+        fluidBlock(FluidBlockRegistry.SAKE_BLOCK);
+        fluidBlock(FluidBlockRegistry.SHOUCHU_BLOCK);
+        fluidBlock(FluidBlockRegistry.TEQUILA_BLOCK);
+        fluidBlock(FluidBlockRegistry.VODKA_BLOCK);
+        fluidBlock(FluidBlockRegistry.WHISKEY_BLOCK);
+        fluidBlock(FluidBlockRegistry.WHITE_WINE_BLOCK);
+        fluidBlock(FluidBlockRegistry.YEAST_FLUID_BLOCK);
+    }
+
+    private void fluidBlock(RegistryObject<LiquidBlock> block) {
+        ModelFile model = models().getExistingFile(modLoc("block/fluid"));
+        getVariantBuilder(block.get()).forAllStates(state -> ConfiguredModel.builder().modelFile(model).build());
     }
 
 }

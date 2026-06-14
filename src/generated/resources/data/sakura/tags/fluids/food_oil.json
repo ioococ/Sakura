@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "sakura:food_oil",
+    "sakura:food_oil_flowing",
+    "#sakura:plant_oil"
+  ]
+}

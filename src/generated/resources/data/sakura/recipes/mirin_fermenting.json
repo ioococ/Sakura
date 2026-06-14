@@ -12,7 +12,7 @@
     }
   ],
   "fluid": {
-    "fluidTag": "sakura:brewers_alcohol",
+    "fluidTag": "sakura:alcohol",
     "amount": 500
   },
   "results": [

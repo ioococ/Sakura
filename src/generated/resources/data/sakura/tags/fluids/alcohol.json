@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "#sakura:alcohol/beer",
+    "#sakura:alcohol/brandy",
+    "#sakura:alcohol/champagne",
+    "#sakura:alcohol/cocoa_liqueur",
+    "#sakura:alcohol/doburoku",
+    "#sakura:alcohol/gin",
+    "#sakura:alcohol/liqueur",
+    "#sakura:alcohol/sake",
+    "#sakura:alcohol/red_wine",
+    "#sakura:alcohol/rum",
+    "#sakura:alcohol/shouchu",
+    "#sakura:alcohol/whiskey",
+    "#sakura:alcohol/white_wine",
+    "#sakura:alcohol/tequila",
+    "#sakura:alcohol/vodka"
+  ]
+}

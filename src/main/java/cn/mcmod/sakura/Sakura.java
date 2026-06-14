@@ -15,6 +15,8 @@ import cn.mcmod.sakura.item.enums.SakuraFoodSet;
 import cn.mcmod.sakura.level.WorldGenerationRegistry;
 import cn.mcmod.sakura.loot_modifier.LootModifiterRegistry;
 import cn.mcmod.sakura.recipes.RecipeTypeRegistry;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -30,6 +32,7 @@ import org.slf4j.Logger;
 public class Sakura {
     public static final String MOD_ID = "sakura";
     public static final Logger LOGGER = LogUtils.getLogger();
+    public static final Gson GSON = (new GsonBuilder()).setPrettyPrinting().disableHtmlEscaping().create();
 
     public static final CreativeModeTab GROUP = new CreativeModeTab(MOD_ID) {
         @Override

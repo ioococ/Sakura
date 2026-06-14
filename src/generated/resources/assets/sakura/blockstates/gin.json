@@ -1,0 +1,52 @@
+{
+  "variants": {
+    "level=0": {
+      "model": "sakura:block/fluid"
+    },
+    "level=1": {
+      "model": "sakura:block/fluid"
+    },
+    "level=2": {
+      "model": "sakura:block/fluid"
+    },
+    "level=3": {
+      "model": "sakura:block/fluid"
+    },
+    "level=4": {
+      "model": "sakura:block/fluid"
+    },
+    "level=5": {
+      "model": "sakura:block/fluid"
+    },
+    "level=6": {
+      "model": "sakura:block/fluid"
+    },
+    "level=7": {
+      "model": "sakura:block/fluid"
+    },
+    "level=8": {
+      "model": "sakura:block/fluid"
+    },
+    "level=9": {
+      "model": "sakura:block/fluid"
+    },
+    "level=10": {
+      "model": "sakura:block/fluid"
+    },
+    "level=11": {
+      "model": "sakura:block/fluid"
+    },
+    "level=12": {
+      "model": "sakura:block/fluid"
+    },
+    "level=13": {
+      "model": "sakura:block/fluid"
+    },
+    "level=14": {
+      "model": "sakura:block/fluid"
+    },
+    "level=15": {
+      "model": "sakura:block/fluid"
+    }
+  }
+}
