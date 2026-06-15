@@ -4,6 +4,7 @@ import cn.mcmod.sakura.block.BlockItemRegistry;
 import cn.mcmod.sakura.block.BlockRegistry;
 import cn.mcmod.sakura.block.entity.BlockEntityRegistry;
 import cn.mcmod.sakura.client.particle.ParticleRegistry;
+import cn.mcmod.sakura.client.sound.SoundRegistry;
 import cn.mcmod.sakura.container.ContainerRegistry;
 import cn.mcmod.sakura.fluid.BucketItemRegistry;
 import cn.mcmod.sakura.fluid.FluidBlockRegistry;
@@ -63,6 +64,7 @@ public class Sakura {
 
         ParticleRegistry.PARTICLE_TYPES.register(eventBus);
 
+        SoundRegistry.SOUND_EVENT.register(eventBus);
         ContainerRegistry.CONTAINER_TYPES.register(eventBus);
 
         LootModifiterRegistry.GLM.register(eventBus);
