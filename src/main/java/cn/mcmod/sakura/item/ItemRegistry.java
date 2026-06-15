@@ -50,19 +50,19 @@ public class ItemRegistry {
     public static final Map<SakuraNormalItemSet, RegistryObject<Item>> MATERIALS = ItemRegistryUtil
             .mapOfKeys(SakuraNormalItemSet.class, material -> register(material.getName(), ItemRegistry::normalItem));
     
-    public static final RegistryObject<Item> IRON_FISH_KNIFE = register("fish_knife", () -> new KnifeItem(Tiers.IRON, 1F, -2.0F, Sakura.defaultItemProperties().stacksTo(1)));
-    public static final RegistryObject<Item> IRON_NOODLE_KNIFE = register("noodle_knife", () -> new KnifeItem(Tiers.IRON, 2F, -3.0F, Sakura.defaultItemProperties().stacksTo(1)));
+    public static final RegistryObject<Item> IRON_FISH_KNIFE = register("fish_knife", () -> new KnifeItem(Tiers.IRON, 1F, -2.0F, Sakura.mainTabProperties().stacksTo(1)));
+    public static final RegistryObject<Item> IRON_NOODLE_KNIFE = register("noodle_knife", () -> new KnifeItem(Tiers.IRON, 2F, -3.0F, Sakura.mainTabProperties().stacksTo(1)));
 
     private static Item normalItem() {
-        return new Item(Sakura.defaultItemProperties());
+        return new Item(Sakura.mainTabProperties());
     }
 
     private static ItemNameBlockItem seed(Block block) {
-        return new ItemNameBlockItem(block, Sakura.defaultItemProperties());
+        return new ItemNameBlockItem(block, Sakura.mainTabProperties());
     }
 
     private static ItemFoodSeeds seed(Block block, FoodInfo info) {
-        return new ItemFoodSeeds(block, Sakura.defaultItemProperties(), info);
+        return new ItemFoodSeeds(block, Sakura.mainTabProperties(), info);
     }
 
     private static <V extends Item> RegistryObject<V> register(String name, Supplier<V> item) {

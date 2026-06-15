@@ -25,13 +25,13 @@ public class FoodRegistry {
             info -> register(info.getFoodInfo().getName(), () -> normalFood(info.getFoodInfo(), info.getContainer().get())));
 
     private static ItemFoodBase normalFood(FoodInfo info) {
-        return new ItemFoodBase(Sakura.defaultItemProperties(), info);
+        return new ItemFoodBase(Sakura.foodTabProperties(), info);
     }
 
     private static ItemFoodBase normalFood(FoodInfo info, Item container) {
         if(container == null)
             return normalFood(info);
-        return new ItemFoodBase(Sakura.defaultItemProperties().craftRemainder(container), info);
+        return new ItemFoodBase(Sakura.foodTabProperties().craftRemainder(container), info);
     }
 
     private static <V extends Item> RegistryObject<V> register(String name, Supplier<V> item) {
