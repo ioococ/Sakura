@@ -11,9 +11,22 @@ import net.minecraftforge.registries.RegistryObject;
 public class BlockItemRegistry {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Sakura.MOD_ID);
 
+    public static final RegistryObject<Item> BURR_CHESTNUT = ITEMS.register("burr_chestnut",
+            () -> new BlockItem(BlockRegistry.BURR_CHESTNUT.get(), Sakura.mainTabProperties()));
+
+    public static final RegistryObject<Item> BAMBOO_SHOOT = ITEMS.register("bamboo_shoot",
+            () -> new BlockItem(BlockRegistry.BAMBOO_SHOOT.get(), Sakura.mainTabProperties()));
+    public static final RegistryObject<Item> BAMBOO_PLANT = ITEMS.register("bamboo_plant",
+            () -> new BlockItem(BlockRegistry.BAMBOO_PLANT.get(), Sakura.mainTabProperties()));
+    public static final RegistryObject<Item> SUNBURNT_BAMBOO_PLANT = ITEMS.register("sunburnt_bamboo_plant",
+            () -> new BlockItem(BlockRegistry.SUNBURNT_BAMBOO_PLANT.get(), Sakura.mainTabProperties()));
+    public static final RegistryObject<Item> CHARCOAL_BAMBOO_PLANT = ITEMS.register("charcoal_bamboo_plant",
+            () -> new BlockItem(BlockRegistry.CHARCOAL_BAMBOO_PLANT.get(), Sakura.mainTabProperties()));
+
     public static final RegistryObject<Item> SAKURA_LEAVES = ITEMS.register("sakura_leaves",
             () -> new BlockItem(BlockRegistry.SAKURA_LEAVES.get(), Sakura.mainTabProperties()));
-
+    public static final RegistryObject<Item> UME_LEAVES = ITEMS.register("ume_leaves",
+            () -> new BlockItem(BlockRegistry.UME_LEAVES.get(), Sakura.mainTabProperties()));
     public static final RegistryObject<Item> GREEN_MAPLE_LEAVES = ITEMS.register("green_maple_leaves",
             () -> new BlockItem(BlockRegistry.GREEN_MAPLE_LEAVES.get(), Sakura.mainTabProperties()));
     public static final RegistryObject<Item> YELLOW_MAPLE_LEAVES = ITEMS.register("yellow_maple_leaves",
@@ -23,21 +36,42 @@ public class BlockItemRegistry {
     public static final RegistryObject<Item> RED_MAPLE_LEAVES = ITEMS.register("red_maple_leaves",
             () -> new BlockItem(BlockRegistry.RED_MAPLE_LEAVES.get(), Sakura.mainTabProperties()));
 
+    public static final RegistryObject<Item> GREEN_MAPLE_LEAF_PILE = ITEMS.register("green_maple_leaf_pile",
+            () -> new BlockItem(BlockRegistry.GREEN_MAPLE_LEAF_PILE.get(), Sakura.mainTabProperties()));
+    public static final RegistryObject<Item> YELLOW_MAPLE_LEAF_PILE = ITEMS.register("yellow_maple_leaf_pile",
+            () -> new BlockItem(BlockRegistry.YELLOW_MAPLE_LEAF_PILE.get(), Sakura.mainTabProperties()));
+    public static final RegistryObject<Item> ORANGE_MAPLE_LEAF_PILE = ITEMS.register("orange_maple_leaf_pile",
+            () -> new BlockItem(BlockRegistry.ORANGE_MAPLE_LEAF_PILE.get(), Sakura.mainTabProperties()));
+    public static final RegistryObject<Item> RED_MAPLE_LEAF_PILE = ITEMS.register("red_maple_leaf_pile",
+            () -> new BlockItem(BlockRegistry.RED_MAPLE_LEAF_PILE.get(), Sakura.mainTabProperties()));
+
     public static final RegistryObject<Item> SAKURA_LOG = ITEMS.register("sakura_log",
             () -> new BlockItem(BlockRegistry.SAKURA_LOG.get(), Sakura.mainTabProperties()));
 
+    public static final RegistryObject<Item> UME_LOG = ITEMS.register("ume_log",
+            () -> new BlockItem(BlockRegistry.UME_LOG.get(), Sakura.mainTabProperties()));
+
+    public static final RegistryObject<Item> MAPLE_LOG = ITEMS.register("maple_log",
+            () -> new BlockItem(BlockRegistry.MAPLE_LOG.get(), Sakura.mainTabProperties()));
+
     public static final RegistryObject<Item> STRIPPED_SAKURA_LOG = ITEMS.register("stripped_sakura_log",
             () -> new BlockItem(BlockRegistry.STRIPPED_SAKURA_LOG.get(), Sakura.mainTabProperties()));
+
+    public static final RegistryObject<Item> STRIPPED_UME_LOG = ITEMS.register("stripped_ume_log",
+            () -> new BlockItem(BlockRegistry.STRIPPED_UME_LOG.get(), Sakura.mainTabProperties()));
+
+    public static final RegistryObject<Item> STRIPPED_MAPLE_LOG = ITEMS.register("stripped_maple_log",
+            () -> new BlockItem(BlockRegistry.STRIPPED_MAPLE_LOG.get(), Sakura.mainTabProperties()));
 
     public static final RegistryObject<Item> SAKURA_WOOD = ITEMS.register("sakura_wood",
             () -> new BlockItem(BlockRegistry.SAKURA_WOOD.get(), Sakura.mainTabProperties()));
     public static final RegistryObject<Item> STRIPPED_SAKURA_WOOD = ITEMS.register("stripped_sakura_wood",
             () -> new BlockItem(BlockRegistry.STRIPPED_SAKURA_WOOD.get(), Sakura.mainTabProperties()));
 
-    public static final RegistryObject<Item> MAPLE_LOG = ITEMS.register("maple_log",
-            () -> new BlockItem(BlockRegistry.MAPLE_LOG.get(), Sakura.mainTabProperties()));
-    public static final RegistryObject<Item> STRIPPED_MAPLE_LOG = ITEMS.register("stripped_maple_log",
-            () -> new BlockItem(BlockRegistry.STRIPPED_MAPLE_LOG.get(), Sakura.mainTabProperties()));
+    public static final RegistryObject<Item> UME_WOOD = ITEMS.register("ume_wood",
+            () -> new BlockItem(BlockRegistry.UME_WOOD.get(), Sakura.mainTabProperties()));
+    public static final RegistryObject<Item> STRIPPED_UME_WOOD = ITEMS.register("stripped_ume_wood",
+            () -> new BlockItem(BlockRegistry.STRIPPED_UME_WOOD.get(), Sakura.mainTabProperties()));
 
     public static final RegistryObject<Item> MAPLE_WOOD = ITEMS.register("maple_wood",
             () -> new BlockItem(BlockRegistry.MAPLE_WOOD.get(), Sakura.mainTabProperties()));
@@ -53,6 +87,8 @@ public class BlockItemRegistry {
 
     public static final RegistryObject<Item> SAKURA_PLANK = ITEMS.register("sakura_plank",
             () -> new BlockItem(BlockRegistry.SAKURA_PLANK.get(), Sakura.mainTabProperties()));
+    public static final RegistryObject<Item> UME_PLANK = ITEMS.register("ume_plank",
+            () -> new BlockItem(BlockRegistry.UME_PLANK.get(), Sakura.mainTabProperties()));
     public static final RegistryObject<Item> MAPLE_PLANK = ITEMS.register("maple_plank",
             () -> new BlockItem(BlockRegistry.MAPLE_PLANK.get(), Sakura.mainTabProperties()));
     public static final RegistryObject<Item> BAMBOO_PLANK = ITEMS.register("bamboo_plank",
@@ -71,11 +107,10 @@ public class BlockItemRegistry {
     public static final RegistryObject<Item> STRAW_BLOCK = ITEMS.register("straw_block",
             () -> new BlockItem(BlockRegistry.STRAW_BLOCK.get(), Sakura.mainTabProperties()));
 
-    public static final RegistryObject<Item> BAMBOO_SHOOT = ITEMS.register("bamboo_shoot",
-            () -> new BlockItem(BlockRegistry.BAMBOO_SHOOT.get(), Sakura.mainTabProperties()));
-
     public static final RegistryObject<Item> SAKURA_SAPLING = ITEMS.register("sakura_sapling",
             () -> new BlockItem(BlockRegistry.SAKURA_SAPLING.get(), Sakura.mainTabProperties()));
+    public static final RegistryObject<Item> UME_SAPLING = ITEMS.register("ume_sapling",
+            () -> new BlockItem(BlockRegistry.UME_SAPLING.get(), Sakura.mainTabProperties()));
     public static final RegistryObject<Item> GREEN_MAPLE_SAPLING = ITEMS.register("green_maple_sapling",
             () -> new BlockItem(BlockRegistry.GREEN_MAPLE_SAPLING.get(), Sakura.mainTabProperties()));
     public static final RegistryObject<Item> YELLOW_MAPLE_SAPLING = ITEMS.register("yellow_maple_sapling",

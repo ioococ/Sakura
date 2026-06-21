@@ -1,33 +1,29 @@
 package cn.mcmod.sakura.block;
 
 import cn.mcmod.sakura.Sakura;
+import cn.mcmod.sakura.block.artificial.BambooBlock;
+import cn.mcmod.sakura.block.artificial.ObonBlock;
+import cn.mcmod.sakura.block.artificial.TatamiBlock;
+import cn.mcmod.sakura.block.artificial.TatamiSlabBlock;
 import cn.mcmod.sakura.block.crops.RiceCrop;
 import cn.mcmod.sakura.block.crops.RiceCropRoot;
 import cn.mcmod.sakura.block.foods.NabeBlock;
 import cn.mcmod.sakura.block.foods.TeishokuBlock;
 import cn.mcmod.sakura.block.foods.TeishokuFinishedBlock;
-import cn.mcmod.sakura.block.machines.ChoppingBoardBlock;
-import cn.mcmod.sakura.block.machines.CookingPotBlock;
-import cn.mcmod.sakura.block.machines.DistillerBlock;
-import cn.mcmod.sakura.block.machines.FermenterBlock;
-import cn.mcmod.sakura.block.machines.StoneMortarBlock;
+import cn.mcmod.sakura.block.machines.*;
+import cn.mcmod.sakura.block.nature.*;
 import cn.mcmod.sakura.client.particle.ParticleRegistry;
+import cn.mcmod.sakura.client.sound.ModSounds;
 import cn.mcmod.sakura.item.ItemRegistry;
-import cn.mcmod.sakura.level.tree.MapleTreeGrower;
-import cn.mcmod.sakura.level.tree.SakuraTreeFeatures;
-import cn.mcmod.sakura.level.tree.SakuraTreeGrower;
-import cn.mcmod_mmf.mmlib.block.Age3CropBlock;
-import cn.mcmod_mmf.mmlib.block.BaseCropBlock;
-import cn.mcmod_mmf.mmlib.block.BaseHorizonBlock;
-import cn.mcmod_mmf.mmlib.block.FacingSlab;
-import cn.mcmod_mmf.mmlib.block.HighCropBlock;
+import cn.mcmod.sakura.world.feature.TreeConfiguredFeatures;
+import cn.mcmod.sakura.world.level.tree.MapleTreeGrower;
+import cn.mcmod.sakura.world.level.tree.SakuraTreeGrower;
+import cn.mcmod.sakura.world.level.tree.UmeTreeGrower;
+import cn.mcmod_mmf.mmlib.block.*;
 import cn.mcmod_mmf.mmlib.item.info.FoodInfo;
 import net.minecraft.core.Direction;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.RotatedPillarBlock;
-import net.minecraft.world.level.block.SaplingBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.grower.AbstractTreeGrower;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
@@ -36,27 +32,70 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.List;
+
 public class BlockRegistry {
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS,
-            Sakura.MOD_ID);
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Sakura.MOD_ID);
+
+    private static final BlockBehaviour.StateArgumentPredicate<EntityType<?>> CAN_SPAWN_ON_LEAVES =
+            (a, b, c, t) -> t == EntityType.OCELOT || t == EntityType.PARROT;
+
+    private static final BlockBehaviour.StatePredicate NEVER = (s, w, p) -> false;
 
     public static final RegistryObject<Block> SAKURA_LEAVES = BLOCKS.register("sakura_leaves",
             () -> new SakuraLeavesBlock(Block.Properties.of(Material.LEAVES).strength(0.2F).randomTicks()
-                    .sound(SoundType.GRASS).noOcclusion(), ParticleRegistry.SAKURA_LEAF));
+                    .sound(ModSounds.LEAVES_SOUNDS).noOcclusion(), ParticleRegistry.SAKURA_LEAF));
 
-    public static final RegistryObject<Block> GREEN_MAPLE_LEAVES = BLOCKS.register("green_maple_leaves",
-            () -> new SakuraLeavesBlock(Block.Properties.of(Material.LEAVES).strength(0.2F).randomTicks()
-                    .sound(SoundType.GRASS).noOcclusion(), ParticleRegistry.RED_MAPLE_LEAF));
-    public static final RegistryObject<Block> YELLOW_MAPLE_LEAVES = BLOCKS.register("yellow_maple_leaves",
-            () -> new SakuraLeavesBlock(Block.Properties.of(Material.LEAVES).strength(0.2F).randomTicks()
-                    .sound(SoundType.GRASS).noOcclusion(), ParticleRegistry.YELLOW_MAPLE_LEAF));
-    public static final RegistryObject<Block> ORANGE_MAPLE_LEAVES = BLOCKS.register("orange_maple_leaves",
-            () -> new SakuraLeavesBlock(Block.Properties.of(Material.LEAVES).strength(0.2F).randomTicks()
-                    .sound(SoundType.GRASS).noOcclusion(), ParticleRegistry.ORANGE_MAPLE_LEAF));
-    public static final RegistryObject<Block> RED_MAPLE_LEAVES = BLOCKS.register("red_maple_leaves",
-            () -> new SakuraLeavesBlock(Block.Properties.of(Material.LEAVES).strength(0.2F).randomTicks()
-                    .sound(SoundType.GRASS).noOcclusion(), ParticleRegistry.GREEN_MAPLE_LEAF));
+    public static final RegistryObject<Block> UME_LEAVES = BLOCKS.register("ume_leaves",
+            () -> new UmeLeavesBlock(Block.Properties.of(Material.LEAVES).strength(0.2F).randomTicks()
+                    .sound(ModSounds.LEAVES_SOUNDS).noOcclusion()));
 
+    public static final RegistryObject<LeavesBlock> GREEN_MAPLE_LEAVES = BLOCKS.register("green_maple_leaves",
+            () -> new MapleLeavesBlock(Block.Properties.of(Material.LEAVES).strength(0.2F).randomTicks()
+                    .sound(ModSounds.LEAVES_SOUNDS).noOcclusion(), MapleLeavesBlock.LeavesTypeEnum.GREEN));
+    public static final RegistryObject<LeavesBlock> YELLOW_MAPLE_LEAVES = BLOCKS.register("yellow_maple_leaves",
+            () -> new MapleLeavesBlock(Block.Properties.of(Material.LEAVES).strength(0.2F).randomTicks()
+                    .sound(ModSounds.LEAVES_SOUNDS).noOcclusion(), MapleLeavesBlock.LeavesTypeEnum.YELLOW));
+    public static final RegistryObject<LeavesBlock> ORANGE_MAPLE_LEAVES = BLOCKS.register("orange_maple_leaves",
+            () -> new MapleLeavesBlock(Block.Properties.of(Material.LEAVES).strength(0.2F).randomTicks()
+                    .sound(ModSounds.LEAVES_SOUNDS).noOcclusion(), MapleLeavesBlock.LeavesTypeEnum.ORANGE));
+    public static final RegistryObject<LeavesBlock> RED_MAPLE_LEAVES = BLOCKS.register("red_maple_leaves",
+            () -> new MapleLeavesBlock(Block.Properties.of(Material.LEAVES).strength(0.2F).randomTicks()
+                    .sound(ModSounds.LEAVES_SOUNDS).noOcclusion(), MapleLeavesBlock.LeavesTypeEnum.RED));
+
+
+    public static final RegistryObject<LeafPileBlock> GREEN_MAPLE_LEAF_PILE = BLOCKS.register("green_maple_leaf_pile",
+            () -> new LeafPileBlock(
+                    BlockBehaviour.Properties.of(Material.REPLACEABLE_PLANT, MaterialColor.COLOR_GREEN)
+                            .dynamicShape().noCollission().isValidSpawn(CAN_SPAWN_ON_LEAVES)
+                            .isSuffocating(NEVER).isViewBlocking(NEVER).instabreak()
+                            .sound(ModSounds.LEAVES_SOUNDS).strength(0.1F),
+                    List.of(ParticleRegistry.GREEN_MAPLE_LEAF)));
+
+    public static final RegistryObject<LeafPileBlock> YELLOW_MAPLE_LEAF_PILE = BLOCKS.register("yellow_maple_leaf_pile",
+            () -> new LeafPileBlock(
+                    BlockBehaviour.Properties.of(Material.REPLACEABLE_PLANT, MaterialColor.COLOR_YELLOW)
+                            .dynamicShape().noCollission().isValidSpawn(CAN_SPAWN_ON_LEAVES)
+                            .isSuffocating(NEVER).isViewBlocking(NEVER).instabreak()
+                            .sound(ModSounds.LEAVES_SOUNDS).strength(0.1F),
+                    List.of(ParticleRegistry.YELLOW_MAPLE_LEAF)));
+
+    public static final RegistryObject<LeafPileBlock> ORANGE_MAPLE_LEAF_PILE = BLOCKS.register("orange_maple_leaf_pile",
+            () -> new LeafPileBlock(
+                    BlockBehaviour.Properties.of(Material.REPLACEABLE_PLANT, MaterialColor.COLOR_ORANGE)
+                            .dynamicShape().noCollission().isValidSpawn(CAN_SPAWN_ON_LEAVES)
+                            .isSuffocating(NEVER).isViewBlocking(NEVER).instabreak()
+                            .sound(ModSounds.LEAVES_SOUNDS).strength(0.1F),
+                    List.of(ParticleRegistry.ORANGE_MAPLE_LEAF)));
+
+
+    public static final RegistryObject<LeafPileBlock> RED_MAPLE_LEAF_PILE = BLOCKS.register("red_maple_leaf_pile",
+            () -> new LeafPileBlock(
+                    BlockBehaviour.Properties.of(Material.REPLACEABLE_PLANT, MaterialColor.COLOR_RED)
+                            .dynamicShape().noCollission().isValidSpawn(CAN_SPAWN_ON_LEAVES)
+                            .isSuffocating(NEVER).isViewBlocking(NEVER).instabreak()
+                            .sound(ModSounds.LEAVES_SOUNDS).strength(0.1F),
+                    List.of(ParticleRegistry.RED_MAPLE_LEAF)));
     public static final RegistryObject<RotatedPillarBlock> SAKURA_LOG = BLOCKS.register("sakura_log",
             () -> log(MaterialColor.WOOD, MaterialColor.PODZOL));
 
@@ -72,11 +111,9 @@ public class BlockRegistry {
     public static final RegistryObject<SaplingBlock> SAKURA_SAPLING = BLOCKS.register("sakura_sapling",
             () -> sapling(new SakuraTreeGrower()));
 
-    public static final RegistryObject<RotatedPillarBlock> MAPLE_LOG = BLOCKS.register("maple_log",
-            MapleTreeLogBlock::new);
+    public static final RegistryObject<RotatedPillarBlock> MAPLE_LOG = BLOCKS.register("maple_log", MapleLogBlock::new);
 
-    public static final RegistryObject<RotatedPillarBlock> MAPLE_SAP_LOG = BLOCKS.register("maple_sap_log",
-            MapleTreeSapLogBlock::new);
+    public static final RegistryObject<RotatedPillarBlock> MAPLE_SAP_LOG = BLOCKS.register("maple_sap_log", MapleSapLogBlock::new);
 
     public static final RegistryObject<RotatedPillarBlock> STRIPPED_MAPLE_LOG = BLOCKS.register("stripped_maple_log",
             () -> log(MaterialColor.WOOD, MaterialColor.WOOD));
@@ -87,25 +124,44 @@ public class BlockRegistry {
     public static final RegistryObject<RotatedPillarBlock> STRIPPED_MAPLE_WOOD = BLOCKS.register("stripped_maple_wood",
             () -> log(MaterialColor.WOOD, MaterialColor.WOOD));
 
+    public static final RegistryObject<SaplingBlock> UME_SAPLING = BLOCKS.register("ume_sapling",
+            () -> sapling(new UmeTreeGrower()));
+
+    public static final RegistryObject<RotatedPillarBlock> UME_LOG = BLOCKS.register("ume_log",
+            () -> log(MaterialColor.WOOD, MaterialColor.PODZOL));
+
+    public static final RegistryObject<RotatedPillarBlock> STRIPPED_UME_LOG = BLOCKS.register("stripped_ume_log",
+            () -> log(MaterialColor.WOOD, MaterialColor.WOOD));
+
+    public static final RegistryObject<RotatedPillarBlock> UME_WOOD = BLOCKS.register("ume_wood",
+            () -> log(MaterialColor.PODZOL, MaterialColor.PODZOL));
+
+    public static final RegistryObject<RotatedPillarBlock> STRIPPED_UME_WOOD = BLOCKS.register("stripped_ume_wood",
+            () -> log(MaterialColor.WOOD, MaterialColor.WOOD));
+
     public static final RegistryObject<RotatedPillarBlock> BAMBOO_BLOCK = BLOCKS.register("bamboo_block", BambooBlock::new);
+
     public static final RegistryObject<RotatedPillarBlock> SUNBURNT_BAMBOO_BLOCK = BLOCKS
-            .register("sunburnt_bamboo_block", () -> simplebambooBlock(MaterialColor.SAND, MaterialColor.WOOD));
+            .register("sunburnt_bamboo_block", () -> simpleBambooBlock(MaterialColor.SAND, MaterialColor.WOOD));
     public static final RegistryObject<RotatedPillarBlock> CHARCOAL_BAMBOO_BLOCK = BLOCKS.register(
-            "charcoal_bamboo_block", () -> simplebambooBlock(MaterialColor.COLOR_GRAY, MaterialColor.COLOR_BLACK));
+            "charcoal_bamboo_block", () -> simpleBambooBlock(MaterialColor.COLOR_GRAY, MaterialColor.COLOR_BLACK));
 
     public static final RegistryObject<Block> GREEN_MAPLE_SAPLING = BLOCKS.register("green_maple_sapling",
-            () -> sapling(new MapleTreeGrower(SakuraTreeFeatures.GREEN_MAPLE, SakuraTreeFeatures.FANCY_GREEN_MAPLE)));
+            () -> sapling(new MapleTreeGrower(TreeConfiguredFeatures.GREEN_MAPLE, TreeConfiguredFeatures.GREEN_FANCY_MAPLE)));
     public static final RegistryObject<Block> YELLOW_MAPLE_SAPLING = BLOCKS.register("yellow_maple_sapling",
-            () -> sapling(new MapleTreeGrower(SakuraTreeFeatures.YELLOW_MAPLE, SakuraTreeFeatures.FANCY_YELLOW_MAPLE)));
+            () -> sapling(new MapleTreeGrower(TreeConfiguredFeatures.YELLOW_MAPLE, TreeConfiguredFeatures.YELLOW_FANCY_MAPLE)));
     public static final RegistryObject<Block> ORANGE_MAPLE_SAPLING = BLOCKS.register("orange_maple_sapling",
-            () -> sapling(new MapleTreeGrower(SakuraTreeFeatures.ORANGE_MAPLE, SakuraTreeFeatures.FANCY_ORANGE_MAPLE)));
+            () -> sapling(new MapleTreeGrower(TreeConfiguredFeatures.ORANGE_MAPLE, TreeConfiguredFeatures.ORANGE_FANCY_MAPLE)));
     public static final RegistryObject<Block> RED_MAPLE_SAPLING = BLOCKS.register("red_maple_sapling",
-            () -> sapling(new MapleTreeGrower(SakuraTreeFeatures.RED_MAPLE, SakuraTreeFeatures.FANCY_RED_MAPLE)));
+            () -> sapling(new MapleTreeGrower(TreeConfiguredFeatures.RED_MAPLE, TreeConfiguredFeatures.RED_FANCY_MAPLE)));
 
-    public static final RegistryObject<Block> BAMBOO_PLANT = BLOCKS.register("bamboo_plant", BambooPlant::new);
     public static final RegistryObject<Block> BAMBOO_SHOOT = BLOCKS.register("bamboo_shoot", BambooShoot::new);
+    public static final RegistryObject<Block> BAMBOO_PLANT = BLOCKS.register("bamboo_plant", BambooPlant::new);
+    public static final RegistryObject<Block> SUNBURNT_BAMBOO_PLANT = BLOCKS.register("sunburnt_bamboo_plant", BambooPlant::new);
+    public static final RegistryObject<Block> CHARCOAL_BAMBOO_PLANT = BLOCKS.register("charcoal_bamboo_plant", BambooPlant::new);
 
     public static final RegistryObject<Block> SAKURA_PLANK = BLOCKS.register("sakura_plank", () -> plank(MaterialColor.WOOD));
+    public static final RegistryObject<Block> UME_PLANK = BLOCKS.register("ume_plank", () -> plank(MaterialColor.WOOD));
     public static final RegistryObject<Block> MAPLE_PLANK = BLOCKS.register("maple_plank", () -> plank(MaterialColor.SAND));
     public static final RegistryObject<Block> BAMBOO_PLANK = BLOCKS.register("bamboo_plank", () -> plank(MaterialColor.SAND));
     
@@ -156,6 +212,10 @@ public class BlockRegistry {
     public static final RegistryObject<Block> EGGPLANT_CROP = BLOCKS.register("eggplant_crop",
             () -> new HighCropBlock(Block.Properties.copy(Blocks.CARROTS).strength(0.2F), ItemRegistry.EGGPLANT_SEEDS));
 
+    public static final RegistryObject<Block> BURR_CHESTNUT = BLOCKS.register(
+            "burr_chestnut",
+            () -> new BurrChestnutBlock(BlockBehaviour.Properties.copy(Blocks.CARROTS).color(MaterialColor.COLOR_YELLOW).noCollission().sound(SoundType.GRASS)));
+
     public static final RegistryObject<Block> STONE_MORTAR = BLOCKS.register("stone_mortar", StoneMortarBlock::new);
     public static final RegistryObject<Block> COOKING_POT = BLOCKS.register("cooking_pot", CookingPotBlock::new);
     public static final RegistryObject<Block> FERMENTER = BLOCKS.register("fermenter", FermenterBlock::new);
@@ -190,7 +250,7 @@ public class BlockRegistry {
                 .instabreak().sound(SoundType.GRASS));
     }
 
-    private static RotatedPillarBlock simplebambooBlock(MaterialColor top, MaterialColor bark) {
+    private static RotatedPillarBlock simpleBambooBlock(MaterialColor top, MaterialColor bark) {
         return new RotatedPillarBlock(BlockBehaviour.Properties
                 .of(Material.BAMBOO,
                         state -> (state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? top : bark))

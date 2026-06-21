@@ -12,11 +12,14 @@ import cn.mcmod.sakura.fluid.FluidRegistry;
 import cn.mcmod.sakura.item.ComposterRegistry;
 import cn.mcmod.sakura.item.FoodRegistry;
 import cn.mcmod.sakura.item.ItemRegistry;
-import cn.mcmod.sakura.level.WorldGenerationRegistry;
 import cn.mcmod.sakura.loot_modifier.LootModifiterRegistry;
 import cn.mcmod.sakura.recipes.RecipeTypeRegistry;
 import cn.mcmod.sakura.tab.FoodTab;
 import cn.mcmod.sakura.tab.MainTab;
+import cn.mcmod.sakura.world.ModConfiguredFeatures;
+import cn.mcmod.sakura.world.ModFeatures;
+import cn.mcmod.sakura.world.ModPlacedFeatures;
+import cn.mcmod.sakura.world.feature.modifier.ModPlacementModifierTypes;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.mojang.logging.LogUtils;
@@ -62,6 +65,11 @@ public class Sakura {
         FluidBlockRegistry.BLOCKS.register(eventBus);
         BucketItemRegistry.ITEMS.register(eventBus);
 
+        ModPlacementModifierTypes.PLACEMENT_MODIFIER_TYPES.register(eventBus);
+        ModFeatures.FEATURES.register(eventBus);
+        ModConfiguredFeatures.register(eventBus);
+        ModPlacedFeatures.PLACED_FEATURES.register(eventBus);
+
         ParticleRegistry.PARTICLE_TYPES.register(eventBus);
 
         SoundRegistry.SOUND_EVENT.register(eventBus);
@@ -71,8 +79,6 @@ public class Sakura {
         RecipeTypeRegistry.RECIPE_TYPES.register(eventBus);
         RecipeTypeRegistry.RECIPE_SERIALIZERS.register(eventBus);
 
-        WorldGenerationRegistry.FEATURES.register(eventBus);
-        WorldGenerationRegistry.PATCHES.register(eventBus);
     }
 
     private void setup(final FMLCommonSetupEvent event) {

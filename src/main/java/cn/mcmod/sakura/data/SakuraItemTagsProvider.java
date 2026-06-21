@@ -27,11 +27,11 @@ public class SakuraItemTagsProvider extends ItemTagsProvider {
     protected void addTags() {
         copy(BlockTags.PLANKS, ItemTags.PLANKS);
         copy(BlockTags.SAPLINGS, ItemTags.SAPLINGS);
-        tag(ItemTags.LOGS).add(BlockItemRegistry.MAPLE_LOG.get(), BlockItemRegistry.SAKURA_LOG.get(),
-                BlockItemRegistry.MAPLE_WOOD.get(), BlockItemRegistry.SAKURA_WOOD.get(),
-                BlockItemRegistry.STRIPPED_MAPLE_LOG.get(), BlockItemRegistry.STRIPPED_SAKURA_LOG.get());
+        tag(ItemTags.LOGS).add(BlockItemRegistry.MAPLE_LOG.get(), BlockItemRegistry.SAKURA_LOG.get(), BlockItemRegistry.UME_LOG.get(),
+                BlockItemRegistry.MAPLE_WOOD.get(), BlockItemRegistry.SAKURA_WOOD.get(), BlockItemRegistry.UME_WOOD.get(),
+                BlockItemRegistry.STRIPPED_MAPLE_LOG.get(), BlockItemRegistry.STRIPPED_SAKURA_LOG.get(), BlockItemRegistry.STRIPPED_UME_LOG.get());
 
-        tag(ItemTags.COALS).add(ItemRegistry.MATERIALS.get(SakuraNormalItemSet.CHARCOAL_BAMBOO).get());
+        tag(ItemTags.COALS).add(BlockItemRegistry.CHARCOAL_BAMBOO_PLANT.get());
 
         tag(SakuraItemTags.TOOLS_KNIVES).addTag(SakuraItemTags.TOOLS_KNIVES_FISH).addTag(SakuraItemTags.TOOLS_KNIVES_NOODLE);
         tag(SakuraItemTags.TOOLS_KNIVES_FISH).add(ItemRegistry.IRON_FISH_KNIFE.get());
@@ -50,8 +50,8 @@ public class SakuraItemTagsProvider extends ItemTagsProvider {
 
         tag(SakuraItemTags.YEAST).add(ItemRegistry.MATERIALS.get(SakuraNormalItemSet.YEAST).get());
 
-        tag(SakuraItemTags.BAMBOO).add(ItemRegistry.MATERIALS.get(SakuraNormalItemSet.BAMBOO).get());
-        tag(SakuraItemTags.BAMBOO).add(ItemRegistry.MATERIALS.get(SakuraNormalItemSet.SUNBURNT_BAMBOO).get());
+        tag(SakuraItemTags.BAMBOO).add(BlockItemRegistry.BAMBOO_PLANT.get());
+        tag(SakuraItemTags.BAMBOO).add(BlockItemRegistry.SUNBURNT_BAMBOO_PLANT.get());
         tag(SakuraItemTags.BAMBOO).add(Items.BAMBOO);
 
         tag(SakuraItemTags.SLICES).addTag(SakuraItemTags.SLICES_CABBAGE).addTag(SakuraItemTags.SLICES_RAW_FISHES);

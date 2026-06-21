@@ -29,15 +29,20 @@ public class SakuraClient {
             ItemBlockRenderTypes.setRenderLayer(BlockRegistry.RICE_CROP_ROOT.get(), RenderType.cutoutMipped());
             ItemBlockRenderTypes.setRenderLayer(BlockRegistry.BAMBOO_PLANT.get(), RenderType.cutoutMipped());
             ItemBlockRenderTypes.setRenderLayer(BlockRegistry.BAMBOO_SHOOT.get(), RenderType.cutoutMipped());
+            ItemBlockRenderTypes.setRenderLayer(BlockRegistry.SUNBURNT_BAMBOO_PLANT.get(), RenderType.cutoutMipped());
+            ItemBlockRenderTypes.setRenderLayer(BlockRegistry.CHARCOAL_BAMBOO_PLANT.get(), RenderType.cutoutMipped());
             ItemBlockRenderTypes.setRenderLayer(BlockRegistry.COOKING_POT.get(), RenderType.cutoutMipped());
+            ItemBlockRenderTypes.setRenderLayer(BlockRegistry.BURR_CHESTNUT.get(), RenderType.cutoutMipped());
+            ItemBlockRenderTypes.setRenderLayer(BlockRegistry.GREEN_MAPLE_LEAF_PILE.get(), RenderType.cutoutMipped());
+            ItemBlockRenderTypes.setRenderLayer(BlockRegistry.YELLOW_MAPLE_LEAF_PILE.get(), RenderType.cutoutMipped());
+            ItemBlockRenderTypes.setRenderLayer(BlockRegistry.ORANGE_MAPLE_LEAF_PILE.get(), RenderType.cutoutMipped());
+            ItemBlockRenderTypes.setRenderLayer(BlockRegistry.RED_MAPLE_LEAF_PILE.get(), RenderType.cutoutMipped());
 
             ItemBlockRenderTypes.setRenderLayer(BlockRegistry.ODEN_NABE.get(), RenderType.cutoutMipped());
             ItemBlockRenderTypes.setRenderLayer(BlockRegistry.SUKIYAKI_NABE.get(), RenderType.cutoutMipped());
 
             BlockRegistry.BLOCKS.getEntries().forEach(block -> {
-                if (block.get() instanceof BushBlock) {
-                    ItemBlockRenderTypes.setRenderLayer(block.get(), RenderType.cutoutMipped());
-                }
+                if (block.get() instanceof BushBlock) ItemBlockRenderTypes.setRenderLayer(block.get(), RenderType.cutoutMipped());
             });
             FluidRegistry.FLUIDS.getEntries().forEach(fluid -> {
                 ItemBlockRenderTypes.setRenderLayer(fluid.get(), RenderType.translucent());

@@ -1,11 +1,11 @@
 package cn.mcmod.sakura.data.loot;
 
-import cn.mcmod.sakura.block.BambooPlant;
 import cn.mcmod.sakura.block.BlockItemRegistry;
 import cn.mcmod.sakura.block.BlockRegistry;
 import cn.mcmod.sakura.block.crops.RiceCropRoot;
 import cn.mcmod.sakura.block.foods.TeishokuBlock;
 import cn.mcmod.sakura.block.foods.TeishokuFinishedBlock;
+import cn.mcmod.sakura.block.nature.BambooPlant;
 import cn.mcmod.sakura.item.FoodRegistry;
 import cn.mcmod.sakura.item.ItemRegistry;
 import cn.mcmod.sakura.item.enums.SakuraFoodSet;
@@ -37,7 +37,7 @@ public class SakuraBlockLoot extends AbstartctBlockLoot {
             else if (block.get() instanceof RiceCropRoot)
                 ;
             else if (block.get() instanceof BambooPlant)
-                dropOther(block.get(), ItemRegistry.MATERIALS.get(SakuraNormalItemSet.BAMBOO).get());
+                dropOther(block.get(), BlockItemRegistry.BAMBOO_PLANT.get());
             else if (block.get() instanceof TeishokuFinishedBlock)
                 dropOther(block.get(), BlockItemRegistry.OBON.get());
             else

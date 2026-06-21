@@ -1,9 +1,6 @@
 package cn.mcmod.sakura.item.enums;
 
 public enum SakuraNormalItemSet {
-    BAMBOO("bamboo"),
-    SUNBURNT_BAMBOO("sunburnt_bamboo"),
-    CHARCOAL_BAMBOO("charcoal_bamboo"),
     BAMBOO_LUMBER("bamboo_lumber"),
     SAKURA_LUMBER("sakura_lumber"),
     MAPLE_LUMBER("maple_lumber"),

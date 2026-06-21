@@ -2,10 +2,16 @@ package cn.mcmod.sakura.block.entity;
 
 import cn.mcmod.sakura.Sakura;
 import cn.mcmod.sakura.block.BlockRegistry;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import cn.mcmod_mmf.mmlib.platform.RegHelper;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.util.function.Supplier;
 
 public class BlockEntityRegistry {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister
@@ -34,4 +40,8 @@ public class BlockEntityRegistry {
     public static final RegistryObject<BlockEntityType<ChoppingBoardBlockEntity>> CHOPPING_BOARD = BLOCK_ENTITIES.register(
             "chopping_board",
             () -> BlockEntityType.Builder.of(ChoppingBoardBlockEntity::new, BlockRegistry.CHOPPING_BOARD.get()).build(null));
+
+    public static Supplier<EntityType<FallingLayerEntity>> FALLING_LAYER = RegHelper.registerEntityType(
+            new ResourceLocation(Sakura.MOD_ID, "falling_layer"),
+            FallingLayerEntity::new, MobCategory.MISC, 0.98F, 0.98F, 10, 20);
 }

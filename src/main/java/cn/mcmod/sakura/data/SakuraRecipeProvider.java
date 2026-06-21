@@ -76,7 +76,7 @@ public class SakuraRecipeProvider extends AbstractRecipeProvider {
                 .unlockedBy("has_item", has(SakuraItemTags.LUMBER)).save(consumer);
 
         ShapedRecipeBuilder.shaped(Items.TORCH, 4).pattern("C").pattern("#")
-                .define('C', ItemRegistry.MATERIALS.get(SakuraNormalItemSet.CHARCOAL_BAMBOO).get())
+                .define('C', BlockItemRegistry.CHARCOAL_BAMBOO_PLANT.get())
                 .define('#', Tags.Items.RODS_WOODEN).unlockedBy("has_item", has(Tags.Items.RODS_WOODEN))
                 .save(consumer, new ResourceLocation(Sakura.MOD_ID, "torchs_from_charcoal"));
 
@@ -286,29 +286,25 @@ public class SakuraRecipeProvider extends AbstractRecipeProvider {
                 .requires(BlockRegistry.SAKURA_LEAVES.get())
                 .unlockedBy("has_mochi", has(FoodRegistry.FOODSET.get(SakuraFoodSet.MOCHI).get())).save(consumer);
 
-        makeIngotToBlock(BlockRegistry.BAMBOO_BLOCK, ItemRegistry.MATERIALS.get(SakuraNormalItemSet.BAMBOO))
-                .unlockedBy("has_item", has(ItemRegistry.MATERIALS.get(SakuraNormalItemSet.BAMBOO).get()))
+        makeIngotToBlock(BlockRegistry.BAMBOO_BLOCK, BlockItemRegistry.BAMBOO_PLANT)
+                .unlockedBy("has_item", has(BlockItemRegistry.BAMBOO_PLANT.get()))
                 .save(consumer);
         makeIngotToBlock(BlockRegistry.BAMBOO_BLOCK, () -> Items.BAMBOO).unlockedBy("has_item", has(Items.BAMBOO))
                 .save(consumer, new ResourceLocation(Sakura.MOD_ID, "bamboo_block_from_vanilla_bamboo"));
-        makeIngotToBlock(BlockRegistry.SUNBURNT_BAMBOO_BLOCK,
-                ItemRegistry.MATERIALS.get(SakuraNormalItemSet.SUNBURNT_BAMBOO))
-                .unlockedBy("has_item",
-                        has(ItemRegistry.MATERIALS.get(SakuraNormalItemSet.SUNBURNT_BAMBOO).get()))
+        makeIngotToBlock(BlockRegistry.SUNBURNT_BAMBOO_BLOCK, BlockItemRegistry.SUNBURNT_BAMBOO_PLANT)
+                .unlockedBy("has_item", has(BlockItemRegistry.SUNBURNT_BAMBOO_PLANT.get()))
                 .save(consumer);
-        makeIngotToBlock(BlockRegistry.CHARCOAL_BAMBOO_BLOCK,
-                ItemRegistry.MATERIALS.get(SakuraNormalItemSet.CHARCOAL_BAMBOO))
-                .unlockedBy("has_item",
-                        has(ItemRegistry.MATERIALS.get(SakuraNormalItemSet.CHARCOAL_BAMBOO).get()))
+        makeIngotToBlock(BlockRegistry.CHARCOAL_BAMBOO_BLOCK, BlockItemRegistry.CHARCOAL_BAMBOO_PLANT)
+                .unlockedBy("has_item", has(BlockItemRegistry.CHARCOAL_BAMBOO_PLANT.get()))
                 .save(consumer);
 
-        makeBlockToIngot(ItemRegistry.MATERIALS.get(SakuraNormalItemSet.BAMBOO), BlockRegistry.BAMBOO_BLOCK)
+        makeBlockToIngot(BlockItemRegistry.BAMBOO_PLANT, BlockRegistry.BAMBOO_BLOCK)
                 .save(consumer);
         makeBlockToIngot(() -> Items.BAMBOO, BlockRegistry.BAMBOO_BLOCK).save(consumer,
                 new ResourceLocation(Sakura.MOD_ID, "bamboo_block_to_vanilla_bamboo"));
-        makeBlockToIngot(ItemRegistry.MATERIALS.get(SakuraNormalItemSet.CHARCOAL_BAMBOO),
+        makeBlockToIngot(BlockItemRegistry.CHARCOAL_BAMBOO_PLANT,
                 BlockRegistry.CHARCOAL_BAMBOO_BLOCK).save(consumer);
-        makeBlockToIngot(ItemRegistry.MATERIALS.get(SakuraNormalItemSet.SUNBURNT_BAMBOO),
+        makeBlockToIngot(BlockItemRegistry.SUNBURNT_BAMBOO_PLANT,
                 BlockRegistry.SUNBURNT_BAMBOO_BLOCK).save(consumer);
 
         makeLumber(ItemRegistry.MATERIALS.get(SakuraNormalItemSet.BAMBOO_LUMBER), Ingredient.of(SakuraItemTags.BAMBOO))
@@ -338,11 +334,11 @@ public class SakuraRecipeProvider extends AbstractRecipeProvider {
                 .unlockedBy("has_item", has(BlockItemRegistry.SAKURA_LOG.get()))
                 .save(consumer, new ResourceLocation(Sakura.MOD_ID, "sakura_lumber_from_stripped"));
 
-        makeLumberToPlank(BlockRegistry.BAMBOO_PLANK, Ingredient.of(SakuraItemTags.LUMBER_BAMBOO))
+        makeLumberToPlank(BlockRegistry.SAKURA_PLANK, Ingredient.of(SakuraItemTags.LUMBER_SAKURA))
                 .unlockedBy("has_item", has(SakuraItemTags.LUMBER)).save(consumer);
         makeLumberToPlank(BlockRegistry.MAPLE_PLANK, Ingredient.of(SakuraItemTags.LUMBER_MAPLE))
                 .unlockedBy("has_item", has(SakuraItemTags.LUMBER)).save(consumer);
-        makeLumberToPlank(BlockRegistry.SAKURA_PLANK, Ingredient.of(SakuraItemTags.LUMBER_SAKURA))
+        makeLumberToPlank(BlockRegistry.BAMBOO_PLANK, Ingredient.of(SakuraItemTags.LUMBER_BAMBOO))
                 .unlockedBy("has_item", has(SakuraItemTags.LUMBER)).save(consumer);
 
         smeltingRecipe(BlockRegistry.CHARCOAL_BAMBOO_BLOCK.get(), BlockRegistry.BAMBOO_BLOCK.get(), 0.5F).save(consumer,
@@ -351,12 +347,12 @@ public class SakuraRecipeProvider extends AbstractRecipeProvider {
         smeltingRecipe(BlockRegistry.CHARCOAL_BAMBOO_BLOCK.get(), BlockRegistry.SUNBURNT_BAMBOO_BLOCK.get(), 0.5F)
                 .save(consumer, new ResourceLocation(Sakura.MOD_ID, "charcoal_bamboo_block_from_sunburnt_smelt"));
 
-        smeltingRecipe(ItemRegistry.MATERIALS.get(SakuraNormalItemSet.CHARCOAL_BAMBOO).get(),
-                ItemRegistry.MATERIALS.get(SakuraNormalItemSet.BAMBOO).get(), 0.5F).save(consumer,
+        smeltingRecipe(BlockItemRegistry.CHARCOAL_BAMBOO_PLANT.get(),
+                BlockItemRegistry.BAMBOO_PLANT.get(), 0.5F).save(consumer,
                 new ResourceLocation(Sakura.MOD_ID, "charcoal_bamboo_from_smelt"));
 
-        smeltingRecipe(ItemRegistry.MATERIALS.get(SakuraNormalItemSet.CHARCOAL_BAMBOO).get(),
-                ItemRegistry.MATERIALS.get(SakuraNormalItemSet.SUNBURNT_BAMBOO).get(), 0.5F).save(consumer,
+        smeltingRecipe(BlockItemRegistry.CHARCOAL_BAMBOO_PLANT.get(),
+                BlockItemRegistry.SUNBURNT_BAMBOO_PLANT.get(), 0.5F).save(consumer,
                 new ResourceLocation(Sakura.MOD_ID, "charcoal_bamboo_from_sunburnt_smelt"));
     }
 
@@ -378,9 +374,9 @@ public class SakuraRecipeProvider extends AbstractRecipeProvider {
 
         StoneMortarRecipeBuilder.mortar(ItemRegistry.MATERIALS.get(SakuraNormalItemSet.CHARCOAL_POWDER).get(), 1)
                 .requires(Ingredient.of(Items.CHARCOAL,
-                        ItemRegistry.MATERIALS.get(SakuraNormalItemSet.CHARCOAL_BAMBOO).get()))
+                        BlockItemRegistry.CHARCOAL_BAMBOO_PLANT.get()))
                 .requires(Ingredient.of(Items.CHARCOAL,
-                        ItemRegistry.MATERIALS.get(SakuraNormalItemSet.CHARCOAL_BAMBOO).get()))
+                        BlockItemRegistry.CHARCOAL_BAMBOO_PLANT.get()))
                 .save(consumer, new ResourceLocation(Sakura.MOD_ID, "charcoal_powder"));
 
         StoneMortarRecipeBuilder.mortar(ItemRegistry.MATERIALS.get(SakuraNormalItemSet.BROWN_RICE).get(), 1)

@@ -1,7 +1,7 @@
 {
   "textures": {
     "gravel": "block/iron_block",
-    "itemframe_background": "sakura:block/bamboo",
+    "itemframe_background": "sakura:block/bamboo_plant",
     "anvil_base": "block/anvil_base"
   },
   "elements": [

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "sakura:block/ume_leaves"
+    },
+    "age=1": {
+      "model": "sakura:block/ume_leaves_flower"
+    },
+    "age=2": {
+      "model": "sakura:block/ume_leaves_1"
+    },
+    "age=3": {
+      "model": "sakura:block/ume_leaves_2"
+    },
+    "age=4": {
+      "model": "sakura:block/ume_leaves_3"
+    }
+  }
+}

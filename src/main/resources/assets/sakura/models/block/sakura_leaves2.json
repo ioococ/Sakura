@@ -1,0 +1,7 @@
+{
+  "parent": "sakura:block/leaves_cross_sakura2",
+  "textures": {
+    "all": "sakura:block/sakura_leaves",
+    "bushy": "sakura:block/sakura_leaves_bushy2"
+  }
+}

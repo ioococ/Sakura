@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/tinted_cross",
+  "textures": {
+    "cross": "sakura:block/burr_chestnut/burr_chestnut_3"
+  }
+}

@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "sakura:bamboo",
-    "sakura:sunburnt_bamboo",
+    "sakura:bamboo_plant",
+    "sakura:sunburnt_bamboo_plant",
     "minecraft:bamboo"
   ]
 }

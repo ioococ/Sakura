@@ -8,5 +8,85 @@
 			"sakura:taiko_3",
             "sakura:taiko_4"
         ]
+    },
+
+    "leaves_break": {
+        "category": "block",
+        "subtitle": "sakura.subtitles.leaves_break",
+        "sounds": [
+            { "name": "sakura:leaves/break1", "weight": 15, "volume": 1.0 },
+            { "name": "sakura:leaves/break2", "weight": 15, "volume": 1.0 },
+            { "name": "sakura:leaves/break3", "weight": 15, "volume": 1.0 },
+            { "name": "sakura:leaves/break4", "weight": 15, "volume": 1.0 },
+            { "name": "sakura:leaves/break5", "weight": 15, "volume": 1.0 },
+            { "name": "sakura:leaves/break6", "weight": 15, "volume": 1.0 },
+            { "name": "sakura:leaves/break7", "weight": 15, "volume": 1.0 },
+            { "name": "sakura:leaves/break8", "weight": 15, "volume": 1.0 },
+            { "name": "sakura:leaves/break9", "weight": 15, "volume": 1.0 },
+            { "name": "sakura:leaves/break10", "weight": 15, "volume": 1.0 },
+            { "name": "sakura:leaves/break11", "weight": 15, "volume": 1.0 },
+            { "name": "sakura:leaves/break12", "weight": 15, "volume": 1.0 }
+        ]
+    },
+    "leaves_step": {
+        "category": "block",
+        "subtitle": "sakura.subtitles.leaves_step",
+        "sounds": [
+            { "name": "sakura:leaves/step1", "weight": 15, "volume": 1.0 },
+            { "name": "sakura:leaves/step2", "weight": 15, "volume": 1.0 },
+            { "name": "sakura:leaves/step3", "weight": 15, "volume": 1.0 },
+            { "name": "sakura:leaves/step4", "weight": 15, "volume": 1.0 },
+            { "name": "sakura:leaves/step5", "weight": 15, "volume": 1.0 },
+            { "name": "sakura:leaves/step6", "weight": 15, "volume": 1.0 },
+            { "name": "sakura:leaves/step7", "weight": 15, "volume": 1.0 },
+            { "name": "sakura:leaves/step8", "weight": 15, "volume": 1.0 },
+            { "name": "sakura:leaves/step9", "weight": 15, "volume": 1.0 },
+            { "name": "sakura:leaves/step10", "weight": 15, "volume": 1.0 }
+        ]
+    },
+    "leaves_place": {
+        "category": "block",
+        "subtitle": "sakura.subtitles.leaves_place",
+        "sounds": [
+            { "name": "sakura:leaves/break1", "weight": 15, "volume": 0.8},
+            { "name": "sakura:leaves/break2", "weight": 15, "volume": 0.8},
+            { "name": "sakura:leaves/break3", "weight": 15, "volume": 0.8},
+            { "name": "sakura:leaves/break4", "weight": 15, "volume": 0.8},
+            { "name": "sakura:leaves/break5", "weight": 15, "volume": 0.8},
+            { "name": "sakura:leaves/break6", "weight": 15, "volume": 0.8},
+            { "name": "sakura:leaves/break7", "weight": 15, "volume": 0.8},
+            { "name": "sakura:leaves/break8", "weight": 15, "volume": 0.8},
+            { "name": "sakura:leaves/break9", "weight": 15, "volume": 0.8},
+            { "name": "sakura:leaves/break10", "weight": 15, "volume": 0.8},
+            { "name": "sakura:leaves/break11", "weight": 15, "volume": 0.8},
+            { "name": "sakura:leaves/break12", "weight": 15, "volume": 0.8}
+        ]
+    },
+    "leaves_hit": {
+        "category": "block",
+        "subtitle": "sakura.subtitles.leaves_hit",
+        "sounds": [
+            { "name": "sakura:leaves/break1", "weight": 15, "volume": 1.0 },
+            { "name": "sakura:leaves/break2", "weight": 15, "volume": 1.0 },
+            { "name": "sakura:leaves/break3", "weight": 15, "volume": 1.0 },
+            { "name": "sakura:leaves/break4", "weight": 15, "volume": 1.0 },
+            { "name": "sakura:leaves/break5", "weight": 15, "volume": 1.0 }
+        ]
+    },
+    "leaves_fall": {
+        "category": "block",
+        "subtitle": "sakura.subtitles.leaves_fall",
+        "sounds": [
+            { "name": "sakura:leaves/step1", "weight": 15, "volume": 1.5 },
+            { "name": "sakura:leaves/step2", "weight": 15, "volume": 1.5 },
+            { "name": "sakura:leaves/step3", "weight": 15, "volume": 1.5 },
+            { "name": "sakura:leaves/step4", "weight": 15, "volume": 1.5 },
+            { "name": "sakura:leaves/step5", "weight": 15, "volume": 1.5 },
+            { "name": "sakura:leaves/step6", "weight": 15, "volume": 1.5 },
+            { "name": "sakura:leaves/step7", "weight": 15, "volume": 1.5 },
+            { "name": "sakura:leaves/step8", "weight": 15, "volume": 1.5 },
+            { "name": "sakura:leaves/step9", "weight": 15, "volume": 1.5 },
+            { "name": "sakura:leaves/step10", "weight": 15, "volume": 1.5 }
+        ]
     }
 }

@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "layers=0": {
+      "model": "sakura:block/leaf_pile/green_maple_leaf_pile_height1"
+    },
+    "layers=1": {
+      "model": "sakura:block/leaf_pile/green_maple_leaf_pile_height2"
+    },
+    "layers=2": {
+      "model": "sakura:block/leaf_pile/green_maple_leaf_pile_height3"
+    },
+    "layers=3": {
+      "model": "sakura:block/leaf_pile/green_maple_leaf_pile_height4"
+    },
+    "layers=4": {
+      "model": "sakura:block/leaf_pile/green_maple_leaf_pile_height6"
+    },
+    "layers=5": {
+      "model": "sakura:block/leaf_pile/green_maple_leaf_pile_height8"
+    },
+    "layers=6": {
+      "model": "sakura:block/leaf_pile/green_maple_leaf_pile_height10"
+    },
+    "layers=7": {
+      "model": "sakura:block/leaf_pile/green_maple_leaf_pile_height12"
+    },
+    "layers=8": {
+      "model": "sakura:block/leaf_pile/green_maple_leaf_pile_height14"
+    },
+    "layers=9": {
+      "model": "sakura:block/leaf_pile/green_maple_leaf_pile_height16"
+    }
+  }
+}

@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "sakura:rum",
+    "sakura:rum_flowing",
     "#sakura:alcohol/beer",
     "#sakura:alcohol/brandy",
     "#sakura:alcohol/champagne",

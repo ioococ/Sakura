@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "sakura:block/burr_chestnut/burr_chestnut_0"
+    },
+    "age=1": {
+      "model": "sakura:block/burr_chestnut/burr_chestnut_1"
+    },
+    "age=2": {
+      "model": "sakura:block/burr_chestnut/burr_chestnut_2"
+    },
+    "age=3": {
+      "model": "sakura:block/burr_chestnut/burr_chestnut_3"
+    }
+  }
+}

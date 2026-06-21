@@ -15,11 +15,11 @@ import net.minecraftforge.fml.common.Mod;
 public class BurnTimeEvent {
     @SubscribeEvent
     public static void registerBurnTime(FurnaceFuelBurnTimeEvent event) {
-        register(event, ItemRegistry.MATERIALS.get(SakuraNormalItemSet.BAMBOO), 400);
+        register(event, BlockItemRegistry.BAMBOO_PLANT, 400);
         register(event, BlockItemRegistry.BAMBOO_BLOCK, 4000);
-        register(event, ItemRegistry.MATERIALS.get(SakuraNormalItemSet.SUNBURNT_BAMBOO), 400);
+        register(event, BlockItemRegistry.SUNBURNT_BAMBOO_PLANT, 400);
         register(event, BlockItemRegistry.SUNBURNT_BAMBOO_BLOCK, 4000);
-        register(event, ItemRegistry.MATERIALS.get(SakuraNormalItemSet.CHARCOAL_BAMBOO), 1600);
+        register(event, BlockItemRegistry.CHARCOAL_BAMBOO_PLANT, 1600);
         register(event, BlockItemRegistry.CHARCOAL_BAMBOO_BLOCK, 16000);
     }
 

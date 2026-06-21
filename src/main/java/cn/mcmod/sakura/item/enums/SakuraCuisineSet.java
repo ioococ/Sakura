@@ -2,17 +2,17 @@ package cn.mcmod.sakura.item.enums;
 
 import java.util.function.Supplier;
 
-import cn.mcmod.sakura.item.ItemRegistry;
+import cn.mcmod.sakura.block.BlockItemRegistry;
 import cn.mcmod_mmf.mmlib.item.info.FoodInfo;
 import net.minecraft.world.item.Item;
 
 public enum SakuraCuisineSet {
     BEEF_STICK(FoodInfo.builder().name("beef_stick").amountAndCalories(8, 0.8F).water(2F).nutrients(0F, 0F, 0F, 4F, 0F)
-            .decayModifier(1.5F).heatCapacity(1F).cookingTemp(480F).build(),ItemRegistry.MATERIALS.get(SakuraNormalItemSet.BAMBOO)),
+            .decayModifier(1.5F).heatCapacity(1F).cookingTemp(480F).build(), BlockItemRegistry.BAMBOO_PLANT),
     CHICKEN_STICK(FoodInfo.builder().name("chicken_stick").amountAndCalories(6, 0.4F).water(2F).nutrients(0F, 0F, 0F, 4F, 0F)
-            .decayModifier(1.5F).heatCapacity(1F).cookingTemp(480F).build(),ItemRegistry.MATERIALS.get(SakuraNormalItemSet.BAMBOO)),
+            .decayModifier(1.5F).heatCapacity(1F).cookingTemp(480F).build(), BlockItemRegistry.BAMBOO_PLANT),
     PORK_STICK(FoodInfo.builder().name("pork_stick").amountAndCalories(6, 0.6F).water(2F).nutrients(0F, 0F, 0F, 4F, 0F)
-            .decayModifier(1.5F).heatCapacity(1F).cookingTemp(480F).build(),ItemRegistry.MATERIALS.get(SakuraNormalItemSet.BAMBOO))
+            .decayModifier(1.5F).heatCapacity(1F).cookingTemp(480F).build(), BlockItemRegistry.BAMBOO_PLANT)
     ;
     private final FoodInfo info;
     private final Supplier<Item> container;

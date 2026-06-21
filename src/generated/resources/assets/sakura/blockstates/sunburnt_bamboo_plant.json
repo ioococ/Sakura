@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "leaves=none": {
+      "model": "sakura:block/sunburnt_bamboo_plant"
+    },
+    "leaves=small": {
+      "model": "sakura:block/small_sunburnt_bamboo_leaves"
+    },
+    "leaves=large": {
+      "model": "sakura:block/large_sunburnt_bamboo_leaves"
+    }
+  }
+}

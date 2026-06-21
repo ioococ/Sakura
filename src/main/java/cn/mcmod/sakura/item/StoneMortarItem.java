@@ -22,7 +22,7 @@ import net.minecraftforge.client.IItemRenderProperties;
 public class StoneMortarItem extends BlockItem {
 
     public StoneMortarItem() {
-        super(BlockRegistry.STONE_MORTAR.get(), Sakura.defaultItemProperties());
+        super(BlockRegistry.STONE_MORTAR.get(), Sakura.mainTabProperties());
     }
 
     @Override

@@ -3,7 +3,7 @@ package cn.mcmod.sakura.client.render;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Vector3f;
 
-import cn.mcmod.sakura.block.ObonBlock;
+import cn.mcmod.sakura.block.artificial.ObonBlock;
 import cn.mcmod.sakura.block.entity.ObonBlockEntity;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.MultiBufferSource;

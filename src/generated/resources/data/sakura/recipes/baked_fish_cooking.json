@@ -9,7 +9,7 @@
     }
   ],
   "fluid": {
-    "fluidTag": "forge:food_oil",
+    "fluidTag": "sakura:food_oil",
     "amount": 125
   },
   "result": {

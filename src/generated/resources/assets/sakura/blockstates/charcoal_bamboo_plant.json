@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "leaves=none": {
+      "model": "sakura:block/charcoal_bamboo_plant"
+    },
+    "leaves=small": {
+      "model": "sakura:block/small_charcoal_bamboo_leaves"
+    },
+    "leaves=large": {
+      "model": "sakura:block/large_charcoal_bamboo_leaves"
+    }
+  }
+}

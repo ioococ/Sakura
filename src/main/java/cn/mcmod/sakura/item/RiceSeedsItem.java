@@ -16,7 +16,7 @@ import net.minecraft.world.level.block.state.BlockState;
 public class RiceSeedsItem extends ItemNameBlockItem {
 
     public RiceSeedsItem() {
-        super(BlockRegistry.RICE_CROP_ROOT.get(), Sakura.defaultItemProperties());
+        super(BlockRegistry.RICE_CROP_ROOT.get(), Sakura.mainTabProperties());
     }
 
     @Override
