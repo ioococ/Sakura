@@ -1,14 +1,11 @@
 package cn.mcmod.sakura.item;
 
-import java.util.Map;
-import java.util.function.Supplier;
-
 import cn.mcmod.sakura.Sakura;
 import cn.mcmod.sakura.block.BlockRegistry;
-import cn.mcmod.sakura.item.enums.SakuraNormalItemSet;
+import cn.mcmod.sakura.item.group.SakuraNormalSet;
 import cn.mcmod_mmf.mmlib.item.ItemFoodSeeds;
 import cn.mcmod_mmf.mmlib.item.info.FoodInfo;
-import cn.mcmod_mmf.mmlib.registry.ItemRegistryUtil;
+import cn.mcmod_mmf.mmlib.utils.ItemRegistryUtil;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.Tiers;
@@ -16,6 +13,9 @@ import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.util.Map;
+import java.util.function.Supplier;
 
 public class ItemRegistry {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Sakura.MOD_ID);
@@ -43,12 +43,11 @@ public class ItemRegistry {
             () -> seed(BlockRegistry.TOMATO_CROP.get()));
 
     public static final RegistryObject<ItemFoodSeeds> TARO = register("taro",
-            () -> seed(BlockRegistry.TARO_CROP.get(),
-                    FoodInfo.builder().name("taro").amountAndCalories(2, 0.2F).water(0F).nutrients(2F, 2F, 0F, 0F, 0F)
-                            .decayModifier(2F).heatCapacity(1F).cookingTemp(480F).build()));
+            () -> seed(BlockRegistry.TARO_CROP.get(), FoodInfo.builder().name("taro").amountAndCalories(2, 0.2F).water(0F).nutrients(2F, 2F, 0F, 0F, 0F).decayModifier(2F).heatCapacity(1F).cookingTemp(480F).build())
+    );
 
-    public static final Map<SakuraNormalItemSet, RegistryObject<Item>> MATERIALS = ItemRegistryUtil
-            .mapOfKeys(SakuraNormalItemSet.class, material -> register(material.getName(), ItemRegistry::normalItem));
+    public static final Map<SakuraNormalSet, RegistryObject<Item>> MATERIALS = ItemRegistryUtil
+            .mapOfKeys(SakuraNormalSet.class, material -> register(material.getName(), ItemRegistry::normalItem));
     
     public static final RegistryObject<Item> IRON_FISH_KNIFE = register("fish_knife", () -> new KnifeItem(Tiers.IRON, 1F, -2.0F, Sakura.mainTabProperties().stacksTo(1)));
     public static final RegistryObject<Item> IRON_NOODLE_KNIFE = register("noodle_knife", () -> new KnifeItem(Tiers.IRON, 2F, -3.0F, Sakura.mainTabProperties().stacksTo(1)));

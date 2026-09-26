@@ -10,10 +10,12 @@ import cn.mcmod.sakura.fluid.BucketItemRegistry;
 import cn.mcmod.sakura.fluid.FluidBlockRegistry;
 import cn.mcmod.sakura.fluid.FluidRegistry;
 import cn.mcmod.sakura.item.ComposterRegistry;
+import cn.mcmod.sakura.item.DrinkRegistry;
 import cn.mcmod.sakura.item.FoodRegistry;
 import cn.mcmod.sakura.item.ItemRegistry;
 import cn.mcmod.sakura.loot_modifier.LootModifiterRegistry;
 import cn.mcmod.sakura.recipes.RecipeTypeRegistry;
+import cn.mcmod.sakura.tab.DrinkTab;
 import cn.mcmod.sakura.tab.FoodTab;
 import cn.mcmod.sakura.tab.MainTab;
 import cn.mcmod.sakura.world.ModConfiguredFeatures;
@@ -39,6 +41,7 @@ public class Sakura {
     public static final Gson GSON = (new GsonBuilder()).setPrettyPrinting().disableHtmlEscaping().create();
     public static final CreativeModeTab MAIN_GROUP = new MainTab(MOD_ID);
     public static final CreativeModeTab FOOD_GROUP = new FoodTab(MOD_ID);
+    public static final CreativeModeTab DRINK_GROUP = new DrinkTab(MOD_ID);
 
 
     public static Item.Properties mainTabProperties() {
@@ -47,6 +50,10 @@ public class Sakura {
 
     public static Item.Properties foodTabProperties() {
         return new Item.Properties().tab(Sakura.FOOD_GROUP);
+    }
+
+    public static Item.Properties drinkTabProperties() {
+        return new Item.Properties().tab(Sakura.DRINK_GROUP);
     }
 
     public Sakura() {
@@ -60,6 +67,7 @@ public class Sakura {
 
         ItemRegistry.ITEMS.register(eventBus);
         FoodRegistry.ITEMS.register(eventBus);
+        DrinkRegistry.ITEMS.register(eventBus);
 
         FluidRegistry.FLUIDS.register(eventBus);
         FluidBlockRegistry.BLOCKS.register(eventBus);

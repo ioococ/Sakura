@@ -3,8 +3,6 @@ package cn.mcmod.sakura.events;
 import java.util.function.Supplier;
 
 import cn.mcmod.sakura.block.BlockItemRegistry;
-import cn.mcmod.sakura.item.ItemRegistry;
-import cn.mcmod.sakura.item.enums.SakuraNormalItemSet;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.event.furnace.FurnaceFuelBurnTimeEvent;

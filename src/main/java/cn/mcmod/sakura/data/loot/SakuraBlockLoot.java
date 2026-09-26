@@ -8,8 +8,8 @@ import cn.mcmod.sakura.block.foods.TeishokuFinishedBlock;
 import cn.mcmod.sakura.block.nature.BambooPlant;
 import cn.mcmod.sakura.item.FoodRegistry;
 import cn.mcmod.sakura.item.ItemRegistry;
-import cn.mcmod.sakura.item.enums.SakuraFoodSet;
-import cn.mcmod.sakura.item.enums.SakuraNormalItemSet;
+import cn.mcmod.sakura.item.group.SakuraFoodSet;
+import cn.mcmod.sakura.item.group.SakuraNormalSet;
 import cn.mcmod_mmf.mmlib.data.loot.AbstartctBlockLoot;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.world.item.Item;
@@ -77,15 +77,15 @@ public class SakuraBlockLoot extends AbstartctBlockLoot {
         createCrop(BlockRegistry.TOMATO_CROP.get(), FoodRegistry.FOODSET.get(SakuraFoodSet.TOMATO).get(),
                 ItemRegistry.TOMATO_SEEDS.get(), 7);
 
-        createCrop(BlockRegistry.RICE_CROP.get(), ItemRegistry.MATERIALS.get(SakuraNormalItemSet.STRAW).get(),
+        createCrop(BlockRegistry.RICE_CROP.get(), ItemRegistry.MATERIALS.get(SakuraNormalSet.STRAW).get(),
                 ItemRegistry.RICE_SEEDS.get(), 7);
 
-        createCrop(BlockRegistry.RICE_CROP_ROOT.get(), ItemRegistry.MATERIALS.get(SakuraNormalItemSet.STRAW).get(),
+        createCrop(BlockRegistry.RICE_CROP_ROOT.get(), ItemRegistry.MATERIALS.get(SakuraNormalSet.STRAW).get(),
                 ItemRegistry.RICE_SEEDS.get(), 7);
 
         createCrop(BlockRegistry.RAPE_SEEDS_CROP.get(), ItemRegistry.RAPE_SEEDS.get(), ItemRegistry.RAPE_SEEDS.get(), 7);
 
-        createCrop(BlockRegistry.TARO_CROP.get(), ItemRegistry.MATERIALS.get(SakuraNormalItemSet.IMOGARA).get(),
+        createCrop(BlockRegistry.TARO_CROP.get(), ItemRegistry.MATERIALS.get(SakuraNormalSet.IMOGARA).get(),
                 ItemRegistry.TARO.get(), 3);
 
         createCrop(BlockRegistry.BUCKWHEAT_CROP.get(), ItemRegistry.BUCKWHEAT.get(), ItemRegistry.BUCKWHEAT.get(), 7);

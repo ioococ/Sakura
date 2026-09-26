@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "sakura:item/cheese_burger_curry_rice"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "sakura:item/wine_bottle",
+  "textures": {
+    "0": "sakura:models/cocoa_liqueur_bottle",
+    "particle": "sakura:models/cocoa_liqueur_bottle"
+  }
+}

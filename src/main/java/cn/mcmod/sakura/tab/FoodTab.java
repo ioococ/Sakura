@@ -1,7 +1,7 @@
 package cn.mcmod.sakura.tab;
 
 import cn.mcmod.sakura.item.FoodRegistry;
-import cn.mcmod.sakura.item.enums.SakuraFoodSet;
+import cn.mcmod.sakura.item.group.SakuraFoodSet;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.NotNull;

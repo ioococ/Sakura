@@ -1,0 +1,6 @@
+{
+  "parent": "sakura:item/tea_cup",
+  "textures": {
+    "2": "sakura:models/mint_tea"
+  }
+}

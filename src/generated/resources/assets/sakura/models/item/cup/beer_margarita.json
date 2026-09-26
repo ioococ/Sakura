@@ -1,0 +1,6 @@
+{
+  "parent": "sakura:item/glass_cup",
+  "textures": {
+    "1": "sakura:models/beer_margarita"
+  }
+}

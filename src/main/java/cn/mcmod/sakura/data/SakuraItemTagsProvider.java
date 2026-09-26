@@ -3,8 +3,8 @@ package cn.mcmod.sakura.data;
 import cn.mcmod.sakura.block.BlockItemRegistry;
 import cn.mcmod.sakura.item.FoodRegistry;
 import cn.mcmod.sakura.item.ItemRegistry;
-import cn.mcmod.sakura.item.enums.SakuraFoodSet;
-import cn.mcmod.sakura.item.enums.SakuraNormalItemSet;
+import cn.mcmod.sakura.item.group.SakuraFoodSet;
+import cn.mcmod.sakura.item.group.SakuraNormalSet;
 import cn.mcmod.sakura.tags.SakuraItemTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
@@ -48,7 +48,7 @@ public class SakuraItemTagsProvider extends ItemTagsProvider {
         tag(SakuraItemTags.SEEDS_SOYBEAN).add(ItemRegistry.SOYBEAN.get());
         tag(SakuraItemTags.SEEDS_TOMATO).add(ItemRegistry.TOMATO_SEEDS.get());
 
-        tag(SakuraItemTags.YEAST).add(ItemRegistry.MATERIALS.get(SakuraNormalItemSet.YEAST).get());
+        tag(SakuraItemTags.YEAST).add(ItemRegistry.MATERIALS.get(SakuraNormalSet.YEAST).get());
 
         tag(SakuraItemTags.BAMBOO).add(BlockItemRegistry.BAMBOO_PLANT.get());
         tag(SakuraItemTags.BAMBOO).add(BlockItemRegistry.SUNBURNT_BAMBOO_PLANT.get());
@@ -60,7 +60,7 @@ public class SakuraItemTagsProvider extends ItemTagsProvider {
         tag(SakuraItemTags.SLICES_RAW_FISHES_SALMON).addOptional(new ResourceLocation("farmersdelight:salmon_slice"));
         tag(SakuraItemTags.SLICES_CABBAGE).add(FoodRegistry.FOODSET.get(SakuraFoodSet.SLICED_CABBAGE).get());
 
-        tag(SakuraItemTags.DUST_CHARCOAL).add(ItemRegistry.MATERIALS.get(SakuraNormalItemSet.CHARCOAL_POWDER).get());
+        tag(SakuraItemTags.DUST_CHARCOAL).add(ItemRegistry.MATERIALS.get(SakuraNormalSet.CHARCOAL_POWDER).get());
 
         tag(SakuraItemTags.OFFHAND_EQUIPMENT).add(Items.SHIELD);
 
@@ -73,17 +73,17 @@ public class SakuraItemTagsProvider extends ItemTagsProvider {
                 .add(FoodRegistry.FOODSET.get(SakuraFoodSet.KAMABOKO).get())
                 .add(FoodRegistry.FOODSET.get(SakuraFoodSet.SATSUMAAGE).get());
 
-        tag(SakuraItemTags.KOUJI).add(ItemRegistry.MATERIALS.get(SakuraNormalItemSet.KOUJI).get());
+        tag(SakuraItemTags.KOUJI).add(ItemRegistry.MATERIALS.get(SakuraNormalSet.KOUJI).get());
         tag(SakuraItemTags.TOMATOSAUCE).add(FoodRegistry.FOODSET.get(SakuraFoodSet.TOMATO_SAUCE).get());
 
         tag(SakuraItemTags.TOFU).add(FoodRegistry.FOODSET.get(SakuraFoodSet.TOFU).get());
         tag(SakuraItemTags.TOFU_FRIED).add(FoodRegistry.FOODSET.get(SakuraFoodSet.FRIED_TOFU).get());
 
         tag(SakuraItemTags.SOYSAUCE).addTag(SakuraItemTags.SOYSAUCE_SOYSAUCE);
-        tag(SakuraItemTags.SOYSAUCE_SOYSAUCE).add(ItemRegistry.MATERIALS.get(SakuraNormalItemSet.SOYSAUCE).get());
+        tag(SakuraItemTags.SOYSAUCE_SOYSAUCE).add(ItemRegistry.MATERIALS.get(SakuraNormalSet.SOYSAUCE).get());
 
-        tag(SakuraItemTags.MISO).add(ItemRegistry.MATERIALS.get(SakuraNormalItemSet.MISO).get());
-        tag(SakuraItemTags.DASHI).add(ItemRegistry.MATERIALS.get(SakuraNormalItemSet.DASHI).get());
+        tag(SakuraItemTags.MISO).add(ItemRegistry.MATERIALS.get(SakuraNormalSet.MISO).get());
+        tag(SakuraItemTags.DASHI).add(ItemRegistry.MATERIALS.get(SakuraNormalSet.DASHI).get());
 
         tag(SakuraItemTags.SOUPS)
                 .add(FoodRegistry.FOODSET.get(SakuraFoodSet.MISO_SOUP).get())
@@ -112,8 +112,8 @@ public class SakuraItemTagsProvider extends ItemTagsProvider {
         tag(SakuraItemTags.VEGETABLES_TOMATO).add(FoodRegistry.FOODSET.get(SakuraFoodSet.TOMATO).get());
 
         tag(SakuraItemTags.RICE_BROWN).addTag(SakuraItemTags.GRAIN_RICE);
-        tag(SakuraItemTags.RICE_RICE).add(ItemRegistry.MATERIALS.get(SakuraNormalItemSet.RICE).get());
-        tag(SakuraItemTags.STRAW).add(ItemRegistry.MATERIALS.get(SakuraNormalItemSet.STRAW).get()).addOptional(new ResourceLocation("farmersdelight:straw"));
+        tag(SakuraItemTags.RICE_RICE).add(ItemRegistry.MATERIALS.get(SakuraNormalSet.RICE).get());
+        tag(SakuraItemTags.STRAW).add(ItemRegistry.MATERIALS.get(SakuraNormalSet.STRAW).get()).addOptional(new ResourceLocation("farmersdelight:straw"));
         tag(SakuraItemTags.RICE).addTag(SakuraItemTags.RICE_BROWN).addTag(SakuraItemTags.RICE_RICE);
 
         tag(SakuraItemTags.LUMBER).addTag(SakuraItemTags.LUMBER_BAMBOO).addTag(SakuraItemTags.LUMBER_MAPLE)
@@ -121,16 +121,16 @@ public class SakuraItemTagsProvider extends ItemTagsProvider {
 
         tag(SakuraItemTags.LUMBER_TFC).addTag(SakuraItemTags.LUMBER);
 
-        tag(SakuraItemTags.LUMBER_BAMBOO).add(ItemRegistry.MATERIALS.get(SakuraNormalItemSet.BAMBOO_LUMBER).get());
+        tag(SakuraItemTags.LUMBER_BAMBOO).add(ItemRegistry.MATERIALS.get(SakuraNormalSet.BAMBOO_LUMBER).get());
 
-        tag(SakuraItemTags.LUMBER_MAPLE).add(ItemRegistry.MATERIALS.get(SakuraNormalItemSet.MAPLE_LUMBER).get());
-        tag(SakuraItemTags.LUMBER_SAKURA).add(ItemRegistry.MATERIALS.get(SakuraNormalItemSet.SAKURA_LUMBER).get());
-        tag(SakuraItemTags.GRAIN_RICE).add(ItemRegistry.MATERIALS.get(SakuraNormalItemSet.BROWN_RICE).get());
+        tag(SakuraItemTags.LUMBER_MAPLE).add(ItemRegistry.MATERIALS.get(SakuraNormalSet.MAPLE_LUMBER).get());
+        tag(SakuraItemTags.LUMBER_SAKURA).add(ItemRegistry.MATERIALS.get(SakuraNormalSet.SAKURA_LUMBER).get());
+        tag(SakuraItemTags.GRAIN_RICE).add(ItemRegistry.MATERIALS.get(SakuraNormalSet.BROWN_RICE).get());
         tag(SakuraItemTags.GRAIN_BUCKWHEAT).add(ItemRegistry.BUCKWHEAT.get());
 
         tag(SakuraItemTags.SALT).addTag(SakuraItemTags.DUST_SALT);
         tag(SakuraItemTags.DUST_SALT).addTag(SakuraItemTags.SALT_SALT);
-        tag(SakuraItemTags.SALT_SALT).add(ItemRegistry.MATERIALS.get(SakuraNormalItemSet.SALT).get());
+        tag(SakuraItemTags.SALT_SALT).add(ItemRegistry.MATERIALS.get(SakuraNormalSet.SALT).get());
 
         tag(SakuraItemTags.SUGAR).addTag(SakuraItemTags.SUGAR_SUGAR);
         tag(SakuraItemTags.SUGAR_SUGAR).add(Items.SUGAR);
@@ -143,15 +143,15 @@ public class SakuraItemTagsProvider extends ItemTagsProvider {
 
         tag(SakuraItemTags.FLOUR).addTags(SakuraItemTags.FLOUR_WHEAT, SakuraItemTags.FLOUR_BUCKWHEAT,
                 SakuraItemTags.FLOUR_RICE);
-        tag(SakuraItemTags.FLOUR_WHEAT).add(ItemRegistry.MATERIALS.get(SakuraNormalItemSet.FLOUR).get());
-        tag(SakuraItemTags.FLOUR_BUCKWHEAT).add(ItemRegistry.MATERIALS.get(SakuraNormalItemSet.BUCKWHEAT_FLOUR).get());
-        tag(SakuraItemTags.FLOUR_RICE).add(ItemRegistry.MATERIALS.get(SakuraNormalItemSet.RICE_FLOUR).get());
+        tag(SakuraItemTags.FLOUR_WHEAT).add(ItemRegistry.MATERIALS.get(SakuraNormalSet.FLOUR).get());
+        tag(SakuraItemTags.FLOUR_BUCKWHEAT).add(ItemRegistry.MATERIALS.get(SakuraNormalSet.BUCKWHEAT_FLOUR).get());
+        tag(SakuraItemTags.FLOUR_RICE).add(ItemRegistry.MATERIALS.get(SakuraNormalSet.RICE_FLOUR).get());
 
         tag(SakuraItemTags.DOUGH).addTags(SakuraItemTags.DOUGH_WHEAT, SakuraItemTags.DOUGH_BUCKWHEAT,
                 SakuraItemTags.DOUGH_RICE);
-        tag(SakuraItemTags.DOUGH_WHEAT).add(ItemRegistry.MATERIALS.get(SakuraNormalItemSet.DOUGH).get());
-        tag(SakuraItemTags.DOUGH_BUCKWHEAT).add(ItemRegistry.MATERIALS.get(SakuraNormalItemSet.BUCKWHEAT_DOUGH).get());
-        tag(SakuraItemTags.DOUGH_RICE).add(ItemRegistry.MATERIALS.get(SakuraNormalItemSet.RICE_DOUGH).get());
+        tag(SakuraItemTags.DOUGH_WHEAT).add(ItemRegistry.MATERIALS.get(SakuraNormalSet.DOUGH).get());
+        tag(SakuraItemTags.DOUGH_BUCKWHEAT).add(ItemRegistry.MATERIALS.get(SakuraNormalSet.BUCKWHEAT_DOUGH).get());
+        tag(SakuraItemTags.DOUGH_RICE).add(ItemRegistry.MATERIALS.get(SakuraNormalSet.RICE_DOUGH).get());
 
         registerForgeTags();
     }
@@ -179,7 +179,7 @@ public class SakuraItemTagsProvider extends ItemTagsProvider {
                 .addTag(SakuraItemTags.VEGETABLES_EGGPLANT).addTag(SakuraItemTags.VEGETABLES_ONION)
                 .addTag(SakuraItemTags.VEGETABLES_POTATO).addTag(SakuraItemTags.VEGETABLES_RADISH)
                 .addTag(SakuraItemTags.VEGETABLES_TOMATO).addTag(SakuraItemTags.VEGETABLES_PUMPKIN)
-                .add(ItemRegistry.MATERIALS.get(SakuraNormalItemSet.IMOGARA).get());
+                .add(ItemRegistry.MATERIALS.get(SakuraNormalSet.IMOGARA).get());
         ;
         tag(SakuraItemTags.LEAFYVEGETABLES).addTag(SakuraItemTags.LEAFYVEGETABLES_CABBAGE);
         tag(SakuraItemTags.LEAFYVEGETABLES_CABBAGE).addTag(SakuraItemTags.VEGETABLES_CABBAGE);
